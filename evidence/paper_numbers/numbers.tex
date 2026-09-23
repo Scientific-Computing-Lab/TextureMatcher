@@ -1,0 +1,227 @@
+% Frozen values for the manuscript. Keep manuscript values centralized here.
+% Legacy names: Pixel = field-linear; Position = primitive-linear.
+
+% Operator configuration.
+\newcommand{\StyleGrid}{256\!\times\!256}
+\newcommand{\FeatureDim}{384}
+\newcommand{\NumSamples}{4096}
+\newcommand{\SinkhornEpsilon}{0.05}
+\newcommand{\SinkhornSteps}{100}
+\newcommand{\NumGaussians}{101}
+
+% Canonical n=1000, 128 px comparison.
+\newcommand{\FIDPixel}{108.0}
+\newcommand{\KIDPixel}{0.030}
+\newcommand{\IncPixel}{0.925}
+\newcommand{\DINOPixel}{0.858}
+\newcommand{\PlacePixel}{0.048}
+\newcommand{\FIDPosition}{133.6}
+\newcommand{\KIDPosition}{0.047}
+\newcommand{\IncPosition}{0.894}
+\newcommand{\DINOPosition}{0.843}
+\newcommand{\PlacePosition}{0.038}
+\newcommand{\FIDGaussian}{97.9}
+\newcommand{\KIDGaussian}{0.024}
+\newcommand{\IncGaussian}{0.926}
+\newcommand{\DINOGaussian}{0.855}
+\newcommand{\PlaceGaussian}{0.105}
+\newcommand{\FIDTransport}{94.7}
+\newcommand{\KIDTransport}{0.021}
+\newcommand{\IncTransport}{0.942}
+\newcommand{\DINOTransport}{0.854}
+\newcommand{\PlaceTransport}{0.081}
+\newcommand{\FIDHard}{112.8}
+\newcommand{\KIDHard}{0.033}
+\newcommand{\IncHard}{0.951}
+\newcommand{\DINOHard}{0.864}
+\newcommand{\PlaceHard}{0.044}
+\newcommand{\FIDSymmetric}{109.0}
+\newcommand{\KIDSymmetric}{0.029}
+\newcommand{\IncSymmetric}{0.961}
+\newcommand{\DINOSymmetric}{0.868}
+\newcommand{\PlaceSymmetric}{0.047}
+\newcommand{\FIDMixer}{82.5}
+\newcommand{\KIDMixer}{0.012}
+\newcommand{\IncMixer}{0.948}
+\newcommand{\DINOMixer}{0.907}
+\newcommand{\PlaceMixer}{0.059}
+
+% Matching-rule study, n=200, 128 px.
+\newcommand{\RuleKIDRandom}{0.077}
+\newcommand{\RuleKIDMean}{0.025}
+\newcommand{\RuleKIDPixel}{0.031}
+\newcommand{\RuleKIDPosition}{0.043}
+\newcommand{\RuleKIDGaussian}{0.022}
+\newcommand{\RuleKIDNN}{0.027}
+\newcommand{\RuleKIDHard}{0.031}
+\newcommand{\RuleKIDTransport}{0.020}
+\newcommand{\RuleKIDSharp}{0.019}
+\newcommand{\RuleFIDRandom}{224.3}
+\newcommand{\RuleFIDMean}{183.7}
+\newcommand{\RuleFIDPixel}{188.7}
+\newcommand{\RuleFIDPosition}{211.8}
+\newcommand{\RuleFIDGaussian}{177.6}
+\newcommand{\RuleFIDNN}{182.4}
+\newcommand{\RuleFIDHard}{184.2}
+\newcommand{\RuleFIDTransport}{174.9}
+\newcommand{\RuleFIDSharp}{173.7}
+\newcommand{\RandomIncRealism}{1.035}
+\newcommand{\RandomDINORealism}{0.926}
+
+% Endpoint, entropy, and timing diagnostics.
+\newcommand{\TargetGap}{0.85}
+\newcommand{\EntropyDefault}{8.08}
+\newcommand{\EntropyCeiling}{8.32}
+\newcommand{\TargetVariance}{38\%}
+\newcommand{\TimeTransport}{0.21}
+\newcommand{\TimePath}{1.36} % superseded by \PathSecOT, 120-pair protocol
+\newcommand{\TimePixel}{0.18}
+\newcommand{\TimePosition}{0.18}
+\newcommand{\TimeSymmetric}{0.25}
+\newcommand{\TimeVacher}{52.4}
+\newcommand{\TimeVacherPath}{576.6}
+\newcommand{\TimeMixer}{0.023}
+
+% Correspondence-regime study, n=264.
+\newcommand{\CorrespondencePairs}{264}
+\newcommand{\SIFTFullOverlap}{735}
+\newcommand{\SIFTQuarterOverlap}{83}
+\newcommand{\SIFTDifferent}{1}
+\newcommand{\CorrGainAbsent}{+0.011}
+\newcommand{\CorrGainAbsentP}{0.066}
+\newcommand{\CorrGainPresent}{-0.003}
+
+% Representation and path checks.
+\newcommand{\DINOPlacementWins}{37}
+\newcommand{\SpreadDINOLin}{60\%}
+\newcommand{\SpreadDINOTransport}{66\%}
+\newcommand{\SpreadSAMLin}{57\%}
+\newcommand{\SpreadSAMTransport}{71\%}
+\newcommand{\SpreadCNTElementLin}{60\%}
+\newcommand{\SpreadCNTElementTransport}{87\%}
+\newcommand{\SpreadCNTFieldLin}{67\%}
+\newcommand{\SpreadCNTFieldTransport}{99\%}
+\newcommand{\RoundTripTransport}{0.17}
+\newcommand{\RoundTripFloor}{0.13}
+\newcommand{\RoundTripPosition}{0.32}
+\newcommand{\LargePathN}{7{,}000}
+\newcommand{\LargePathMonotonicity}{0.99}
+
+% Supplementary values.
+\newcommand{\ReconReference}{2819}
+\newcommand{\GaussianRidge}{10^{-4}}
+\newcommand{\EpsLow}{0.005}
+\newcommand{\EpsHigh}{0.5}
+\newcommand{\EntropyLow}{7.09}
+\newcommand{\EntropyHigh}{8.31}
+\newcommand{\VarianceLow}{88\%}
+\newcommand{\VarianceHigh}{1\%}
+\newcommand{\EpsLPIPS}{0.21}
+\newcommand{\ResampleLPIPS}{0.15}
+\newcommand{\HardEndpointGap}{0.80}
+\newcommand{\OTEndpointGap}{0.87}
+\newcommand{\SwapRatioOT}{4.15}
+\newcommand{\SwapRatioSym}{1.15}
+\newcommand{\RecallOT}{0.672}
+\newcommand{\RecallSym}{0.418}
+\newcommand{\RhoHealthy}{0.977\pm0.021}
+\newcommand{\RhoFlagged}{0.52\pm0.08}
+\newcommand{\RhoHealthyN}{929}
+\newcommand{\RhoFlaggedN}{71}
+
+% ---------------------------------------------------------------------------
+% Revision values. All new prose numbers below.
+% timing, 120 pairs, one A100, same protocol for all methods (encode separate; per-t = one renderer pass)
+\newcommand{\EncodeSec}{0.09}\newcommand{\OTTransportSec}{0.03}\newcommand{\HardAssignSec}{0.48}\newcommand{\DecSec}{0.08}\newcommand{\DecSecLow}{0.02}
+\newcommand{\OTsec}{0.21}\newcommand{\OTInterpSec}{0.11}\newcommand{\PathSecOT}{1.02}\newcommand{\OTsecLow}{0.12}\newcommand{\OTInterpSecLow}{0.037}
+\newcommand{\HardSec}{0.66}\newcommand{\LinearSec}{0.18}\newcommand{\PathSecLinear}{0.99}
+\newcommand{\TMsec}{0.012}\newcommand{\TMEncSec}{0.009}\newcommand{\TMInterpSec}{0.003}\newcommand{\PathSecTM}{0.04}
+% Texture Mixer coupling ablation, 120 pairs, canonical 128px scoring; dKID by paired leave-one-pair-out jackknife, 95% CI
+
+\newcommand{\TMVarRetOt}{0.33}\newcommand{\TMEpsRel}{0.03}
+% equal-sample hard vs soft in CNT, 200 ablation pairs, identical 1024 vectors, canonical scoring
+
+\newcommand{\EqGaphard}{0.81}\newcommand{\EqGapotSharp}{0.84}\newcommand{\EqGapot}{0.87}
+\newcommand{\EqVarRetSharp}{0.88}\newcommand{\EqVarRet}{0.38}\newcommand{\EqBalP}{10^{-14}}\newcommand{\EqGapP}{10^{-13}}
+% spatial alignment isolated: 40 seamless (mirror-tiled) images, B = cyclic shift of A; DINOv2 deviation from the source reconstruction at t=.5
+\newcommand{\AlignLinZero}{0}\newcommand{\AlignLinFour}{8.2}\newcommand{\AlignLinSixteen}{15.2}\newcommand{\AlignLinMax}{23.9}\newcommand{\AlignGaussDev}{18.2}\newcommand{\AlignOTdev}{22.4}\newcommand{\AlignCrossLo}{16}\newcommand{\AlignCrossHi}{64}\newcommand{\AlignN}{40}
+% coupling on CNT's Gaussian primitives, 120 pairs, canonical scoring
+\newcommand{\GEdKIDmorph}{+0.0433}\newcommand{\GEdKIDmorphCI}{[+0.0333,+0.0534]}
+\newcommand{\GEdKIDfix}{+0.0001}\newcommand{\GEdKIDfixCI}{[-0.0041,+0.0043]}
+\newcommand{\GEScrambleDReal}{0.001}\newcommand{\GEKIDprimHard}{0.030}
+% encoding ceiling, 120 pairs
+\newcommand{\CeilKIDorig}{0.009}\newcommand{\CeilKIDrec}{0.014}\newcommand{\CeilKIDrecTwo}{0.025}\newcommand{\CeilKIDmid}{0.023}\newcommand{\CeilLPIPSrec}{0.21}\newcommand{\CeilRealOrig}{1.00}\newcommand{\CeilRealRec}{0.90}\newcommand{\CeilRealMid}{0.85}\newcommand{\CeilRho}{0.08}
+% names referenced by the revision text; values from the v2 archive
+\newcommand{\CNExact}{1{,}024}\newcommand{\SubsampleM}{4{,}096}\newcommand{\VacherWSec}{52.4}
+% protocol constants for the new supplementary subsections
+\newcommand{\GEPrimN}{30}\newcommand{\SinkhornMargTol}{10^{-3}}
+% Texture Mixer coupling rows in the shared 120-pair table: DINO realism
+
+% Final consolidation: every 120-pair row, the Texture Mixer coupling rows and the equal-sample rows
+% rescored in one session against the canonical reference; field-linear re-rendered through the same
+% field-blend-and-pyramid construction; all dKID intervals paired leave-one-pair-out jackknives.
+\newcommand{\GFIDpix}{218.9}\newcommand{\GRIncpix}{0.913}\newcommand{\GRDinpix}{0.856}\newcommand{\GPlacepix}{0.041}
+\newcommand{\GFIDtex}{247.9}\newcommand{\GRInctex}{0.897}\newcommand{\GRDintex}{0.849}\newcommand{\GPlacetex}{0.040}
+\newcommand{\GFIDgauss}{216.2}\newcommand{\GRIncgauss}{0.919}\newcommand{\GRDingauss}{0.847}\newcommand{\GPlacegauss}{0.103}
+\newcommand{\GFIDot}{208.2}\newcommand{\GRIncot}{0.924}\newcommand{\GRDinot}{0.851}\newcommand{\GPlaceot}{0.081}
+\newcommand{\GFIDhard}{211.8}\newcommand{\GRInchard}{0.943}\newcommand{\GRDinhard}{0.871}\newcommand{\GPlacehard}{0.044}
+\newcommand{\GFIDtm}{204.0}\newcommand{\GRInctm}{0.948}\newcommand{\GRDintm}{0.907}\newcommand{\GPlacetm}{0.061}
+\newcommand{\GFIDgpt}{193.7}\newcommand{\GRIncgpt}{0.960}\newcommand{\GRDingpt}{0.906}\newcommand{\GPlacegpt}{0.054}
+\newcommand{\GFIDgptsym}{201.1}\newcommand{\GRIncgptsym}{0.953}\newcommand{\GRDingptsym}{0.969}\newcommand{\GPlacegptsym}{0.046}
+\newcommand{\TMFIDlerp}{203.9}\newcommand{\TMRInclerp}{0.949}\newcommand{\TMRDinlerp}{0.909}\newcommand{\TMBallerp}{0.060}
+\newcommand{\TMFIDmean}{201.2}\newcommand{\TMRIncmean}{0.957}\newcommand{\TMRDinmean}{0.923}\newcommand{\TMBalmean}{0.077}
+\newcommand{\TMFIDot}{204.0}\newcommand{\TMRIncot}{0.942}\newcommand{\TMRDinot}{0.922}\newcommand{\TMBalot}{0.072}
+\newcommand{\TMFIDhard}{215.1}\newcommand{\TMRInchard}{0.966}\newcommand{\TMRDinhard}{0.922}\newcommand{\TMBalhard}{0.052}
+\newcommand{\EqFIDlinear}{189.3}\newcommand{\EqBallinear}{0.046}\newcommand{\EqRInclinear}{0.923}
+\newcommand{\EqFIDhard}{183.4}\newcommand{\EqBalhard}{0.043}\newcommand{\EqRInchard}{0.952}
+\newcommand{\EqFIDotSharp}{174.5}\newcommand{\EqBalotSharp}{0.067}\newcommand{\EqRIncotSharp}{0.933}
+\newcommand{\EqFIDot}{177.6}\newcommand{\EqBalot}{0.072}\newcommand{\EqRIncot}{0.931}
+\newcommand{\EqFIDpaper}{174.9}\newcommand{\EqBalpaper}{0.076}\newcommand{\EqRIncpaper}{0.942}
+\newcommand{\EqFIDgainOT}{8\%}
+\newcommand{\EqdKIDotVsLinear}{-0.0107}\newcommand{\EqdKIDotVsLinearCI}{[-0.0154,-0.0059]}
+\newcommand{\EqdKIDotPaperVsLinear}{-0.0124}\newcommand{\EqdKIDotPaperVsLinearCI}{[-0.0172,-0.0076]}
+\newcommand{\EqdKIDhardVsLinear}{-0.0022}\newcommand{\EqdKIDhardVsLinearCI}{[-0.0066,+0.0022]}
+\newcommand{\EqdKIDhard}{+0.0085}\newcommand{\EqdKIDhardCI}{[+0.0049,+0.0120]}
+\newcommand{\EqdKIDhardSharp}{+0.0103}\newcommand{\EqdKIDhardSharpCI}{[+0.0070,+0.0135]}
+\newcommand{\EqdKIDsharp}{-0.0018}\newcommand{\EqdKIDsharpCI}{[-0.0035,-0.0001]}
+\newcommand{\TMdKIDmean}{-0.0035}\newcommand{\TMdKIDmeanCI}{[-0.0074,+0.0004]}
+\newcommand{\TMdKIDot}{-0.0020}\newcommand{\TMdKIDotCI}{[-0.0060,+0.0020]}
+\newcommand{\TMdKIDhard}{+0.0087}\newcommand{\TMdKIDhardCI}{[+0.0042,+0.0132]}
+\newcommand{\TMdKIDotVsMean}{+0.0015}\newcommand{\TMdKIDotVsMeanCI}{[-0.0016,+0.0045]}
+\newcommand{\GdKIDotVsPix}{-0.0114}\newcommand{\GdKIDotVsPixCI}{[-0.0174,-0.0054]}
+
+% 120-pair, Texture Mixer, equal-sample and primitive-study KIDs recomputed with the trace-corrected reference term; differences unchanged.
+\newcommand{\GKIDpix}{0.0305}
+\newcommand{\GKIDtex}{0.0504}
+\newcommand{\GKIDgauss}{0.0253}
+\newcommand{\GKIDot}{0.0190}
+\newcommand{\GKIDhard}{0.0302}
+\newcommand{\GKIDtm}{0.0119}
+\newcommand{\GKIDgpt}{0.0051}
+\newcommand{\GKIDgptsym}{0.0087}
+\newcommand{\TMKIDlerp}{0.0119}
+\newcommand{\TMKIDmean}{0.0084}
+\newcommand{\TMKIDot}{0.0099}
+\newcommand{\TMKIDhard}{0.0206}
+\newcommand{\EqKIDlinear}{0.0322}
+\newcommand{\EqKIDhard}{0.0300}
+\newcommand{\EqKIDotSharp}{0.0197}
+\newcommand{\EqKIDot}{0.0216}
+\newcommand{\EqKIDpaper}{0.0198}
+\newcommand{\EqKIDgainOT}{38\%}\newcommand{\EqKIDgainOTsmall}{33\%}
+\newcommand{\GEKIDfixP}{0.030}\newcommand{\GEKIDfixA}{0.030}\newcommand{\GEKIDfixPA}{0.027}\newcommand{\GEKIDmorphP}{0.036}\newcommand{\GEKIDmorphA}{0.080}
+\newcommand{\GEKIDprimSoft}{0.016}\newcommand{\GEKIDdenseOT}{0.019}
+\newcommand{\TMKIDgainMean}{29\%}\newcommand{\TMKIDgainOT}{17\%}
+% anchor-mixture drift (Appendix E), previously inline
+\newcommand{\AnchorChangeA}{46\%}\newcommand{\AnchorChangeB}{38\%}
+
+% Texture Mixer texton-matching rows rescored on 1,000 pairs (native / target-mean / entropic); jackknife 95% CI
+\newcommand{\TMkN}{1000}\newcommand{\TMkKIDlerp}{0.0121}\newcommand{\TMkKIDmean}{0.0090}\newcommand{\TMkKIDot}{0.0093}
+\newcommand{\TMkRInclerp}{0.948}\newcommand{\TMkRIncmean}{0.970}\newcommand{\TMkRIncot}{0.955}\newcommand{\TMkBallerp}{0.056}\newcommand{\TMkBalmean}{0.077}\newcommand{\TMkBalot}{0.078}
+\newcommand{\TMkdKIDmean}{-0.0031}\newcommand{\TMkdKIDmeanCI}{[-0.0044,-0.0018]}\newcommand{\TMkdKIDot}{-0.0028}\newcommand{\TMkdKIDotCI}{[-0.0039,-0.0017]}
+\newcommand{\TMkdKIDotVsMean}{+0.0003}\newcommand{\TMkdKIDotVsMeanCI}{[-0.0006,+0.0012]}\newcommand{\TMkRealP}{0.005}\newcommand{\TMkKIDgain}{26\%}
+
+% Table 1 percent column: (positional KID - row KID) / positional KID, from the macros above.
+% CNT block vs \KIDPixel; Texture Mixer block vs \TMkKIDlerp.
+\newcommand{\CKIDpctGauss}{20\%}\newcommand{\CKIDpctOT}{30\%}\newcommand{\CKIDpctExact}{$-$10\%}
+\newcommand{\TMkKIDpctOT}{23\%}

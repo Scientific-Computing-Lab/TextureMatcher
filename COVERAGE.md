@@ -14,7 +14,7 @@ One row per labeled table/figure in the main text and supplement (from
 
 A claim can be both reproducible (Tier 3 render script exists) and
 rescorable (Tier 1 already checks the archive's own cache) at once — that's
-the strongest state, and it's independently verified: **245 of 254 checked
+the strongest state, and it's independently verified: **245 of 257 checked
 rows in `CHECK.md` MATCH the paper, 0 MISMATCH.**
 
 ## Main text
@@ -160,4 +160,4 @@ part of this package.
 - GPT-Image-1.5 rows: rescorable (images hosted, prompts/ledger shipped),
   generation itself not reproducible (proprietary, already run).
 
-`CHECK.md`: **245 MATCH, 0 MISMATCH, 254 rows checked.**
+`CHECK.md`: **245 MATCH, 0 MISMATCH, 257 rows checked.**

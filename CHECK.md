@@ -2,10 +2,10 @@
 
 Data root: `(outside the repro package; path omitted for anonymity -- see --data-root/--paper-root)`
 
-Paper root: `paper`
+Paper root: `package/evidence/paper_numbers`
 
 
-**254 rows checked. 245 MATCH, 0 MISMATCH, 3 have no per-pair file row (see notes per row), 0 have no corresponding paper macro, 6 informational.**
+**257 rows checked. 245 MATCH, 0 MISMATCH, 3 have no per-pair file row (see notes per row), 0 have no corresponding paper macro, 9 informational.**
 
 Tolerance: |diff| <= max(0.0006, 2% relative) for plain values (0.0006 covers the
 trace-vs-len KID reference-term offset of ~0.000245); wider tolerances are used
@@ -67,7 +67,7 @@ they differ from the default.
 | `GRDinotsym` | 0.864 | 0.863946 | -5.35e-05 | MATCH | final128_n1000.csv[k in pairs_120] |
 | `GPlaceotsym` | 0.044 | 0.043609 | -0.00039102 | MATCH | final128_n1000.csv[k in pairs_120] |
 
-### Table1-TM-1000 (20 rows)
+### Table1-TM-1000 (23 rows)
 
 | Macro | Paper | Computed | Diff | Status | Source |
 |---|---|---|---|---|---|
@@ -91,6 +91,9 @@ they differ from the default.
 | `TMkdKIDotVsMeanCI.hi` | 0.0012 | 0.00119344 | -6.5629e-06 | MATCH | jackknife/feats_tm1000_*.npy (+recompute) |
 | `TMkKIDgain` | 26 | 25.7213 | -0.27872 | MATCH | derived (mean vs lerp) |
 | `TMkKIDpctOT` | 23 | 23.3678 | +0.367788 | MATCH | derived (ot vs lerp) |
+| `TMkFIDlerp` | nan | 82.4274 | +nan | INFO (new; no paper macro yet) | jackknife/feats_tm1000_*.npy vs matching_ablation/ref_inc.npy (+recompute, fid_score) |
+| `TMkFIDmean` | nan | 79.5513 | +nan | INFO (new; no paper macro yet) | jackknife/feats_tm1000_*.npy vs matching_ablation/ref_inc.npy (+recompute, fid_score) |
+| `TMkFIDot` | nan | 79.0668 | +nan | INFO (new; no paper macro yet) | jackknife/feats_tm1000_*.npy vs matching_ablation/ref_inc.npy (+recompute, fid_score) |
 
 ### tab:eqsample (45 rows)
 
