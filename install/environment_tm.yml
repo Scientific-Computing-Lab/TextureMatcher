@@ -1,0 +1,47 @@
+# Conda environment for the Texture Mixer (TF1-era) baseline.
+#
+# IMPORTANT deviation from a literal "Python 3.7 / TF 1.15" reading: the
+# notebooks in this archive do NOT run Texture Mixer's original repo under
+# genuine TensorFlow 1.15. TextureMixer's code (ningyu1991/TextureMixer)
+# was written against tf.contrib.slim, which only exists in TF1 -- but
+# every notebook that actually ran it (tm_scale1000_headtohead.ipynb,
+# finishing_experiments.ipynb "PHASE 1, CELL 1", etc.) ran on Colab's
+# then-current TF2 install and shimmed the TF1 API surface on top of it:
+#   tf1 = tensorflow.compat.v1; tf1.disable_eager_execution(); tf1.disable_v2_behavior()
+#   pip install tf_slim; wire tf_slim in as tensorflow.contrib.{slim,framework,layers}
+#   sys.modules['tensorflow'] = tf1   # so the repo's `import tensorflow as tf` gets the v1 API
+#   patch two `x.shape.ndims is 0/1` identity comparisons in tfutil.py (Python's `is`
+#   changed for small-int caching across versions; the repo compares with `is`)
+# A genuine TF1.15 environment does not install cleanly on current CUDA/
+# cuDNN or on Ampere+/Hopper GPUs, so this environment mirrors what the
+# archive actually proved works end-to-end rather than the nominal TF1.15
+# the original TextureMixer release targeted. If you need bit-identical
+# behaviour to a real TF1.15 install, adapt this file yourself; we have not
+# tested that path.
+#
+# Kept in its own environment/process because this one substitutes a global
+# `tensorflow` shim (see texture_mixer.sh and the tm_1000.py experiment
+# script) that would otherwise collide with the torch-side CNT environment.
+name: texton-matching-tm
+channels:
+  - conda-forge
+dependencies:
+  - python>=3.10
+  - pip
+  - numpy
+  - pillow
+  - matplotlib
+  - pandas
+  - scipy
+  - pip:
+      # No upper bound on tensorflow: on Colab, none of the notebooks
+      # ever pip-install tensorflow at all, they just use whatever's
+      # preinstalled (see reproduce_tm.ipynb). An upper-bounded pin here
+      # risks exactly the failure install/cnt.sh had to fix for CNT's
+      # requirements.in -- pip finding no compatible wheel for a newer
+      # Python and failing outright, or resolving to a version whose
+      # published wheels don't cover your Python. Let pip pick whatever
+      # current release it can install.
+      - tensorflow>=2.13            # provides tensorflow.compat.v1, shimmed to look like TF1 (see above)
+      - tf_slim
+      - gdown

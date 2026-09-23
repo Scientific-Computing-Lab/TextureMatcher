@@ -1,0 +1,41 @@
+{
+  "bootstrap_replicates": 10000,
+  "created_utc": "2026-09-02T10:28:17.313Z",
+  "permutation_replicates": 100000,
+  "results": [
+    {
+      "bootstrap_95_ci": [
+        0.002817960642161313,
+        0.04218605377002799
+      ],
+      "mean_paired_difference_a_minus_b": 0.022227267018071265,
+      "median_paired_difference_a_minus_b": 0.018252840869848103,
+      "method_a": "GPT_P2",
+      "method_b": "GPT_P1",
+      "metric": "DINOv2_midpoint_balance",
+      "n_pairs": 120,
+      "paired_effect_dz": 0.19834024708134676,
+      "permutation_p_holm": 0.03038969610303897,
+      "permutation_p_unadjusted": 0.03038969610303897,
+      "stratified_bootstrap": true
+    },
+    {
+      "bootstrap_95_ci": [
+        0.005120259952213189,
+        0.02514509339067877
+      ],
+      "mean_paired_difference_a_minus_b": 0.01518886166862059,
+      "median_paired_difference_a_minus_b": 0.013234602316926497,
+      "method_a": "GPT_P2",
+      "method_b": "GPT_P1",
+      "metric": "LPIPS_midpoint_balance",
+      "n_pairs": 120,
+      "paired_effect_dz": 0.2676246080422062,
+      "permutation_p_holm": 0.008499915000849992,
+      "permutation_p_unadjusted": 0.004249957500424996,
+      "stratified_bootstrap": true
+    }
+  ],
+  "schema_version": 1,
+  "seed": 2026
+}

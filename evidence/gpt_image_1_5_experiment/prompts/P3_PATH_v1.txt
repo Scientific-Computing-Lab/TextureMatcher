@@ -1,0 +1,6 @@
+You are given exactly two reference images in order: reference image 1 is source texture A and reference image 2 is target-appearance texture B. Generate one single square texture image at interpolation coordinate t = {t:.2f}, where t = 0 means A and t = 1 means B.
+
+Preserve the dominant spatial organization and layout of A while changing its local texture appearance continuously toward B in proportion to t. At this coordinate, texture-level properties—motif shape, spatial scale, density, regularity, material, local contrast, and color statistics—should be approximately weighted (1-t) from A and t from B. Produce one coherent texture that could exist on its own.
+
+Do not make a pixel-space blend, alpha blend, cross-fade, transparent overlay, split image, side-by-side composition, collage, or simple average of colors. Do not include endpoints, labels, text, borders, margins, or a presentation panel. Output only the texture, edge-to-edge.
+

@@ -1,0 +1,38 @@
+{
+  "counts": {
+    "endpoint_rows": 528,
+    "paired_rows": 528,
+    "path_rows": 264,
+    "prompt_ablation_rows": 48,
+    "symmetry_rows": 48,
+    "unique_distances": 2184,
+    "unique_images": 756
+  },
+  "created_utc": "2026-09-02T10:39:05.235Z",
+  "device": "cuda",
+  "dino": {
+    "model": "facebook/dinov2-base",
+    "requested_revision": "f9e44c814b77203eaa57a6bdbbd535f21ede1415",
+    "resolved_revision": "f9e44c814b77203eaa57a6bdbbd535f21ede1415",
+    "torch_version": "2.5.1+cu121",
+    "transformers_version": "4.48.3"
+  },
+  "elapsed_seconds": 53.112998188938946,
+  "gpu": "NVIDIA GeForce RTX 3090",
+  "lpips": {
+    "checkpoint_sha256": "df73285e35b22355a2df87cdb6b70b343713b667eddbda73e1977e0c860835c0",
+    "input_size": [
+      256,
+      256
+    ],
+    "network": "alex",
+    "package_version": "0.1.4",
+    "resampling": "bicubic",
+    "version": "0.1"
+  },
+  "numpy_version": "2.4.6",
+  "pillow_version": "12.3.0",
+  "python_version": "3.11.15",
+  "schema_version": 1,
+  "started_utc": "2026-09-02T10:38:12.122Z"
+}

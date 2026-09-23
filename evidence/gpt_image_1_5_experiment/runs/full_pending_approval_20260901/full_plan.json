@@ -1,0 +1,15 @@
+{
+  "approval_utc": "2026-09-02T05:44:41.000Z",
+  "authorization_basis": "User explicitly authorized the complete end-to-end S1-S6 experiment on 2026-09-02.",
+  "authorized": true,
+  "created_utc": "2026-09-01T18:58:49.907Z",
+  "dataset_digest": "d2d26791b48a367063fb93dbc241d98089bcb94b19157195ef0b100771f4484c",
+  "jobs_sha256": "07a8c4e45e01da941c09f3daf1093d38fc370f5d0b60426d23d38f8f6caba76a",
+  "phase": "full",
+  "preview_signature_reuses": 24,
+  "expected_new_paid_requests": 420,
+  "run_id": "full_pending_approval_20260901",
+  "schema_version": 1,
+  "subsets_digest": "9705d06f7c5c402c1e128f9c1b3ce4bb4306f86ef8f07b2e1a786acc90299dc2",
+  "unique_request_count": 444
+}

@@ -1,0 +1,673 @@
+{
+  "annotations_sha256": "e3b12d9a3811a4ece8a813daf67317e793f965ccf91d955a10934dca37375093",
+  "frozen_utc": "2026-09-01T18:50:25.100Z",
+  "pairs_dataset_digest": "d2d26791b48a367063fb93dbc241d98089bcb94b19157195ef0b100771f4484c",
+  "regime_counts": {
+    "ordinary": 14,
+    "periodic": 30,
+    "semantic": 76
+  },
+  "schema_version": 1,
+  "seed": 2026,
+  "selection_rule": "ascending sha256('<seed>:<subset>:<k>') independently per regime",
+  "source_only_annotation_contract": true,
+  "subsets": {
+    "human_42": [
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0680",
+        "rationale": "Irregular flecked and gauze-like cues lack a dominant repeat",
+        "regime": "ordinary",
+        "selection_score": "12d70163dc06816068a8706453e3f9c00996853d30f42f2f4ba818c4f3748286"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0783",
+        "rationale": "Irregular stained and woven cues lack a dominant regular repeat",
+        "regime": "ordinary",
+        "selection_score": "2d4d795ba46e869cc64f005d9a8d9cede08f83910c4b2c3a96568e98926d5cf2"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0536",
+        "rationale": "Irregular gauze and scale-like cues lack a stable lattice or object",
+        "regime": "ordinary",
+        "selection_score": "453abec4f136c96209888edc2d4986829c888818e24e376fd66f66e07cd49cb0"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0174",
+        "rationale": "Irregular bubbles and swirls lack a dominant repeat or object",
+        "regime": "ordinary",
+        "selection_score": "568079df429de29aee061e58353da4d7e29b8a28b078bbecc6e04a52e1cb8c59"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0652",
+        "rationale": "Irregular braided and grassy fibers lack a stable lattice or focal object",
+        "regime": "ordinary",
+        "selection_score": "6385c54b425e106e46f1de173bfbaac574b82d4524c91f7c6682df181a6c3d91"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0315",
+        "rationale": "Irregular cracked and porous material cues lack a dominant repeat",
+        "regime": "ordinary",
+        "selection_score": "714214160a6c1d053f37d304399ecec19ccfa236c0b9010e81610ec7d78f211e"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0232",
+        "rationale": "Irregular stripe-like and fibrous cues lack a stable lattice or object",
+        "regime": "ordinary",
+        "selection_score": "733aeb44773c57f011c55c2733e3267fc3cef7fd964f5d21fd3735969ade8ea4"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0140",
+        "rationale": "Irregular crystalline and speckled cues lack a dominant repeat or object",
+        "regime": "ordinary",
+        "selection_score": "79a5d9ee2743cc2fc1c538e934f7979fe0f9587dfffc60dbe7231965b68192a0"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0445",
+        "rationale": "Irregular marbled and wrinkled material cues lack a dominant repeat",
+        "regime": "ordinary",
+        "selection_score": "7f66f5a018c2d25447ca2338afaaa97c8f311b8108eed5557bbb24f7d0052d1d"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0299",
+        "rationale": "Irregular scale-like texture lacks a dominant object or regular repeat",
+        "regime": "ordinary",
+        "selection_score": "92b70d5591b8572fccf3e4e7a5a9d70efeb6055a0528a2b73df91c462c2dded5"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0829",
+        "rationale": "Irregular furry and smeared material cues lack a dominant repeat",
+        "regime": "ordinary",
+        "selection_score": "a56d31d2960bf337e391364a64b07c3e955ce8755c8ecbd3bbf2f3f3c56fafce"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0947",
+        "rationale": "Irregular material texture lacks a dominant object or stable repeat",
+        "regime": "ordinary",
+        "selection_score": "b05d709cbea52425e3b92a9e71129a3e365b7ed085b626d45f57ac4cf608f0a3"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0835",
+        "rationale": "Irregular abstract graphic texture lacks a focal object or stable lattice",
+        "regime": "ordinary",
+        "selection_score": "b19c0a05854b0474a9fcd3e0c2f8f194485c1601c14d23b686b2a367d0d0aba5"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0489",
+        "rationale": "Irregular layered and scale-like material lacks a dominant repeat",
+        "regime": "ordinary",
+        "selection_score": "f68522fa1f4b1591d4627d63c3278e8d8d643bfaa95cdc411a463822d514941f"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0705",
+        "rationale": "Dominant checker repetition is visible",
+        "regime": "periodic",
+        "selection_score": "06806cd577fa34e617d02f990937848cb161fec76491f904b2273705cd12ce8c"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0009",
+        "rationale": "Dominant repeated dot and ornamental motifs are visible",
+        "regime": "periodic",
+        "selection_score": "06faf9503cf7c661cfdfd7f44f3b3f090d88a80515e341bf117704159cf39445"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0724",
+        "rationale": "Dominant weave and groove repetition is visible",
+        "regime": "periodic",
+        "selection_score": "0c93885b897b39ef6014796d4d736702e67ea5176d525835164effbe5c7cfcb2"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0742",
+        "rationale": "Dominant knitted repetition is visible",
+        "regime": "periodic",
+        "selection_score": "0f17386d6f69a229d4fe2c44326cb0d7d2efbf0f074f041ffa45c116c24dc856"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0182",
+        "rationale": "Dominant woven repetition is visible",
+        "regime": "periodic",
+        "selection_score": "1286d1ea7b88cf40c1190ba3875a1646ebdc6f80ba64d2bb9a2336b41c46cbad"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0530",
+        "rationale": "Dominant lace and layered repetition is visible",
+        "regime": "periodic",
+        "selection_score": "1a89d69aa092336c48dc4150a61fb07025e851434985feca94c861a113bad0a6"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0759",
+        "rationale": "Dominant mesh repetition is visible",
+        "regime": "periodic",
+        "selection_score": "31de2492b2bc9a7c7cd537e26225be96cd634acdc2a4cfe57cbe95ee058f0f5f"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0017",
+        "rationale": "Dominant knit and zigzag repeats are visible",
+        "regime": "periodic",
+        "selection_score": "31ebe20dd720bd079319b6536b454e22468326b48b8960c29a1e9c9f186db557"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0214",
+        "rationale": "Dominant crosshatched and dot repetition is visible",
+        "regime": "periodic",
+        "selection_score": "3ffedb7f32e2d9fc7405d93bf50d6e2c9d68e74baf25a9bb1ee0fd1c92895299"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0834",
+        "rationale": "Dominant mesh repetition is visible",
+        "regime": "periodic",
+        "selection_score": "59d6fac0bbaf7f879905f40c0a6e770727f091547d568257e3278a2a15b14653"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0943",
+        "rationale": "Dominant dot and stripe repetition is visible",
+        "regime": "periodic",
+        "selection_score": "5f576bf9ab7ebf3bc7b837b5e424cfe4797127682539b88d14b3be959e709fab"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0626",
+        "rationale": "Dominant yarn and zigzag repetition is visible",
+        "regime": "periodic",
+        "selection_score": "6590e8b6c6fae58b5a5ed2510c6fa5ca44b4c9e763d417abb0bd80cc1ac1f9d3"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0053",
+        "rationale": "Dominant parallel stripe and pleat structure is visible",
+        "regime": "periodic",
+        "selection_score": "6aaf9ddde82fc842c3b5159941ca5b81d49b6f5c6fedd0c9536776ebcd2aeb78"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0456",
+        "rationale": "Dominant ornamental motif repetition is visible",
+        "regime": "periodic",
+        "selection_score": "72a750adf9ed8bd20c9c05590f4e2e5f2718e0868388eba2dd5550b2753dbed0"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0656",
+        "rationale": "Recognizable flowers are visible",
+        "regime": "semantic",
+        "selection_score": "02d6a8e2647b8383cd7a4950b7d6811ec091ea60b55496c96cb812d83c6f36c6"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0807",
+        "rationale": "Recognizable floral imagery is visible",
+        "regime": "semantic",
+        "selection_score": "0c4a6f04ac959cf2378492400b22a2c46a7af3da02379d58f49db36e43223faa"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0737",
+        "rationale": "A recognizable fish is visible",
+        "regime": "semantic",
+        "selection_score": "0d452453b293de59f8d438c9b4619fa4ebc1a1d8303db9797fc1a94fbd2fb230"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0426",
+        "rationale": "Recognizable cake and bag-like object cues are visible",
+        "regime": "semantic",
+        "selection_score": "133d11acff619f91096a84f42927958f1150c6d5369cecdaaba780fef5a602f4"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0838",
+        "rationale": "A recognizable shirt is visible",
+        "regime": "semantic",
+        "selection_score": "17692f28a598058b65ca843a0feed6f7e579f2ca3c2f0f31aa98c1b84babb1cd"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0937",
+        "rationale": "Recognizable cat and bag cues are visible",
+        "regime": "semantic",
+        "selection_score": "1938b8620adbc1ab33c6b3baefb1ecb3122daadae4d758684ee52faea411ff40"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0938",
+        "rationale": "Recognizable decking and knitted-object cues are visible",
+        "regime": "semantic",
+        "selection_score": "1c30a3d9b8b7469d49beab489ebc1ad19e110f9b04a6a42b4d698170bd1e534e"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0869",
+        "rationale": "A recognizable chair is visible",
+        "regime": "semantic",
+        "selection_score": "1e4e3209f7b8b05d79fb9aea41edc3071a1659c09263a673b02ed533cd9672d8"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0221",
+        "rationale": "A recognizable forest scene is visible",
+        "regime": "semantic",
+        "selection_score": "226245a6a1b3dd0e723711d734fb9a6bb7998b634d7d969302bd0e93fb4a7825"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0534",
+        "rationale": "Recognizable waffle-like food structure is visible",
+        "regime": "semantic",
+        "selection_score": "25db4020d6e70576d68efde102d606121cb2f89d66dfcf07843788449feb28e9"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0770",
+        "rationale": "Recognizable manufactured blocks and leaf cues are visible",
+        "regime": "semantic",
+        "selection_score": "2a45dd0af0dc02552b88b0f6899045949c417e5b21f8a868b3daf89d00293221"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0339",
+        "rationale": "Recognizable waffle and seed-like food cues are visible",
+        "regime": "semantic",
+        "selection_score": "2af6df6fd3486034454c01c09128d95f1a392373e2641f4275c06aa4c63f588a"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0927",
+        "rationale": "Recognizable toy and manufactured-tile cues are visible",
+        "regime": "semantic",
+        "selection_score": "2f92e01744ecd1319b2e4dc27dd5ff27fbf0728f0ef04a46b6bf63a194821a4b"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0618",
+        "rationale": "Recognizable pastry and artwork cues are visible",
+        "regime": "semantic",
+        "selection_score": "411c05f65f5fe6a5c7fbebce913ea0da036296a30acb880da4d85eb3be844a5d"
+      }
+    ],
+    "pilot_3": [
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0445",
+        "rationale": "Irregular marbled and wrinkled material cues lack a dominant repeat",
+        "regime": "ordinary",
+        "selection_score": "04a6b32864e47f147e4ae0dc24d426dbf196de6490fcaf268b4952549d814249"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0725",
+        "rationale": "Dominant mesh repetition is visible",
+        "regime": "periodic",
+        "selection_score": "0245d905707dc3f3fd61968d4b6a64f3dd998f3cf8d7212a3ccb8016e7aafe1f"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0656",
+        "rationale": "Recognizable flowers are visible",
+        "regime": "semantic",
+        "selection_score": "0073aac38f5b278e3bffdbab892151335bde782ab73c99fc1552130948a17b26"
+      }
+    ],
+    "s3_24": [
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0140",
+        "rationale": "Irregular crystalline and speckled cues lack a dominant repeat or object",
+        "regime": "ordinary",
+        "selection_score": "0fa31b2ce404e7e528c3c8753ee90b01f0da102a68b4d4a19843dadb00718a41"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0680",
+        "rationale": "Irregular flecked and gauze-like cues lack a dominant repeat",
+        "regime": "ordinary",
+        "selection_score": "17ae031c0c454e517e1eb62aa0cecebc54fe78684209b302185b31a8dc31e962"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0299",
+        "rationale": "Irregular scale-like texture lacks a dominant object or regular repeat",
+        "regime": "ordinary",
+        "selection_score": "4c554b07683d2807fa4552db175ab4356b938bc229c7244e8534f07db46031cc"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0489",
+        "rationale": "Irregular layered and scale-like material lacks a dominant repeat",
+        "regime": "ordinary",
+        "selection_score": "60c2f56a5390b537bc2309d68c95a8a32ed7adafae439d389a8e690ca3b05f78"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0829",
+        "rationale": "Irregular furry and smeared material cues lack a dominant repeat",
+        "regime": "ordinary",
+        "selection_score": "61a2caadd76c2b0e0956e5d8dcfa25955016be1dc1c3de38bdcc056c216d1633"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0174",
+        "rationale": "Irregular bubbles and swirls lack a dominant repeat or object",
+        "regime": "ordinary",
+        "selection_score": "64f7b85bbf87d17422e8f04af066d68c0142224e52ac27d7acbfc43eb14cbf56"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0783",
+        "rationale": "Irregular stained and woven cues lack a dominant regular repeat",
+        "regime": "ordinary",
+        "selection_score": "7045b93e4eb8bb6006c8fc56d3ace780c61cad7b2bd9a1cb2fb1b0df3a858ffe"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0315",
+        "rationale": "Irregular cracked and porous material cues lack a dominant repeat",
+        "regime": "ordinary",
+        "selection_score": "740e268ac661f71394aaa86f88c3d2d7f2275e42d6f19aa926a0c2129f96ec98"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0943",
+        "rationale": "Dominant dot and stripe repetition is visible",
+        "regime": "periodic",
+        "selection_score": "09e415e678d386cd149ecdb64b1ded4d2957587d718937462d64b7391569090b"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0022",
+        "rationale": "A strong repeated zigzag structure is visible",
+        "regime": "periodic",
+        "selection_score": "0b1eb0dd7db6012e664445b1d0301d4a027b55e6be97407512f9a5de70352113"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0759",
+        "rationale": "Dominant mesh repetition is visible",
+        "regime": "periodic",
+        "selection_score": "0c47d52959507569ca4cc193c7c6e259ec5d5ad52746f27aed1282c8dc484a2c"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0182",
+        "rationale": "Dominant woven repetition is visible",
+        "regime": "periodic",
+        "selection_score": "0e2c93223bdc272af35badc56946ce02147dccb88e5c0586f5c8bf83a0d06a1f"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0841",
+        "rationale": "Dominant stripe and zigzag repetition is visible",
+        "regime": "periodic",
+        "selection_score": "143ade9b9a2e41ee3e074cc83ee06449f5ac0d85e01684f41dc557b6472cd135"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0068",
+        "rationale": "Dominant repeated linear structure is visible",
+        "regime": "periodic",
+        "selection_score": "15ed9344830ef475835e35a414b200a834caafbb739fe6e274444f40502f3e97"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0530",
+        "rationale": "Dominant lace and layered repetition is visible",
+        "regime": "periodic",
+        "selection_score": "1715cc1ee8a03c1194bf8d689641319e36f6899b6f19fca5011929ee50f0d1ca"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0693",
+        "rationale": "Dominant mesh and scale repetition is visible",
+        "regime": "periodic",
+        "selection_score": "23f3b8d63f84680923216feabf41e3dd3460548f1ade302c67b2eb2e73759a7d"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0838",
+        "rationale": "A recognizable shirt is visible",
+        "regime": "semantic",
+        "selection_score": "009067fb4bf4332c53e417cc521c0341fc478a6d83e9a82ebe260f96a43f2be0"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0568",
+        "rationale": "Recognizable tree and bark structure is visible",
+        "regime": "semantic",
+        "selection_score": "05384153a85a697155cdb1749a6d46d358ec01d13379853cf1b175d2141f610a"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0657",
+        "rationale": "A recognizable garment is visible",
+        "regime": "semantic",
+        "selection_score": "0621487b75838919cfb485c2dc295b11deada686e4aa7abb9289e51a837968de"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0239",
+        "rationale": "Recognizable pothole and quilt-like artifacts are visible",
+        "regime": "semantic",
+        "selection_score": "0921c91a123523923079edce147b7daf272e666b2e170271d435f95a4e283a2f"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0091",
+        "rationale": "Visible text or watermark creates semantic intrusion",
+        "regime": "semantic",
+        "selection_score": "0ae269c1eaf9e7e510c9043684d36462ae743d229ff065532d42bf5b078490f8"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0794",
+        "rationale": "Recognizable drawn or graphic imagery is visible",
+        "regime": "semantic",
+        "selection_score": "0efd5579a9ac62831280f7b8fd0b1850ec5bbcac7aece8138992d92ca7d547ce"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0618",
+        "rationale": "Recognizable pastry and artwork cues are visible",
+        "regime": "semantic",
+        "selection_score": "1260f383f4be497a1cef2edf595dea45fb6ca56448dee616c4b20d0e2787982f"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0718",
+        "rationale": "A recognizable plant is visible",
+        "regime": "semantic",
+        "selection_score": "1476e2ecb156a9339c6f2804b77d148f16f1a657f765d779a7f965352e332cd5"
+      }
+    ],
+    "s5_12": [
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0299",
+        "rationale": "Irregular scale-like texture lacks a dominant object or regular repeat",
+        "regime": "ordinary",
+        "selection_score": "0e875c88bc9bbacb92febc5f9f51e794b74102d021ad6f1ac23cf198a03b3d39"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0783",
+        "rationale": "Irregular stained and woven cues lack a dominant regular repeat",
+        "regime": "ordinary",
+        "selection_score": "2a8b425d8ca228946275161a55932751c735e1d54de29a4aef50e3d3458494e9"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0140",
+        "rationale": "Irregular crystalline and speckled cues lack a dominant repeat or object",
+        "regime": "ordinary",
+        "selection_score": "5211fbba903f1855ae548264f794ae4efef3657479c8bd24f00ea61c90b592e8"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0232",
+        "rationale": "Irregular stripe-like and fibrous cues lack a stable lattice or object",
+        "regime": "ordinary",
+        "selection_score": "5658dec460079fa7f01307d9beb5682d1f6958858a31febb9c2f811e1c2136e2"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0182",
+        "rationale": "Dominant woven repetition is visible",
+        "regime": "periodic",
+        "selection_score": "0aceaef7cf8ac719a5c3e0d669bd3ee68581ffc620fbdc07db49b1b4b1e33dcd"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0009",
+        "rationale": "Dominant repeated dot and ornamental motifs are visible",
+        "regime": "periodic",
+        "selection_score": "0d9c049c606adb654b92a52529b5cbecca8614d886f44501d762931cf2d31ad5"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0725",
+        "rationale": "Dominant mesh repetition is visible",
+        "regime": "periodic",
+        "selection_score": "1c80d84d7452375e258242fc4f99336878c53cd0f3bb5bd2cd3700f4ecd97a50"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0460",
+        "rationale": "Dominant zigzag structure is visible",
+        "regime": "periodic",
+        "selection_score": "2791794520604a3e5dfac23ccd008ecbe29e4b131434bf3df6d11776c0e1f95e"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0912",
+        "rationale": "Recognizable garment and fish cues are visible",
+        "regime": "semantic",
+        "selection_score": "01816709238471c5eac5b95fdd5f9166b683dec593207013440aa546246becf3"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0656",
+        "rationale": "Recognizable flowers are visible",
+        "regime": "semantic",
+        "selection_score": "0a305cea739a1f849ba66e06ac5fe17524a8c4cffd4e431974be0ac5ae9f2dd9"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0568",
+        "rationale": "Recognizable tree and bark structure is visible",
+        "regime": "semantic",
+        "selection_score": "0ad2c9518028e8165ed5a8ae717e9080c1decd7eee30999f280a1a361eaf06f5"
+      },
+      {
+        "annotated_utc": "2026-09-01T18:47:00Z",
+        "annotator": "Codex_source_only",
+        "k": "0813",
+        "rationale": "A recognizable purse is visible",
+        "regime": "semantic",
+        "selection_score": "0f421ebcc7c9fcd3d029b02db46e0913ec4c2363185f70c9cdc7628ca5b4ffc7"
+      }
+    ]
+  },
+  "subsets_digest": "9705d06f7c5c402c1e128f9c1b3ce4bb4306f86ef8f07b2e1a786acc90299dc2"
+}

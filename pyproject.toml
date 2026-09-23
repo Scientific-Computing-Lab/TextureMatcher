@@ -1,0 +1,48 @@
+[project]
+name = "texton-matching"
+version = "0.1.0"
+description = "Reproduction package for Texture Interpolation as Texton Matching"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+
+# Tier 1 (score_only.py) needs only this base set -- CPU-only, no GPU, no
+# CNT/Texture Mixer install. Tiers 2/3 need the extras below plus
+# install/cnt.sh and/or install/texture_mixer.sh (see README).
+dependencies = [
+    "numpy",
+    "scipy",
+    "pandas",
+    "pillow",
+]
+
+[project.optional-dependencies]
+# Tier 2 (rescore.py): feature extraction and scoring, torch side.
+scoring = [
+    "torch",
+    "torchvision",
+    "timm>=1.0.11",
+    "lpips",
+    "einops",
+]
+# Tier 3, CNT side (experiments/cnt_1000.py, cnt_matched_200.py,
+# primitives_120.py, ceiling_120.py, rules_200.py, alignment.py,
+# anchor_mixtures.py, vacher_50.py, runtime_120.py): install/cnt.sh also
+# clones CNT itself and detectron2, which aren't pip packages of this
+# project and aren't listed here -- see install/cnt.sh.
+cnt = [
+    "torch",
+    "torchvision",
+    "timm>=1.0.11",
+    "lpips",
+    "einops",
+    "hydra-core>=1.3",
+    "omegaconf>=2.3",
+    "antlr4-python3-runtime==4.9.3",
+]
+dev = [
+    "pytest",
+]
+
+[tool.setuptools.packages.find]
+include = ["texton_matching*"]

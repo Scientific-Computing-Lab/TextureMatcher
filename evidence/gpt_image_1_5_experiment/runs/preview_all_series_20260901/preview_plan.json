@@ -1,0 +1,12 @@
+{
+  "authorization_basis": "User explicitly authorized the 45-call three-pair expanded preview.",
+  "authorized": true,
+  "created_utc": "2026-09-01T22:39:57.705Z",
+  "dataset_digest": "d2d26791b48a367063fb93dbc241d98089bcb94b19157195ef0b100771f4484c",
+  "jobs_sha256": "5a6d9f53a1137af2954eeb5023982e922fc0bc1fe9ddcd80c6ee8c6e74ad4be5",
+  "phase": "preview",
+  "run_id": "preview_all_series_20260901",
+  "schema_version": 1,
+  "subsets_digest": "9705d06f7c5c402c1e128f9c1b3ce4bb4306f86ef8f07b2e1a786acc90299dc2",
+  "unique_request_count": 45
+}

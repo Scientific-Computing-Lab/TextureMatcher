@@ -1,0 +1,143 @@
+schema_version: 1
+experiment_id: gpt_image_1_5_texture_midpoints
+seed: 2026
+
+data:
+  source_url: CODE_URL
+  source_commit: 366d4e53631c2d610969b557028d41f0d843f7de
+  root: ..
+  pairs_csv: ../pairs.csv
+  a_dir: ../A
+  b_dir: ../B
+  expected_rows: 120
+  expected_size: [256, 256]
+  allowed_modes: [RGB]
+  pair_manifest: data/pairs_manifest.json
+  strata_annotations: data/strata_annotations.csv
+  subsets: data/subsets.json
+
+azure:
+  api_key_env: AZURE_OPENAI_API_KEY
+  endpoint: AZURE_ENDPOINT_REDACTED
+  api_version: 2025-04-01-preview
+  deployment: gpt-image-1.5
+  pricing:
+    source: https://prices.azure.com/api/retail/prices
+    retrieved_utc: "2026-09-02T06:22:16.982Z"
+    currency: USD
+    region: eastus2
+    deployment_class_assumption: data_zone
+    effective_start: "2025-12-01T00:00:00Z"
+    usd_per_million_tokens:
+      input_text: 5.5
+      input_image: 8.8
+      output_text: 11.0
+      output_image: 35.2
+    global_standard_multiplier: 0.9090909090909091
+
+generation:
+  n: 1
+  size: 1024x1024
+  input_fidelity: high
+  output_format: png
+  concurrency: 1
+  request_timeout_seconds: 600
+  paid_call_cap: 10
+  expanded_preview_call_cap: 45
+  smoke_quality: low
+  pilot_quality: medium
+  full_quality: high
+
+retry:
+  max_attempts: 4
+  base_delay_seconds: 2.0
+  max_delay_seconds: 30.0
+  jitter_seconds: 0.75
+  retry_http_statuses: [429, 500, 502, 503, 504]
+
+prompts:
+  P0_MINIMAL: prompts/P0_MINIMAL_v1.txt
+  P1_PERCEPTUAL_SYMMETRIC: prompts/P1_PERCEPTUAL_SYMMETRIC_v1.txt
+  P2_SOURCE_LAYOUT: prompts/P2_SOURCE_LAYOUT_v1.txt
+  P3_PATH: prompts/P3_PATH_v1.txt
+  manifest: prompts/manifest.json
+
+selection:
+  annotation_contract: source_images_only_before_any_model_output
+  regimes: [ordinary, periodic, semantic]
+  pilot_per_regime: 1
+  s3_per_regime: 8
+  s5_per_regime: 4
+  score: sha256_seed_subset_k
+
+series:
+  S1:
+    prompt_id: P2_SOURCE_LAYOUT
+    order: AB
+    subset: all
+    replicates: 1
+    quality: high
+  S2:
+    prompt_id: P1_PERCEPTUAL_SYMMETRIC
+    order: AB
+    subset: all
+    replicates: 1
+    quality: high
+  S3:
+    prompt_ids: [P0_MINIMAL, P1_PERCEPTUAL_SYMMETRIC, P2_SOURCE_LAYOUT]
+    order: AB
+    subset: s3_24
+    replicates: 1
+    quality: high
+  S4:
+    prompt_id: P1_PERCEPTUAL_SYMMETRIC
+    orders: [AB, BA]
+    subset: s3_24
+    replicates: 2
+    quality: high
+  S5:
+    prompt_id: P3_PATH
+    order: AB
+    subset: s5_12
+    t_values: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
+    replicates: 1
+    quality: high
+  S6:
+    calls: 0
+    analysis_only: true
+
+evaluation:
+  output_size: [128, 128]
+  resize_method: unresolved_from_available_paper_artifacts
+  perceptual_metrics:
+    frozen_utc: 2026-09-02T05:47:00Z
+    dinov2_model: facebook/dinov2-base
+    dinov2_revision: f9e44c814b77203eaa57a6bdbbd535f21ede1415
+    dinov2_distance: cosine_distance_cls_embedding
+    lpips_network: alex
+    lpips_version: "0.1"
+    lpips_input_size: [256, 256]
+    lpips_resampling: bicubic
+  bootstrap_seed: 2026
+  bootstrap_replicates: 10000
+  permutation_replicates: 100000
+  multiple_comparison: holm
+  symmetry_statistic: mean_between_order_distance_over_mean_within_order_distance
+  foundation_reference_label: distance_to_foundation_model_reference
+
+human_study:
+  seed: 2026
+  methods: [AAT, Gaussian, TextureMixer, GPT_P1, GPT_P2, Pixel, Position]
+  candidate_block_size: 2
+  endpoint_pairs: 42
+  endpoint_pairs_per_regime: 14
+  target_power: 0.90
+  target_participants: 180
+  scored_trials_per_participant: 30
+  primary_trials_per_participant: 12
+  attention_checks_per_participant: 2
+  alpha: 0.05
+  smallest_effect_preference: 0.55
+  power_simulations: 5000
+  participant_logit_sd: 0.35
+  pair_logit_sd: 0.25

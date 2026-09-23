@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "manifest_record.schema.json",
+  "title": "Azure GPT Image request manifest record",
+  "type": "object",
+  "required": [
+    "schema_version", "run_id", "series_id", "prompt_id", "prompt_hash",
+    "request_signature", "k", "category_A", "category_B", "file_A",
+    "file_B", "sha256_A", "sha256_B", "input_order", "endpoint",
+    "api_version", "deployment", "sdk_version", "size", "quality",
+    "input_fidelity", "output_format", "replicate", "started_utc",
+    "ended_utc", "latency_seconds", "attempt_count", "status",
+    "git_commit", "dirty_worktree"
+  ],
+  "properties": {
+    "schema_version": {"const": 1},
+    "status": {"enum": ["success", "failed", "skipped_existing"]},
+    "input_order": {"enum": ["AB", "BA"]},
+    "output_dimensions": {
+      "type": ["array", "null"],
+      "prefixItems": [{"type": "integer"}, {"type": "integer"}]
+    },
+    "revised_prompt": {"type": ["string", "null"]},
+    "usage": {"type": ["object", "null"]},
+    "request_id": {"type": ["string", "null"]},
+    "error_code": {"type": ["string", "null"]}
+  },
+  "additionalProperties": true
+}

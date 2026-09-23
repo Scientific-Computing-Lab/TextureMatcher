@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "pairs_manifest.schema.json",
+  "title": "Frozen 120-pair DTD input manifest",
+  "type": "object",
+  "required": ["schema_version", "dataset_digest", "pairs_csv_sha256", "row_count", "pairs"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "row_count": {"const": 120},
+    "pairs": {
+      "type": "array",
+      "minItems": 120,
+      "maxItems": 120,
+      "items": {
+        "type": "object",
+        "required": ["k", "category_A", "category_B", "file_A", "file_B", "sha256_A", "sha256_B", "width_A", "height_A", "width_B", "height_B", "mode_A", "mode_B"]
+      }
+    }
+  },
+  "additionalProperties": true
+}
+

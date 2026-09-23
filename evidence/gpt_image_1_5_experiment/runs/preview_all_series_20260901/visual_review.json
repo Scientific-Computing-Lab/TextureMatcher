@@ -1,0 +1,9 @@
+{
+  "reviewed_utc": "2026-09-01T23:10:00Z",
+  "review_scope": "Post-generation qualitative review of nine consolidated preview figures; not model reasoning or a scientific outcome analysis.",
+  "reviewer": "Codex",
+  "ordinary_0445": "P0/P1 mix marbled and wrinkled cues; P2 imposes a diamond-like structure. S4 varies with order and repeat. S5 changes color but retains an interior topology that transitions abruptly to B.",
+  "periodic_0725": "All midpoint prompts favor an explicit target-like mesh. S4 changes scale, density, geometry, and brightness. S5 introduces mesh early and changes motif scale non-monotonically.",
+  "semantic_0656": "All prompts and all generated path frames retain recognizable roses. P2 most clearly preserves source layout, and S5 transitions abruptly from rose objects at t=0.9 to the non-object B endpoint.",
+  "scientific_status": "Descriptive preview only; no winner selection, hypothesis test, or ground-truth claim."
+}

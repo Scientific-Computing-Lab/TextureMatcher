@@ -1,0 +1,32 @@
+{
+  "bootstrap_replicates": 10000,
+  "created_utc": "2026-09-02T10:28:09.190Z",
+  "results": [
+    {
+      "mean_between_order_distance": 0.24716050984958807,
+      "mean_within_order_repeat_distance": 0.18290037785967192,
+      "n_pairs": 24,
+      "pairwise_ratio_median": 1.233844083656102,
+      "preregistered_ratio": 1.3513395256034897,
+      "space": "DINOv2",
+      "stratified_bootstrap_95_ci": [
+        1.2095903535772758,
+        1.5576816179504158
+      ]
+    },
+    {
+      "mean_between_order_distance": 0.4026276939548552,
+      "mean_within_order_repeat_distance": 0.36598043112705153,
+      "n_pairs": 24,
+      "pairwise_ratio_median": 1.0884538773068586,
+      "preregistered_ratio": 1.1001344872865113,
+      "space": "LPIPS",
+      "stratified_bootstrap_95_ci": [
+        1.047256447111375,
+        1.158408972788689
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "seed": 2026
+}

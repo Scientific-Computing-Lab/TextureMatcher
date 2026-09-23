@@ -1,0 +1,11 @@
+{
+  "authorized": false,
+  "created_utc": "2026-09-01T18:50:56.144Z",
+  "dataset_digest": "d2d26791b48a367063fb93dbc241d98089bcb94b19157195ef0b100771f4484c",
+  "jobs_sha256": "5be707ff128846b7f9f6839d5564a364def488c59c4c86d31ce69980974e85c7",
+  "phase": "pilot",
+  "run_id": "pilot_20260901T185300Z",
+  "schema_version": 1,
+  "subsets_digest": "9705d06f7c5c402c1e128f9c1b3ce4bb4306f86ef8f07b2e1a786acc90299dc2",
+  "unique_request_count": 10
+}

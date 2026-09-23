@@ -1,0 +1,37 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*.pyc
+.ipynb_checkpoints/
+
+# Packaging
+*.egg-info/
+build/
+dist/
+
+# Archives and rendered/scored outputs -- never commit these; DATA_ROOT and
+# --out / --data-root point at wherever you've unpacked or rendered them.
+# Anchored to the repo root (leading /) so this doesn't also match nested
+# data/ directories that are meant to be committed, e.g.
+# evidence/gpt_image_1_5_experiment/data/.
+*.zip
+*.tar.gz
+/data/
+/rendered/
+/scored/
+
+# Checkpoints (fetched by install/*.sh, not committed)
+*.ckpt
+*.pkl
+*.pth
+network-final.pkl
+
+# Editors / OS
+.DS_Store
+.vscode/
+.idea/
+
+# Local environments
+.venv/
+venv/
+env/

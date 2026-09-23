@@ -1,0 +1,121 @@
+k,regime,rationale,annotator,annotated_utc
+0006,semantic,Recognizable food or produce appears in the source pair,Codex_source_only,2026-09-01T18:47:00Z
+0009,periodic,Dominant repeated dot and ornamental motifs are visible,Codex_source_only,2026-09-01T18:47:00Z
+0017,periodic,Dominant knit and zigzag repeats are visible,Codex_source_only,2026-09-01T18:47:00Z
+0022,periodic,A strong repeated zigzag structure is visible,Codex_source_only,2026-09-01T18:47:00Z
+0053,periodic,Dominant parallel stripe and pleat structure is visible,Codex_source_only,2026-09-01T18:47:00Z
+0068,periodic,Dominant repeated linear structure is visible,Codex_source_only,2026-09-01T18:47:00Z
+0069,semantic,A recognizable handbag is visible,Codex_source_only,2026-09-01T18:47:00Z
+0091,semantic,Visible text or watermark creates semantic intrusion,Codex_source_only,2026-09-01T18:47:00Z
+0099,periodic,Dominant woven and zigzag repeats are visible,Codex_source_only,2026-09-01T18:47:00Z
+0110,semantic,Recognizable web and designed-object cues are visible,Codex_source_only,2026-09-01T18:47:00Z
+0140,ordinary,Irregular crystalline and speckled cues lack a dominant repeat or object,Codex_source_only,2026-09-01T18:47:00Z
+0142,periodic,Dominant checker-like repetition is visible,Codex_source_only,2026-09-01T18:47:00Z
+0143,semantic,Recognizable waffle or food structure is visible,Codex_source_only,2026-09-01T18:47:00Z
+0156,semantic,Recognizable food elements are visible,Codex_source_only,2026-09-01T18:47:00Z
+0168,semantic,Recognizable discrete objects dominate part of the pair,Codex_source_only,2026-09-01T18:47:00Z
+0174,ordinary,Irregular bubbles and swirls lack a dominant repeat or object,Codex_source_only,2026-09-01T18:47:00Z
+0178,periodic,Dominant grid structure is visible,Codex_source_only,2026-09-01T18:47:00Z
+0182,periodic,Dominant woven repetition is visible,Codex_source_only,2026-09-01T18:47:00Z
+0184,semantic,A recognizable human face is visible,Codex_source_only,2026-09-01T18:47:00Z
+0193,semantic,Recognizable fence or web structure creates scene-level cues,Codex_source_only,2026-09-01T18:47:00Z
+0200,semantic,Recognizable vehicle-like and manufactured grate cues are visible,Codex_source_only,2026-09-01T18:47:00Z
+0214,periodic,Dominant crosshatched and dot repetition is visible,Codex_source_only,2026-09-01T18:47:00Z
+0221,semantic,A recognizable forest scene is visible,Codex_source_only,2026-09-01T18:47:00Z
+0230,semantic,Recognizable graphic or interface-like elements are visible,Codex_source_only,2026-09-01T18:47:00Z
+0232,ordinary,Irregular stripe-like and fibrous cues lack a stable lattice or object,Codex_source_only,2026-09-01T18:47:00Z
+0238,semantic,Recognizable road and bodily-material cues are visible,Codex_source_only,2026-09-01T18:47:00Z
+0239,semantic,Recognizable pothole and quilt-like artifacts are visible,Codex_source_only,2026-09-01T18:47:00Z
+0299,ordinary,Irregular scale-like texture lacks a dominant object or regular repeat,Codex_source_only,2026-09-01T18:47:00Z
+0308,semantic,A recognizable human face is visible,Codex_source_only,2026-09-01T18:47:00Z
+0315,ordinary,Irregular cracked and porous material cues lack a dominant repeat,Codex_source_only,2026-09-01T18:47:00Z
+0319,periodic,Dominant perforated and banded repetition is visible,Codex_source_only,2026-09-01T18:47:00Z
+0323,semantic,Recognizable wheel-like or decorative object cues are visible,Codex_source_only,2026-09-01T18:47:00Z
+0339,semantic,Recognizable waffle and seed-like food cues are visible,Codex_source_only,2026-09-01T18:47:00Z
+0362,semantic,Recognizable drawing and manufactured-tile cues are visible,Codex_source_only,2026-09-01T18:47:00Z
+0426,semantic,Recognizable cake and bag-like object cues are visible,Codex_source_only,2026-09-01T18:47:00Z
+0428,periodic,Dominant checker and zigzag repetition is visible,Codex_source_only,2026-09-01T18:47:00Z
+0435,semantic,Recognizable food form is visible,Codex_source_only,2026-09-01T18:47:00Z
+0445,ordinary,Irregular marbled and wrinkled material cues lack a dominant repeat,Codex_source_only,2026-09-01T18:47:00Z
+0451,semantic,Recognizable garment or bag construction is visible,Codex_source_only,2026-09-01T18:47:00Z
+0456,periodic,Dominant ornamental motif repetition is visible,Codex_source_only,2026-09-01T18:47:00Z
+0460,periodic,Dominant zigzag structure is visible,Codex_source_only,2026-09-01T18:47:00Z
+0473,semantic,Recognizable sidewalk and garden scene cues are visible,Codex_source_only,2026-09-01T18:47:00Z
+0475,semantic,Recognizable window-blind structure is visible,Codex_source_only,2026-09-01T18:47:00Z
+0479,periodic,Dominant parallel pleat structure is visible,Codex_source_only,2026-09-01T18:47:00Z
+0489,ordinary,Irregular layered and scale-like material lacks a dominant repeat,Codex_source_only,2026-09-01T18:47:00Z
+0499,semantic,Recognizable carved object and fruit-like cues are visible,Codex_source_only,2026-09-01T18:47:00Z
+0501,semantic,A recognizable pothole or road defect is visible,Codex_source_only,2026-09-01T18:47:00Z
+0502,semantic,Recognizable bananas are visible,Codex_source_only,2026-09-01T18:47:00Z
+0512,periodic,Dominant rectangular grid repetition is visible,Codex_source_only,2026-09-01T18:47:00Z
+0516,semantic,Recognizable room and fan-like object cues are visible,Codex_source_only,2026-09-01T18:47:00Z
+0520,semantic,Recognizable graph-paper and landscape cues are visible,Codex_source_only,2026-09-01T18:47:00Z
+0530,periodic,Dominant lace and layered repetition is visible,Codex_source_only,2026-09-01T18:47:00Z
+0534,semantic,Recognizable waffle-like food structure is visible,Codex_source_only,2026-09-01T18:47:00Z
+0536,ordinary,Irregular gauze and scale-like cues lack a stable lattice or object,Codex_source_only,2026-09-01T18:47:00Z
+0549,semantic,Recognizable bottle and manufactured checker cues are visible,Codex_source_only,2026-09-01T18:47:00Z
+0565,semantic,Recognizable pumpkins or produce are visible,Codex_source_only,2026-09-01T18:47:00Z
+0568,semantic,Recognizable tree and bark structure is visible,Codex_source_only,2026-09-01T18:47:00Z
+0577,semantic,A recognizable flower is visible,Codex_source_only,2026-09-01T18:47:00Z
+0591,semantic,Recognizable fruit is visible,Codex_source_only,2026-09-01T18:47:00Z
+0606,semantic,Recognizable fixture and flower cues are visible,Codex_source_only,2026-09-01T18:47:00Z
+0618,semantic,Recognizable pastry and artwork cues are visible,Codex_source_only,2026-09-01T18:47:00Z
+0626,periodic,Dominant yarn and zigzag repetition is visible,Codex_source_only,2026-09-01T18:47:00Z
+0652,ordinary,Irregular braided and grassy fibers lack a stable lattice or focal object,Codex_source_only,2026-09-01T18:47:00Z
+0656,semantic,Recognizable flowers are visible,Codex_source_only,2026-09-01T18:47:00Z
+0657,semantic,A recognizable garment is visible,Codex_source_only,2026-09-01T18:47:00Z
+0660,semantic,Recognizable architectural or jewel-like object cues are visible,Codex_source_only,2026-09-01T18:47:00Z
+0680,ordinary,Irregular flecked and gauze-like cues lack a dominant repeat,Codex_source_only,2026-09-01T18:47:00Z
+0687,semantic,A recognizable tunnel or architectural scene is visible,Codex_source_only,2026-09-01T18:47:00Z
+0693,periodic,Dominant mesh and scale repetition is visible,Codex_source_only,2026-09-01T18:47:00Z
+0702,semantic,A recognizable garment is visible,Codex_source_only,2026-09-01T18:47:00Z
+0705,periodic,Dominant checker repetition is visible,Codex_source_only,2026-09-01T18:47:00Z
+0709,semantic,Recognizable waffle-like food structure is visible,Codex_source_only,2026-09-01T18:47:00Z
+0718,semantic,A recognizable plant is visible,Codex_source_only,2026-09-01T18:47:00Z
+0724,periodic,Dominant weave and groove repetition is visible,Codex_source_only,2026-09-01T18:47:00Z
+0725,periodic,Dominant mesh repetition is visible,Codex_source_only,2026-09-01T18:47:00Z
+0737,semantic,A recognizable fish is visible,Codex_source_only,2026-09-01T18:47:00Z
+0738,semantic,Recognizable bread or pastry is visible,Codex_source_only,2026-09-01T18:47:00Z
+0742,periodic,Dominant knitted repetition is visible,Codex_source_only,2026-09-01T18:47:00Z
+0759,periodic,Dominant mesh repetition is visible,Codex_source_only,2026-09-01T18:47:00Z
+0770,semantic,Recognizable manufactured blocks and leaf cues are visible,Codex_source_only,2026-09-01T18:47:00Z
+0774,semantic,Recognizable human hair or person cues are visible,Codex_source_only,2026-09-01T18:47:00Z
+0783,ordinary,Irregular stained and woven cues lack a dominant regular repeat,Codex_source_only,2026-09-01T18:47:00Z
+0785,periodic,Dominant lace and scale repetition is visible,Codex_source_only,2026-09-01T18:47:00Z
+0786,periodic,Dominant checked and interlaced repetition is visible,Codex_source_only,2026-09-01T18:47:00Z
+0789,semantic,Recognizable floral drawing is visible,Codex_source_only,2026-09-01T18:47:00Z
+0794,semantic,Recognizable drawn or graphic imagery is visible,Codex_source_only,2026-09-01T18:47:00Z
+0801,semantic,Recognizable artwork or digital graphic cues are visible,Codex_source_only,2026-09-01T18:47:00Z
+0805,semantic,Recognizable animal and wooden-object cues are visible,Codex_source_only,2026-09-01T18:47:00Z
+0807,semantic,Recognizable floral imagery is visible,Codex_source_only,2026-09-01T18:47:00Z
+0813,semantic,A recognizable purse is visible,Codex_source_only,2026-09-01T18:47:00Z
+0816,periodic,Dominant stripe and lace repetition is visible,Codex_source_only,2026-09-01T18:47:00Z
+0817,semantic,A recognizable studded bag is visible,Codex_source_only,2026-09-01T18:47:00Z
+0821,semantic,A recognizable robe or garment is visible,Codex_source_only,2026-09-01T18:47:00Z
+0829,ordinary,Irregular furry and smeared material cues lack a dominant repeat,Codex_source_only,2026-09-01T18:47:00Z
+0834,periodic,Dominant mesh repetition is visible,Codex_source_only,2026-09-01T18:47:00Z
+0835,ordinary,Irregular abstract graphic texture lacks a focal object or stable lattice,Codex_source_only,2026-09-01T18:47:00Z
+0836,semantic,Recognizable crayons and animal-fur cues are visible,Codex_source_only,2026-09-01T18:47:00Z
+0838,semantic,A recognizable shirt is visible,Codex_source_only,2026-09-01T18:47:00Z
+0841,periodic,Dominant stripe and zigzag repetition is visible,Codex_source_only,2026-09-01T18:47:00Z
+0858,semantic,Recognizable human hair or person cues are visible,Codex_source_only,2026-09-01T18:47:00Z
+0869,semantic,A recognizable chair is visible,Codex_source_only,2026-09-01T18:47:00Z
+0875,semantic,A recognizable leaf is visible,Codex_source_only,2026-09-01T18:47:00Z
+0910,semantic,Recognizable manufactured plate and flower cues are visible,Codex_source_only,2026-09-01T18:47:00Z
+0912,semantic,Recognizable garment and fish cues are visible,Codex_source_only,2026-09-01T18:47:00Z
+0924,semantic,Recognizable outdoor and road-defect cues are visible,Codex_source_only,2026-09-01T18:47:00Z
+0927,semantic,Recognizable toy and manufactured-tile cues are visible,Codex_source_only,2026-09-01T18:47:00Z
+0933,semantic,Recognizable belt and plant cues are visible,Codex_source_only,2026-09-01T18:47:00Z
+0936,semantic,Recognizable spiderweb and rock cues are visible,Codex_source_only,2026-09-01T18:47:00Z
+0937,semantic,Recognizable cat and bag cues are visible,Codex_source_only,2026-09-01T18:47:00Z
+0938,semantic,Recognizable decking and knitted-object cues are visible,Codex_source_only,2026-09-01T18:47:00Z
+0940,semantic,Recognizable animal-pattern and manufactured mesh cues are visible,Codex_source_only,2026-09-01T18:47:00Z
+0943,periodic,Dominant dot and stripe repetition is visible,Codex_source_only,2026-09-01T18:47:00Z
+0945,semantic,Recognizable room and manufactured honeycomb cues are visible,Codex_source_only,2026-09-01T18:47:00Z
+0947,ordinary,Irregular material texture lacks a dominant object or stable repeat,Codex_source_only,2026-09-01T18:47:00Z
+0953,semantic,Recognizable pavement and leaf cues are visible,Codex_source_only,2026-09-01T18:47:00Z
+0958,semantic,Recognizable flower and digital-art cues are visible,Codex_source_only,2026-09-01T18:47:00Z
+0972,semantic,Recognizable shirt and pastry cues are visible,Codex_source_only,2026-09-01T18:47:00Z
+0975,semantic,Recognizable bands and manufactured perforated-metal cues are visible,Codex_source_only,2026-09-01T18:47:00Z
+0992,semantic,Recognizable crystal or mineral-object cues are visible,Codex_source_only,2026-09-01T18:47:00Z
+0994,semantic,Recognizable waffle-like food structure is visible,Codex_source_only,2026-09-01T18:47:00Z

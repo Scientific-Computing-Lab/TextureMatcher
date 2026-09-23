@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "trial_record.schema.json",
+  "title": "Blinded human-study trial",
+  "type": "object",
+  "required": ["trial_id", "k", "regime", "endpoint_order", "candidate_left", "candidate_right", "question_ids", "hashes"],
+  "properties": {
+    "endpoint_order": {"enum": ["AB", "BA"]},
+    "question_ids": {"const": ["pair_midpoint", "self_consistent_texture"]}
+  },
+  "additionalProperties": true
+}
+

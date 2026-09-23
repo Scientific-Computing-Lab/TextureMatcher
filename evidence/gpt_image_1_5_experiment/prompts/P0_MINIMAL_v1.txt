@@ -1,0 +1,2 @@
+You are given exactly two reference images in order: reference image 1 is texture A and reference image 2 is texture B. Generate one single square texture image M at the perceptual midpoint between A and B (t = 0.50). Output M only, edge-to-edge. Do not output A or B, a panel, collage, border, label, caption, or text.
+

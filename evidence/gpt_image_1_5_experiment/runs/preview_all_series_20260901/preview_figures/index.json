@@ -1,0 +1,53 @@
+{
+  "created_utc": "2026-09-01T23:08:01.935Z",
+  "display_resize": "Pillow LANCZOS fit within square; visualization only",
+  "files": [
+    {
+      "byte_count": 648841,
+      "path": "runs/preview_all_series_20260901/preview_figures/S1_S3/0445_high_quality_prompts.png",
+      "sha256": "41bf1eedae8148d126bff36401ea569dd9a0485a5d262ea95a40f5760445a0a2"
+    },
+    {
+      "byte_count": 801757,
+      "path": "runs/preview_all_series_20260901/preview_figures/S4/0445_symmetry_repeats.png",
+      "sha256": "7f3f3338f61c9903a26ede4aebf96c1c8cddb0d2534cbf846b942e1252008a4e"
+    },
+    {
+      "byte_count": 1574565,
+      "path": "runs/preview_all_series_20260901/preview_figures/S5/0445_path_t00_t10.png",
+      "sha256": "abfc652b0bf23735361181848b5a3ef23a1632f2f3982671ddd787b87178b015"
+    },
+    {
+      "byte_count": 863318,
+      "path": "runs/preview_all_series_20260901/preview_figures/S1_S3/0725_high_quality_prompts.png",
+      "sha256": "2d8b9a6e44aef4f5ee193c1a27421475561420bb28556da2d2ca635f2dc5373a"
+    },
+    {
+      "byte_count": 1053802,
+      "path": "runs/preview_all_series_20260901/preview_figures/S4/0725_symmetry_repeats.png",
+      "sha256": "0cd7dda2e926d93bafd34e0084cd83987a71993f326ae916e7939018d939be8b"
+    },
+    {
+      "byte_count": 2253924,
+      "path": "runs/preview_all_series_20260901/preview_figures/S5/0725_path_t00_t10.png",
+      "sha256": "b727594e65e8ddd18d5765fdbf0d82c70c41fd948e10c448af2d61d794aea049"
+    },
+    {
+      "byte_count": 815827,
+      "path": "runs/preview_all_series_20260901/preview_figures/S1_S3/0656_high_quality_prompts.png",
+      "sha256": "effbcce146a9529d55b1327e37eeeb5f733b66536757adbc15fe215272568aff"
+    },
+    {
+      "byte_count": 1046193,
+      "path": "runs/preview_all_series_20260901/preview_figures/S4/0656_symmetry_repeats.png",
+      "sha256": "043b9d865b5d7288915fd6a9f3e8ebc3120bbcf4f20150b8dd75d71cfafc78c8"
+    },
+    {
+      "byte_count": 2070991,
+      "path": "runs/preview_all_series_20260901/preview_figures/S5/0656_path_t00_t10.png",
+      "sha256": "fa2de94943df2bffa173606291d60a09ffa767f8e8b0c8e022b241fabe1373df"
+    }
+  ],
+  "schema_version": 1,
+  "source_endpoints_untouched_before_display_resize": true
+}

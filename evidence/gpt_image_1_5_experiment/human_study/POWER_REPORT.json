@@ -1,0 +1,25 @@
+{
+  "created_utc": "2026-09-02T10:28:47.525Z",
+  "endpoint_pair_count": 42,
+  "estimated_power": 0.9064,
+  "limitations": [
+    "Prospective simulation; assumptions are not estimated from study outcomes.",
+    "Final analysis uses a mixed-effects/Bradley-Terry model; this is a conservative design check rather than an exact model-based power proof."
+  ],
+  "mean_estimated_preference": 0.5478855910480152,
+  "pair_logit_sd": 0.25,
+  "participant_count": 180,
+  "participant_logit_sd": 0.35,
+  "passes_target": true,
+  "preference_estimate_95_range": [
+    0.5181151129914512,
+    0.5767072986545972
+  ],
+  "primary_trials_per_participant": 12,
+  "schema_version": 1,
+  "seed": 2026,
+  "simulations": 5000,
+  "smallest_effect_preference": 0.55,
+  "target_power": 0.9,
+  "test": "two-sided pair-clustered normal approximation at alpha 0.05"
+}

@@ -1,0 +1,12 @@
+{
+  "reviewed_utc": "2026-09-01T18:57:00Z",
+  "review_scope": "Post-generation visual compliance review of the ten frozen offline A-M-B contact sheets; not model reasoning and not a scientific outcome analysis.",
+  "summary": "All ten outputs are single edge-to-edge square textures with no visible text, labels, borders, panels, or endpoint reproductions inside M; P0, P1, and P2 therefore obey the basic output-format contract on this pilot.",
+  "prompt_observations": "P0 produced coherent textures but sometimes weak endpoint evidence; P1 generally retained cues from both endpoints but the semantic pair showed faint object-like rose structure; P2 preserved the source flower layout most clearly on pair 0656, while pair 0725 was strongly target-mesh-like and source-layout compliance was not unequivocal. No prompt winner is inferred from three pairs.",
+  "reviewer": "Codex",
+  "pairs": {
+    "0445": "All prompts yield coherent marbled/wrinkled textures; P2 is strongly red and its source-layout advantage is visually ambiguous.",
+    "0725": "All prompts yield coherent mesh-like textures; each is visually close to B's explicit mesh, so source-layout retention is weak or ambiguous.",
+    "0656": "P0 suppresses explicit flower identity, P1 retains faint rose-like forms, and P2 clearly retains A's flower layout with darker veined/material appearance from B."
+  }
+}

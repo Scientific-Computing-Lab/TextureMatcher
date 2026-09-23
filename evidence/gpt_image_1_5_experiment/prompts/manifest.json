@@ -1,0 +1,32 @@
+{
+  "frozen_utc": "2026-09-01T18:32:49.602Z",
+  "prompts": {
+    "P0_MINIMAL": {
+      "byte_count": 321,
+      "path": "prompts/P0_MINIMAL_v1.txt",
+      "sha256": "d15df80319b10a650b4d6a755563aec0a107bb5a00e1227a1c585508fafb3599",
+      "template_variables": []
+    },
+    "P1_PERCEPTUAL_SYMMETRIC": {
+      "byte_count": 1147,
+      "path": "prompts/P1_PERCEPTUAL_SYMMETRIC_v1.txt",
+      "sha256": "6e2f5b8a99500cfc5b3bc1d170fbf43f682c1322fcd2a412fd20c5dd78cbc5bf",
+      "template_variables": []
+    },
+    "P2_SOURCE_LAYOUT": {
+      "byte_count": 1076,
+      "path": "prompts/P2_SOURCE_LAYOUT_v1.txt",
+      "sha256": "8a0b1051078a463c710ddb1b4e7cdb634d1593bbc020fa035dbe940915229156",
+      "template_variables": []
+    },
+    "P3_PATH": {
+      "byte_count": 955,
+      "path": "prompts/P3_PATH_v1.txt",
+      "sha256": "069bbf563397699a676fa1a3bb32d5ff5e6ea19e5ece1031b18b90242256e2dd",
+      "template_variables": [
+        "t"
+      ]
+    }
+  },
+  "schema_version": 1
+}
