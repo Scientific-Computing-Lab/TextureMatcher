@@ -646,7 +646,7 @@ def main():
     def _display_root(p: Path) -> str:
         # Absolute paths are machine-specific (and can embed the local
         # username) -- report a path relative to this repro package instead
-        # of the resolved absolute one, so docs/CHECK.md stays anonymous no
+        # of the resolved absolute one, so CHECK.md stays anonymous no
         # matter who generates it or where the archive is unpacked.
         try:
             return str(p.relative_to(PACKAGE_ROOT))
@@ -708,8 +708,8 @@ def main():
     lines.append("")
 
     (out_dir / "docs").mkdir(parents=True, exist_ok=True)
-    (out_dir / "docs" / "docs/CHECK.md").write_text("\n".join(lines))
-    print(f"[score_only] wrote {out_dir / 'docs' / 'docs/CHECK.md'}")
+    (out_dir / "docs" / "CHECK.md").write_text("\n".join(lines))
+    print(f"[score_only] wrote {out_dir / 'docs' / 'CHECK.md'}")
     print(f"[score_only] {matches} MATCH / {mismatches} MISMATCH / {len(df)} total")
     if mismatches:
         print("[score_only] MISMATCHES:")
