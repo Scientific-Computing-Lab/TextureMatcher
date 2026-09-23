@@ -29,7 +29,7 @@ metric the Align* macros come from), LPIPS to R_A, high-frequency energy
 retention relative to R_A, and DINO realism.
 
 Formula recovered for the six named macros (verified against the printed
-t=0.5 pivot table in cell 8's own output, and against INVENTORY.md's phase-1
+t=0.5 pivot table in cell 8's own output, and against docs/INVENTORY.md's phase-1
 recompute, which is why this is "recovered" rather than "guessed"):
   - AlignN            = 40 (the image count)
   - AlignLinZero       = median dino_dev, rule=linear, shift=0,  t=0.5  (trivially 0: no shift, no deviation)
@@ -49,11 +49,11 @@ downstream aggregation across the four per-shift medians is NOT shown in
 cell 8's own saved output (only the per-shift pivot table is printed there);
 "plain mean of the four per-shift medians" is what best reproduces the
 paper's AlignGaussDev value (to five significant figures) and reproduces
-AlignOTdev to within the tolerance INVENTORY.md's own phase-1 audit already
+AlignOTdev to within the tolerance docs/INVENTORY.md's own phase-1 audit already
 flagged as the best it could recover. Take AlignOTdev as approximate.
 
 Requires: install/scoring.sh and install/cnt.sh (a GPU is strongly
-recommended -- this is not run in this environment; see README).
+recommended -- this is not run in this environment; see docs/PROVENANCE.md).
 
 Usage:
     python experiments/alignment.py --cnt-root ../cnt-siga24 --dtd-root ../dtd/images \\

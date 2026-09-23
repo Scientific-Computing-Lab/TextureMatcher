@@ -19,7 +19,7 @@ Ported from notebooks_raw/dtd/images/stability_applications_5_8.ipynb:
                                source images)
       rerun_noise_pct       = 100 * DINOv2_dist(bary_sym run twice)
                                / mean_pairwise_DINOv2_dist(4 source images)
-    -- confirmed against INVENTORY.md's printed-output values exactly:
+    -- confirmed against docs/INVENTORY.md's printed-output values exactly:
     quad A ([honeycombed, cracked, woven, scaly]) prints 46%/14%, quad B
     ([marbled, grid, fibrous, bumpy]) prints 38%/32%. (Cell 13 also
     contains an earlier, rougher version of the same src_sep computation,
@@ -39,7 +39,7 @@ actually run it on a GPU with CNT installed. Do not treat this script as
 verified; treat it as a faithful, honest port of the saved cell source.
 
 Requires: install/scoring.sh and install/cnt.sh (a GPU is strongly
-recommended -- this is not run in this environment; see README).
+recommended -- this is not run in this environment; see docs/PROVENANCE.md).
 
 Usage:
     python experiments/anchor_mixtures.py --cnt-root ../cnt-siga24 \\
@@ -261,7 +261,7 @@ def main():
     print("[anchor_mixtures] NOTE: fig:app-mixtures/fig:app-mixtures2/fig:app-palette panel assembly (arranging")
     print("[anchor_mixtures]       the saved PNGs above into the final multi-panel figure) is left to whoever")
     print("[anchor_mixtures]       picks the final figure, same as every other figure in this package -- see")
-    print("[anchor_mixtures]       INVENTORY.md §2 item 28, 'Figure provenance stops at the candidate stage.'")
+    print("[anchor_mixtures]       docs/INVENTORY.md §2 item 28, 'Figure provenance stops at the candidate stage.'")
 
 
 if __name__ == "__main__":

@@ -4,7 +4,7 @@ matching rules plus the field-linear/primitive-linear baselines, then calls
 rescore.py to score them and run score_only.py.
 
 Requires: install/scoring.sh and install/cnt.sh (a GPU is strongly
-recommended -- this is not run in this environment; see README).
+recommended -- this is not run in this environment; see docs/PROVENANCE.md).
 
 Usage:
     python experiments/cnt_1000.py --cnt-root ../cnt-siga24 --dtd-root ../dtd/images \\

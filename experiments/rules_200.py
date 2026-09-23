@@ -5,7 +5,7 @@ rendering path, nine rules).
 Ported from matching_ablation.ipynb cell 2 (`_targets` / `interp_rule` --
 read directly, not reconstructed from a description) and cell 4 ("3. MAIN
 RUN -- n pairs from the saved tm_scale1000 manifest"), which is also where
-the notebook's own cell 1 setup ("F2 ablation setup" family, INVENTORY.md
+the notebook's own cell 1 setup ("F2 ablation setup" family, docs/INVENTORY.md
 §4a) lives. FID-by-rule is additionally computed in exact_finish.ipynb
 cell 4 ("1. FID BY MATCHING RULE"), a GPU-eigvalsh reimplementation of the
 same fid() formula this package's texton_matching.scoring.fid_score
@@ -39,7 +39,7 @@ by rescore.py's existing `--table rules_200` path (read rescore.py's
 directories must match -- they already do, verified against that code).
 
 Requires: install/scoring.sh and install/cnt.sh (a GPU is strongly
-recommended -- this is not run in this environment; see README).
+recommended -- this is not run in this environment; see docs/PROVENANCE.md).
 
 Usage:
     python experiments/rules_200.py --cnt-root ../cnt-siga24 \\

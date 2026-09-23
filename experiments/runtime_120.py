@@ -14,7 +14,7 @@ hardware (or the original authors, on the original machine) has something
 runnable, not so its output can be diffed against the archive the way
 cnt_1000.py's or tm_1000.py's pixel outputs can be.
 
-Also note (INVENTORY.md §0 item 7): the paper's full `tab:runtime` mixes
+Also note (docs/INVENTORY.md §0 item 7): the paper's full `tab:runtime` mixes
 protocols beyond what this script covers. `VacherWSec` comes from a
 SEPARATE 20-pair run (`paper_completion/timing_n20.csv`, see
 experiments/vacher_50.py's docstring), not this 120-pair protocol.
@@ -27,7 +27,7 @@ column below).
 `DecSecLow` (the 128px decode timing, cell 8 -- "PHASE 2, CELL 5b -- OUR
 SIDE at 128px") is deliberately NOT reproduced here, for two independent
 reasons, not just one: (1) the archive itself never saved a comparable
-file (`timing_120_ours128.csv` is missing; INVENTORY.md §0 item 7 / §6
+file (`timing_120_ours128.csv` is missing; docs/INVENTORY.md §0 item 7 / §6
 item 1 flags this number as printed-output-only even in the original
 run, so there is nothing to compare against regardless); and (2) more
 importantly, `texton_matching.cnt.CNTModel.FMS` is computed once in

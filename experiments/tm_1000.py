@@ -11,7 +11,7 @@ finishing_experiments.ipynb "PHASE 1, CELL 3" (TM coupling ablation) with
 the pair set widened from 120 to --n-pairs.
 
 Requires: install/texture_mixer.sh (a GPU is strongly recommended -- this
-is not run in this environment; see README).
+is not run in this environment; see docs/PROVENANCE.md).
 
 Usage (inside the texton-matching-tm env):
     python experiments/tm_1000.py --tm-root ../TextureMixer \\

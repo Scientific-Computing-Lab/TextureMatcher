@@ -29,7 +29,7 @@ RULES = ("field_linear", "primitive_linear", "gaussian", "target_mean", "soft_ot
 # Two more sampled-rule names, used only by tab:rules' 200-pair ablation
 # (experiments/rules_200.py), not part of the paper's six canonical rules
 # above. Ported verbatim from matching_ablation.ipynb cell 2's `_targets`
-# (the "F2 ablation setup" family, INVENTORY.md §4a; read directly, not
+# (the "F2 ablation setup" family, docs/INVENTORY.md §4a; read directly, not
 # reconstructed from a description): "nn" pairs each sampled source cell
 # with its nearest sampled target cell (`tgt[cdist(src,tgt).argmin(1)]`,
 # no transport plan at all); "random" pairs the same n_sub source and

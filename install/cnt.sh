@@ -58,7 +58,7 @@
 # the (comparatively slow) detectron2 build.
 #
 # Checkpoint (finetuned-model256.ckpt) source, verified against the
-# authors' own repository (2026-09-22): the CNT GitHub README
+# authors' own repository: the CNT GitHub README
 # (https://github.com/phtu-cs/compositional-neural-textures, raw at
 # https://raw.githubusercontent.com/phtu-cs/compositional-neural-textures/main/README.md)
 # says, verbatim: "download model checkpoint from Google Drive" linking to

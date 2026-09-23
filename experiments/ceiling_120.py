@@ -14,7 +14,7 @@ script does not attempt (see the comment above its computation below);
 score_only.py already flags this same gap when it reads the row back
 ("file value; recompute needs a per-pair reconstruction-error join, not
 attempted") -- this script writes ceiling_summary.json without it, and the
-CHECK.md row falls back to NO FILE ROW until someone adds that join.
+docs/CHECK.md row falls back to NO FILE ROW until someone adds that join.
 
 Reference caveat (read before trusting this script's KID numbers): cell 5's
 own saved source scores against `ref_inc`, which cell 1 of the SAME
@@ -39,7 +39,7 @@ reproduce `CeilKID*`, the cell-5-literal (canonical 2,819) reference is the
 other thing to try.
 
 Requires: install/scoring.sh and install/cnt.sh (a GPU is strongly
-recommended -- this is not run in this environment; see README).
+recommended -- this is not run in this environment; see docs/PROVENANCE.md).
 
 Usage:
     python experiments/ceiling_120.py --cnt-root ../cnt-siga24 \\

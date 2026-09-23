@@ -3,7 +3,7 @@
 comparison between texton matching and Vacher et al.'s optimization-based
 interpolation baseline, scored at 128px.
 
-Ported from two notebooks (see INVENTORY.md's claims map for `tab:app-vacher`):
+Ported from two notebooks (see docs/INVENTORY.md's claims map for `tab:app-vacher`):
 
   - `literature_baselines_corrected.ipynb` cells 1-2: the "corrected loader"
     rerun of the 50-pair comparison. Cell 1's `vacher_interp` is the exact
@@ -16,7 +16,7 @@ Ported from two notebooks (see INVENTORY.md's claims map for `tab:app-vacher`):
     comment: "THE loader. Always go through load_image, via a temp file if
     needed") means every image -- ours and Vacher's midpoints alike -- is
     always routed through CNT's own `load_image` (proper [-1,1] range),
-    the same class of fix INVENTORY.md flags for `position_estimator_4_9`
+    the same class of fix docs/INVENTORY.md flags for `position_estimator_4_9`
     (naive [0,1] loading elsewhere silently lost ~68% of contrast); this
     script inherits that fix for free by using texton_matching.cnt, which
     always calls CNT's `load_image` too.

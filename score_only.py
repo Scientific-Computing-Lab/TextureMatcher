@@ -17,7 +17,7 @@ results archive (no CNT, no rendering, no GPU) and:
      bug, so they are read as median(per-pair value), matching the paper's
      own aggregation, not re-derived from raw manifold radii).
   5. Compares every one of the above to the macro value in
-     paper/numbers.tex / paper/numbers_v2.tex and writes CHECK.md.
+     the paper macros in evidence/paper_numbers/ and writes docs/CHECK.md.
   6. Writes corrected versions of the stale-KID summary tables into
      package/evidence/ (does not touch data/).
 
@@ -39,6 +39,37 @@ import numpy as np
 import pandas as pd
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+
+def _upcast_load(_np_load=np.load):
+    """np.load that returns float16 caches (evidence/tier1/) as float64."""
+    class _Npz:
+        def __init__(self, z):
+            self._z, self.files = z, z.files
+
+        def keys(self):
+            return self._z.keys()
+
+        def __iter__(self):
+            return iter(self._z.files)
+
+        def __contains__(self, k):
+            return k in self._z.files
+
+        def __getitem__(self, k):
+            a = self._z[k]
+            return a.astype(np.float64) if getattr(a, "dtype", None) == np.float16 else a
+
+    def load(*args, **kwargs):
+        obj = _np_load(*args, **kwargs)
+        if isinstance(obj, np.ndarray):
+            return obj.astype(np.float64) if obj.dtype == np.float16 else obj
+        return _Npz(obj)
+
+    return load
+
+
+np.load = _upcast_load()
 from texton_matching.paths import pairs_dir, resolve_data_root
 from texton_matching.scoring import (
     balance_from_place,
@@ -111,7 +142,7 @@ def parse_ci(raw: str | None) -> tuple[float, float] | None:
 
 
 # ---------------------------------------------------------------------------
-# CHECK.md row bookkeeping
+# docs/CHECK.md row bookkeeping
 # ---------------------------------------------------------------------------
 
 ROWS: list[dict] = []
@@ -582,7 +613,7 @@ def main():
     # the archive's OWN cached timings reduce to the paper's macros the way
     # the paper says they do; it says nothing about whether a fresh render
     # on different hardware would match). VacherWSec and GPTsec are NOT
-    # checked here: per INVENTORY.md Sec.0 item 7, they come from separate
+    # checked here: per docs/INVENTORY.md Sec.0 item 7, they come from separate
     # protocols (paper_completion/timing_n20.csv's 20-pair run, and the GPT
     # run report's API latency) that this 120-pair CNT/TM table never
     # covered, even in the source notebooks. DecSecLow (the 128px pass) has
@@ -603,7 +634,7 @@ def main():
     check("TMInterpSec", parse_num(M.get("TMInterpSec")), timing_tm["gen"].median(), source="evidence/timing_120_tm.csv (+recompute, median; 'gen' column)", table="tab:runtime", abs_tol=0.0006)
 
     # =====================================================================
-    # Write CHECK.md
+    # Write docs/CHECK.md
     # =====================================================================
     df = pd.DataFrame(ROWS)
     matches = (df.status == "MATCH").sum()
@@ -615,10 +646,10 @@ def main():
     def _display_root(p: Path) -> str:
         # Absolute paths are machine-specific (and can embed the local
         # username) -- report a path relative to this repro package instead
-        # of the resolved absolute one, so CHECK.md stays anonymous no
+        # of the resolved absolute one, so docs/CHECK.md stays anonymous no
         # matter who generates it or where the archive is unpacked.
         try:
-            return str(p.relative_to(PACKAGE_ROOT.parent))
+            return str(p.relative_to(PACKAGE_ROOT))
         except ValueError:
             return "(outside the repro package; path omitted for anonymity -- see --data-root/--paper-root)"
 
@@ -659,7 +690,7 @@ def main():
             lines.append(f"| `{row.macro}` | {fmt(row.paper)} | {fmt(row.computed)} | {fmt(row.delta, plus=True)} | {row.status} | {row.source} |")
         lines.append("")
 
-    lines.append("## Not attempted in this script (see INVENTORY.md §0/§2 for why)\n")
+    lines.append("## Not attempted in this script (see docs/INVENTORY.md §0/§2 for why)\n")
     lines.append("These paper values have no per-pair CSV or raw feature cache in the archive")
     lines.append("(they exist only as notebook-printed output), or require re-deriving the")
     lines.append("Kynkaanniemi manifold-realism radii rather than reading an already-scored")
@@ -672,12 +703,13 @@ def main():
     lines.append("- `tab:app-vacher` FID column (printed-only; timing macros ARE checked above)")
     lines.append("- Anchor-mixture prose (`AnchorChangeA/B`), sparse-coding prose, round-trip prose")
     lines.append("- `\\GPTsec`, `\\GPTcostUSD`, `\\GPTOrderRatio*`, `\\GPTPathMono`, `\\GPTPathRtwo` (from the GPT run report, outside this data root)")
-    lines.append("- `\\ResampleLPIPS`, `\\GEScrambleDReal` (unverified per INVENTORY.md)")
+    lines.append("- `\\ResampleLPIPS`, `\\GEScrambleDReal` (unverified per docs/INVENTORY.md)")
     lines.append("- Old 1,000-pair observer prose and `tab:app-representation`'s CNT rows (printed-only)")
     lines.append("")
 
-    (out_dir / "CHECK.md").write_text("\n".join(lines))
-    print(f"[score_only] wrote {out_dir / 'CHECK.md'}")
+    (out_dir / "docs").mkdir(parents=True, exist_ok=True)
+    (out_dir / "docs" / "docs/CHECK.md").write_text("\n".join(lines))
+    print(f"[score_only] wrote {out_dir / 'docs' / 'docs/CHECK.md'}")
     print(f"[score_only] {matches} MATCH / {mismatches} MISMATCH / {len(df)} total")
     if mismatches:
         print("[score_only] MISMATCHES:")

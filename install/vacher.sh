@@ -2,7 +2,7 @@
 # Installs Vacher et al.'s optimization-based texture-interpolation baseline
 # (tab:app-vacher / the Gram/Gaussian/Wasserstein rows), used for a
 # not-yet-scriptable comparison; no experiments/ script renders it (see
-# README "what's not covered").
+# docs/PROVENANCE.md).
 #
 # Mirrors every notebook that used it (compute_cost_5_4.ipynb,
 # literature_baselines_4_1.ipynb, literature_baselines_corrected.ipynb,
@@ -43,6 +43,6 @@ echo "[vacher.sh] at commit $GOT_COMMIT -- record this yourself if you need to r
 
 echo "[vacher.sh] done. Vacher texture-interpolation is at $TARGET_DIR"
 echo "[vacher.sh] NOTE: no experiments/ script in this package renders the Vacher baseline;"
-echo "[vacher.sh]       tab:app-vacher's FID column is one of the values INVENTORY.md and CHECK.md"
+echo "[vacher.sh]       tab:app-vacher's FID column is one of the values docs/INVENTORY.md and docs/CHECK.md"
 echo "[vacher.sh]       both flag as printed-only in the source notebooks (see paper_completion.ipynb"
 echo "[vacher.sh]       cell 3 for the timing numbers, which score_only.py does reproduce)."

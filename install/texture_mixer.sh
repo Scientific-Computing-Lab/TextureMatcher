@@ -10,7 +10,7 @@
 # the tfutil.py patch -- same fail-fast principle as install/cnt.sh.
 #
 # Checked against the CNT-side failure modes install/cnt.sh had to fix
-# (2026-09-22 review): this script itself installs no pinned old package
+# this script itself installs no pinned old package
 # versions (its only pip step is `pip install -q gdown`; TextureMixer's own
 # `requirements.txt`, which DOES pin ancient TF1.12-era versions, is never
 # installed here or by any notebook -- both bypass it entirely via the
@@ -24,7 +24,7 @@
 # from a cache in our project's own Drive, but it is fetched there with a
 # plain, unauthenticated gdown call the first time it's needed:
 #   gdown 1ObAFBPGaRJFo11LUa0qNhRX14nTEWKC1 -O earth.zip
-# VERIFIED against the authors' own repository (2026-09-22): the
+# VERIFIED against the authors' own repository: the
 # TextureMixer GitHub README (https://github.com/ningyu1991/TextureMixer,
 # raw at https://raw.githubusercontent.com/ningyu1991/TextureMixer/master/README.md,
 # "Pre-Trained Models" section) lists three pretrained models by name, and
@@ -49,7 +49,7 @@ VGG_REPO="https://github.com/machrisaa/tensorflow-vgg.git"
 CKPT_GDRIVE_ID="1ObAFBPGaRJFo11LUa0qNhRX14nTEWKC1"
 # Full sha256 of earth_texture/network-final.pkl (233,627,047 bytes, dated
 # 2018-12-13 inside the zip), obtained by downloading this ID directly
-# while building this package (2026-09-22) -- no prior recorded hash
+# while building this package -- no prior recorded hash
 # existed to cross-check against (unlike CNT's), so this is the first
 # recording of it; if it ever changes, the authors have re-released the file.
 CKPT_SHA256="b2361d5e1ac5bff7e4c32548531dab1d93b91c15c9d448d4324f6adedaff1abf"

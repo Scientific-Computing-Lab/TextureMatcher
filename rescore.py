@@ -40,7 +40,7 @@ matching_ablation/ref_inc.npy / ref_dino.npy if present, else rebuilt from
 canonical notebook (needs --dtd-root; download DTD with
 texton_matching.data.download_dtd first).
 
-NOT covered by this script (see README "what's not covered"): the
+NOT covered by this script (see docs/PROVENANCE.md): the
 app:ceiling and tab:app-primitives tables, whose per-pair CSVs mix A-side/
 B-side reconstructions and Gaussian-primitive arms in a way this generic
 rescorer doesn't attempt to replicate. score_only.py still checks them --

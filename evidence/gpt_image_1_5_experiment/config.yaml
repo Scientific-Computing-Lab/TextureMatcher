@@ -3,7 +3,7 @@ experiment_id: gpt_image_1_5_texture_midpoints
 seed: 2026
 
 data:
-  source_url: CODE_URL
+  source_url: omitted
   source_commit: 366d4e53631c2d610969b557028d41f0d843f7de
   root: ..
   pairs_csv: ../pairs.csv

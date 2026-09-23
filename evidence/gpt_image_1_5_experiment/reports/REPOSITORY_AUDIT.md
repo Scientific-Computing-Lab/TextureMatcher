@@ -10,7 +10,7 @@ Audit date: 2026-09-01 UTC.
   pair manifests, baseline logs, and generated outputs were not supplied. It
   was inspected read-only and was not modified.
 - The user-supplied external-evaluation repository
-  `CODE_URL`
+  `omitted`
   was inspected at commit
   `366d4e53631c2d610969b557028d41f0d843f7de`. Its `pairs.csv`, `A/`, and `B/`
   were copied without modification into the experiment's ignored data area;

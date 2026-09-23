@@ -12,7 +12,7 @@ would otherwise look arbitrary) and cell 13 (the Gaussian-level entropic
 bridge, E4). Everything else in that notebook (E2a/E2b latent counterfactuals,
 E3 corrupt-the-cue, the SENS/REPL/timing cells) is validation machinery for
 the notebook's own internal protocol and does not feed any paper macro
-(confirmed via INVENTORY.md's claims map) -- it is deliberately not ported
+(confirmed via docs/INVENTORY.md's claims map) -- it is deliberately not ported
 here.
 
 Scope note: `ACTIVE_THR` and `ROT_IS_APPEARANCE` below are copied verbatim

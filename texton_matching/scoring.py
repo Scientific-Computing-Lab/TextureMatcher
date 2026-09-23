@@ -24,7 +24,7 @@ resulting delta. The jackknife standard error is
     SE = sqrt((n-1)/n * sum_i (theta_i - mean(theta))^2)
 and the reported interval is Delta +/- 1.96 * SE. This reproduces
 data/jackknife/jackknife_final.csv exactly (validated during package
-construction; see CHECK.md).
+construction; see docs/CHECK.md).
 """
 from __future__ import annotations
 
@@ -114,7 +114,7 @@ def paired_jackknife_delta_kid(
     `gen_a` and `gen_b` must be aligned pair-for-pair (same row order, same
     set of pair ids) -- e.g. two columns of the same 120- or 200-pair
     evaluation. This reproduces every EqdKID*/TMdKID*/GdKID*/GEdKID*/TMkdKID*
-    macro in the paper (see CHECK.md).
+    macro in the paper (see docs/CHECK.md).
     """
     kyy = _reference_self_term(ref)
     kid_b = kid_full(gen_b, ref, kyy)

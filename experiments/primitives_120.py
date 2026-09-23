@@ -17,14 +17,14 @@ Gaussian-level entropic appearance matching on an eps grid, picking the eps
 whose retained variance is closest to dense soft-OT's).
 
 NOT ported (validation/robustness machinery for the notebook's own internal
-protocol, confirmed via INVENTORY.md's claims map to feed no paper macro):
+protocol, confirmed via docs/INVENTORY.md's claims map to feed no paper macro):
 E2a latent counterfactuals, E2b real-image replication, E3 corrupt-the-cue,
 the 24-pair sensitivity sweep, the 80-pair replication set, and the timing
 batch.
 
 Calibration caveat: the notebook calibrates cost scales (s_pos, s_app) on a
 20-pair set disjoint from its 120-pair main set (`CAL`, drawn from a larger
-pool this package doesn't have the manifest for -- INVENTORY.md's read of
+pool this package doesn't have the manifest for -- docs/INVENTORY.md's read of
 the saved cells doesn't preserve the exact pool). This script calibrates
 from --calibration-manifest if given, else from the SAME --n-pairs pairs
 being matched -- a reasonable approximation, not a byte-identical
@@ -33,7 +33,7 @@ rescale the mixed-cost combination weight; they do not change what P-only
 or A-only assignments are (those never look at the other cost's scale).
 
 Requires: install/scoring.sh and install/cnt.sh (a GPU is strongly
-recommended -- this is not run in this environment; see README). Needs
+recommended -- this is not run in this environment; see docs/PROVENANCE.md). Needs
 torch, scipy and rescore.py's Extractor in the SAME process (unlike the
 other Tier-3 scripts, which subprocess into rescore.py at the end, this one
 needs rescore.Extractor inline to build the custom multi-arm feature caches

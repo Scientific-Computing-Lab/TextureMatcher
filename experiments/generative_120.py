@@ -7,7 +7,7 @@ tex/gauss/ot/hard, and tm_1000.py's coupling ablation for tmlerp/tmmean/
 tmot/tmhard) plus the GPT-Image-1.5 outputs (gpt/gptsym), which this
 package cannot produce -- GPT-Image-1.5 is a proprietary API and its exact
 prompts were not retained in the archive (see paper/appendix/
-supplement.tex's Reproducibility Statement and INVENTORY.md). Provide them
+supplement.tex's Reproducibility Statement and docs/INVENTORY.md). Provide them
 yourself; see --gpt-dir / --gptsym-dir below.
 
 Requires: install/scoring.sh (this only extracts features and scores; no
