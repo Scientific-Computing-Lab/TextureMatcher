@@ -1,9 +1,13 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "texton-matching"
 version = "0.1.0"
 description = "Reproduction package for Texture Interpolation as Texton Matching"
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.9"
 license = { text = "MIT" }
 
 # Tier 1 (score_only.py) needs only this base set -- CPU-only, no GPU, no
