@@ -19,42 +19,40 @@ rows in `CHECK.md` MATCH the paper, 0 MISMATCH.**
 
 ## Main text
 
-| Label | Producing script / notebook | Data it needs | Status |
+| Paper item | Producing script / notebook | Data it needs | Status |
 |---|---|---|---|
-| `tab:canonical` | `experiments/cnt_1000.py` + `experiments/tm_1000.py` (render); `score_only.py` (rescore, Tier1 58 rows MATCH) | `evidence/pairs_demo.csv` or a fresh DTD draw; archive: `tm_scale1000/*`, `matching_ablation/final128_n1000.csv`, `jackknife/tm1000_*` | **reproducible + rescorable** |
-| `fig:qualitative` | `notebooks/4_1_canonical_rescore_128px.ipynb` (was `finish_day`) c12 + `notebooks/S_older_evaluations/paper_figure_candidate_factory.ipynb` | `paper_figs/grid/set{A,B,C}_fixed.png` (candidates) | **not reproducible** as the exact published figure — INVENTORY §0 item 10: no notebook writes the final picked filenames, and `paper/` ships no images to checksum against. The candidate source images *are* reproducible (`cnt_1000.py`'s six-pair grid). |
-| `tab:eqsample` | `experiments/cnt_matched_200.py` (render); `score_only.py` (Tier1, 45 rows MATCH) | `matching_ablation/eqsample/*`, `tm_scale1000/ot` | **reproducible + rescorable** |
-| `tab:generative` | `experiments/generative_120.py` (render/assemble, CNT+TM rows); `score_only.py` (Tier1, part of 77+5-row generative blocks, MATCH) | 12 dirs under `tm_scale1000/`; GPT rows below | **reproducible + rescorable** for pix/tex/gauss/ot/hard/tm rows. GPT rows (`gpt`,`gptsym`): **rescorable, not reproducible** — see "GPT-Image-1.5" section below. |
-| `fig:gptstrip` | `notebooks/4_3b_generative_gpt_staging.ipynb` (was `Untitled6`) c7 | `paper_figs/gpt/gpt_strip_first8.png` | **not reproducible** as the exact figure — the panel-assembly code for this specific strip isn't preserved (INVENTORY §2). The underlying GPT images are shipped/hostable (rescorable). |
-| `fig:app-mixtures` | `experiments/anchor_mixtures.py` | `pairs_120`-style category quads; CNT | **reproducible, unverified** — no cached file anywhere in the archive ever held `AnchorChangeA/B` (always printed-only); this script's output can only be confirmed by running it on a GPU. |
-| `fig:transfer` | `notebooks/S_older_evaluations/stability_applications_5_8.ipynb` + candidate factory | `stability_apps/results/hero_kway_anchor.png` | **not reproducible** as the exact figure; the anchor-mixing mechanism itself is exercised by `anchor_mixtures.py`. |
-| `fig:overview` (teaser) | `notebooks/S_older_evaluations/paper_figure_candidate_factory.ipynb` | `paper_figs_day2/fig01_teaser`, `fig02_method` | **not reproducible** — figure-only, no script, candidate images only. |
+| Table 1 (`tab:canonical`) | `experiments/cnt_1000.py` + `experiments/tm_1000.py` (render); `score_only.py` (rescore, Tier1 58 rows MATCH) | `evidence/pairs_demo.csv` or a fresh DTD draw; archive: `tm_scale1000/*`, `matching_ablation/final128_n1000.csv`, `jackknife/tm1000_*` | **reproducible + rescorable** |
+| Figure 2 (`fig:qualitative`) | `notebooks/canonical_rescore_128px.ipynb` (was `finish_day`) c12 + `notebooks/supplementary_studies/figure_candidate_factory.ipynb` | `paper_figs/grid/set{A,B,C}_fixed.png` (candidates) | **not reproducible** as the exact published figure — INVENTORY §0 item 10: no notebook writes the final picked filenames, and `paper/` ships no images to checksum against. The candidate source images *are* reproducible (`cnt_1000.py`'s six-pair grid). |
+| Table 2 (`tab:eqsample`) | `experiments/cnt_matched_200.py` (render); `score_only.py` (Tier1, 45 rows MATCH) | `matching_ablation/eqsample/*`, `tm_scale1000/ot` | **reproducible + rescorable** |
+| Table 3 (`tab:generative`) | `experiments/generative_120.py` (render/assemble, CNT+TM rows); `score_only.py` (Tier1, part of 77+5-row generative blocks, MATCH) | 12 dirs under `tm_scale1000/`; GPT rows below | **reproducible + rescorable** for pix/tex/gauss/ot/hard/tm rows. GPT rows (`gpt`,`gptsym`): **rescorable, not reproducible** — see "GPT-Image-1.5" section below. |
+| Figure 3 (`fig:gptstrip`) | `notebooks/generative_comparison_gpt_staging.ipynb` (was `Untitled6`) c7 | `paper_figs/gpt/gpt_strip_first8.png` | **not reproducible** as the exact figure — the panel-assembly code for this specific strip isn't preserved (INVENTORY §2). The underlying GPT images are shipped/hostable (rescorable). |
+| Figure 4 (`fig:app-mixtures`) | `experiments/anchor_mixtures.py` | `pairs_120`-style category quads; CNT | **reproducible, unverified** — no cached file anywhere in the archive ever held `AnchorChangeA/B` (always printed-only); this script's output can only be confirmed by running it on a GPU. |
+| Figure 5 (`fig:transfer`) | `notebooks/supplementary_studies/anchor_mixtures_and_stability.ipynb` + candidate factory | `stability_apps/results/hero_kway_anchor.png` | **not reproducible** as the exact figure; the anchor-mixing mechanism itself is exercised by `anchor_mixtures.py`. |
+| Figure 1 (`fig:overview`) (teaser) | `notebooks/supplementary_studies/figure_candidate_factory.ipynb` | `paper_figs_day2/fig01_teaser`, `fig02_method` | **not reproducible** — figure-only, no script, candidate images only. |
 
 ## Supplement
 
-| Label | Producing script / notebook | Data it needs | Status |
+| Paper item | Producing script / notebook | Data it needs | Status |
 |---|---|---|---|
-| `tab:app-generative` | Same as `tab:generative` above (full 120-pair table) | Same | **reproducible + rescorable** (non-GPT rows); GPT rows rescorable/not-reproducible as above |
-| `fig:app-gpt` | Same as `fig:gptstrip` | Same | **not reproducible** as exact figure; images rescorable |
-| `tab:app-vacher` | `experiments/vacher_50.py` (FID column only) | `corrected_rerun/lit_manifest.csv`-style 50-pair draw; Vacher repo (`install/vacher.sh`) | **FID column: reproducible in principle, self-flagged approximate** — the script could not recover one parameter (`P26_REF_CAP`, reference images per category) from the saved notebook cell and exposed it as `--ref-per-category` with a documented default; treat its output as "same protocol shape," not a byte-exact replay of 268.3/284.6/318.4/273.9. **Timing (`VacherWSec`): rescorable but not wired** — `paper_completion/timing_n20.csv` exists in the archive but no script or Tier-1 check reads it (see "Open items" below). |
-| `tab:app-primitives` | `experiments/primitives_120.py` + `texton_matching/primitives.py`; `score_only.py` (Tier1, 14 rows MATCH) | `pairs_120/pairs.csv`; CNT | **reproducible + rescorable** |
-| `tab:rules` | `experiments/rules_200.py`; `score_only.py` (Tier1, 32 rows MATCH) | `matching_ablation/ref_list.json`-style 2,819-image reference; CNT | **reproducible + rescorable** |
-| `tab:app-representation` | `notebooks/S_older_evaluations/cnt_sam_dino_compare.ipynb` + `never_gonna_give_you_up.ipynb` | none (`item2_representation_n40.json` is missing from the archive entirely) | **not reproducible** — printed-only, and the file that would hold it was never in the archive to begin with. The printed values are still preserved in `INVENTORY.md` §2's cross-check column even though the shipped notebooks have their saved outputs stripped (see "A note on stripped outputs" below). |
-| `tab:app-realism` | `notebooks/S_older_evaluations/Vortex.ipynb` | none | **not reproducible** — printed-only, no file; values preserved in `INVENTORY.md` §2. |
-| `tab:app-position` | `notebooks/S_older_evaluations/position_estimator_4_9.ipynb` | none | **not reproducible** — printed-only, AND flagged: this run fed CNT images in `[0,1]` instead of `[-1,1]` (INVENTORY §0 item 5), a bug fixed elsewhere (`corrected_pipeline_rerun.ipynb`) but never re-applied to this specific table. Rerunning the shipped notebook as-is reproduces a *known-buggy* run, not what the paper reports as fixed. |
-| `tab:app-order` | `notebooks/S_older_evaluations/compute_cost_5_4.ipynb` + `corrected_pipeline_rerun.ipynb` | `compute_cost/order_dependence_n6.csv` (exists in archive) | **rescorable but not checked by Tier 1** (see "Open items"). The Vacher rows in this specific table are separately flagged in INVENTORY as **unverified/mismatched** against that same file (swap distance .634 in the paper vs .085 in the file) — a genuine discrepancy for the paper's authors to resolve, not something this package should silently paper over. |
-| `fig:app-epsilon` | `notebooks/S_completion_eps_rho_timing20.ipynb` (was `paper_completion`) + candidate factory | `paper_completion/eps_sweep.json` (exists in archive) | **rescorable but not checked by Tier 1** (see "Open items") |
-| `tab:app-repeat` | `notebooks/S_older_evaluations/degradation_ot_vs_tm_5_9.ipynb` | `degradation_5_9/results/degradation.csv` (exists in archive) | **rescorable but not checked by Tier 1**, except the autoencoder control row, which is printed-only even in the source notebook |
-| `tab:runtime` | `experiments/runtime_120.py`; `score_only.py` (Tier1, 6 rows MATCH) | `pairs_120/pairs.csv`; CNT + Texture Mixer; one GPU | **reproducible + rescorable** for the CNT/TM columns (`EncodeSec`,`DecSec`,`OTTransportSec`,`HardAssignSec`,`TMEncSec`,`TMInterpSec`). `VacherWSec`/`GPTsec` in this same table come from other protocols entirely (see `tab:app-vacher` and the GPT section) and were never this table's own timings, even in the source notebook. `DecSecLow` (128px pass): the archive itself never saved `timing_120_ours128.csv` — permanently printed-only, not this package's gap to fill. |
-| `fig:app-qualitative` | Same source as `fig:qualitative` | Same | **not reproducible** as exact figure; candidates reproducible via `cnt_1000.py` |
-| `fig:app-boundary` | `notebooks/4_1_canonical_rescore_128px.ipynb` c6/c11/c14 + candidate factory | `paper_figs/boundary` | **not reproducible** as exact figure; the underlying correspondence-progression images are producible by varying `eta` in `texton_matching.matching`'s field-linear rule via `cnt_1000.py`. |
-| `fig:app-alignshift` | `experiments/alignment.py`; `score_only.py` (Tier1, 8 rows MATCH) | `evidence/alignment_scores.csv`; CNT | **reproducible + rescorable** |
-| `fig:app-mixtures2` | `experiments/anchor_mixtures.py` (second quad) | Same as `fig:app-mixtures` | **reproducible, unverified** (same caveat as `fig:app-mixtures`) |
-| `fig:app-palette` | `experiments/anchor_mixtures.py` (palette output) | Same | **reproducible, unverified** (same caveat) |
-| `fig:app-semantic` | `notebooks/S_older_evaluations/stability_applications_5_8.ipynb` (`tm_comparison/regions_*.png`) | none | **not reproducible** — exploratory, no cached number, no script |
-| `fig:app-coding` | *(none shipped)* | none | **not reproducible, permanently** — INVENTORY §2 states the paper itself says the raw coding outputs were not retained. The source notebook, `fps_basis_5_7.ipynb`, is classified **LEGACY** (INVENTORY §3b, by the paper's own topic rule, not by this package), so it is intentionally not shipped here — see "Open items." |
-| `fig:app-rho` | `notebooks/S_completion_eps_rho_timing20.ipynb` c10 | `paper_completion/rhostar_1000_sharp_exact.csv` (exists in archive) | **rescorable but not checked by Tier 1** (see "Open items") |
-| `app:ceiling` | `experiments/ceiling_120.py`; `score_only.py` (Tier1, 9 rows MATCH) | CNT; `matching_ablation/ref_inc.npy` (for the 5,640-window reference builder) | **reproducible + rescorable**, except `CeilRho`: the new script writes this as `NaN` rather than fabricating it — it could not fully reconstruct the per-pair reconstruction-error/midpoint-quality join from the saved notebook cell, and said so rather than guessing. `score_only.py` still checks `CeilRho` against the archive's own cached `ceiling_summary.json` value (MATCH), just not against a *fresh* render. |
+| Appendix Table 4 (`tab:app-generative`) | Same as `tab:generative` above (full 120-pair table) | Same | **reproducible + rescorable** (non-GPT rows); GPT rows rescorable/not-reproducible as above |
+| Appendix Figure 6 (`fig:app-gpt`) | Same as `fig:gptstrip` | Same | **not reproducible** as exact figure; images rescorable |
+| Appendix Table 5 (`tab:app-vacher`) | `experiments/vacher_50.py` (FID column only) | `corrected_rerun/lit_manifest.csv`-style 50-pair draw; Vacher repo (`install/vacher.sh`) | **FID column: reproducible in principle, self-flagged approximate** — the script could not recover one parameter (`P26_REF_CAP`, reference images per category) from the saved notebook cell and exposed it as `--ref-per-category` with a documented default; treat its output as "same protocol shape," not a byte-exact replay of 268.3/284.6/318.4/273.9. **Timing (`VacherWSec`): rescorable but not wired** — `paper_completion/timing_n20.csv` exists in the archive but no script or Tier-1 check reads it (see "Open items" below). |
+| Appendix Table 6 (`tab:app-primitives`) | `experiments/primitives_120.py` + `texton_matching/primitives.py`; `score_only.py` (Tier1, 14 rows MATCH) | `pairs_120/pairs.csv`; CNT | **reproducible + rescorable** |
+| Appendix Table 7 (`tab:rules`) | `experiments/rules_200.py`; `score_only.py` (Tier1, 32 rows MATCH) | `matching_ablation/ref_list.json`-style 2,819-image reference; CNT | **reproducible + rescorable** |
+| Appendix Table 8 (`tab:app-representation`) | `notebooks/supplementary_studies/feature_space_spread_dino_sam.ipynb` + `ot_metric_forensics_cnt.ipynb` | none (`item2_representation_n40.json` is missing from the archive entirely) | **not reproducible** — printed-only, and the file that would hold it was never in the archive to begin with. The printed values are still preserved in `INVENTORY.md` §2's cross-check column even though the shipped notebooks have their saved outputs stripped (see "A note on stripped outputs" below). |
+| Appendix Table 9 (`tab:app-realism`) | `notebooks/supplementary_studies/vortex_observer_realism.ipynb` | none | **not reproducible** — printed-only, no file; values preserved in `INVENTORY.md` §2. |
+| Appendix Figure 7 (`fig:app-epsilon`) | `notebooks/entropy_sweep_plan_alignment_timing.ipynb` (was `paper_completion`) + candidate factory | `paper_completion/eps_sweep.json` (exists in archive) | **rescorable but not checked by Tier 1** (see "Open items") |
+| Appendix Table 12 (`tab:app-repeat`) | `notebooks/supplementary_studies/repeated_operations_ot_vs_texture_mixer.ipynb` | `degradation_5_9/results/degradation.csv` (exists in archive) | **rescorable but not checked by Tier 1**, except the autoencoder control row, which is printed-only even in the source notebook |
+| Appendix Table 13 (`tab:runtime`) | `experiments/runtime_120.py`; `score_only.py` (Tier1, 6 rows MATCH) | `pairs_120/pairs.csv`; CNT + Texture Mixer; one GPU | **reproducible + rescorable** for the CNT/TM columns (`EncodeSec`,`DecSec`,`OTTransportSec`,`HardAssignSec`,`TMEncSec`,`TMInterpSec`). `VacherWSec`/`GPTsec` in this same table come from other protocols entirely (see `tab:app-vacher` and the GPT section) and were never this table's own timings, even in the source notebook. `DecSecLow` (128px pass): the archive itself never saved `timing_120_ours128.csv` — permanently printed-only, not this package's gap to fill. |
+| Appendix Figure 8 (`fig:app-qualitative`) | Same source as `fig:qualitative` | Same | **not reproducible** as exact figure; candidates reproducible via `cnt_1000.py` |
+| Appendix Figure 9 (`fig:app-boundary`) | `notebooks/canonical_rescore_128px.ipynb` c6/c11/c14 + candidate factory | `paper_figs/boundary` | **not reproducible** as exact figure; the underlying correspondence-progression images are producible by varying `eta` in `texton_matching.matching`'s field-linear rule via `cnt_1000.py`. |
+| Appendix Figure 10 (`fig:app-alignshift`) | `experiments/alignment.py`; `score_only.py` (Tier1, 8 rows MATCH) | `evidence/alignment_scores.csv`; CNT | **reproducible + rescorable** |
+| Appendix Figure 11 (`fig:app-mixtures2`) | `experiments/anchor_mixtures.py` (second quad) | Same as `fig:app-mixtures` | **reproducible, unverified** (same caveat as `fig:app-mixtures`) |
+| Appendix Figure 12 (`fig:app-palette`) | `experiments/anchor_mixtures.py` (palette output) | Same | **reproducible, unverified** (same caveat) |
+| Appendix Figure 13 (`fig:app-semantic`) | `notebooks/supplementary_studies/anchor_mixtures_and_stability.ipynb` (`tm_comparison/regions_*.png`) | none | **not reproducible** — exploratory, no cached number, no script |
+| Appendix Figure 14 (`fig:app-coding`) | *(none shipped)* | none | **not reproducible, permanently** — INVENTORY §2 states the paper itself says the raw coding outputs were not retained. The source notebook, `fps_basis_5_7.ipynb`, is classified **LEGACY** (INVENTORY §3b, by the paper's own topic rule, not by this package), so it is intentionally not shipped here — see "Open items." |
+| Appendix Figure 15 (`fig:app-rho`) | `notebooks/entropy_sweep_plan_alignment_timing.ipynb` c10 | `paper_completion/rhostar_1000_sharp_exact.csv` (exists in archive) | **rescorable but not checked by Tier 1** (see "Open items") |
+| Appendix D.6 (`app:ceiling`) | `experiments/ceiling_120.py`; `score_only.py` (Tier1, 9 rows MATCH) | CNT; `matching_ablation/ref_inc.npy` (for the 5,640-window reference builder) | **reproducible + rescorable**, except `CeilRho`: the new script writes this as `NaN` rather than fabricating it — it could not fully reconstruct the per-pair reconstruction-error/midpoint-quality join from the saved notebook cell, and said so rather than guessing. `score_only.py` still checks `CeilRho` against the archive's own cached `ceiling_summary.json` value (MATCH), just not against a *fresh* render. |
 
 ## GPT-Image-1.5 (`introduction.tex`, `generative.tex`, `statements.tex`)
 
@@ -96,7 +94,7 @@ the 240 scored calls have a median of 38.4 s.
 ## Every KEEP notebook (INVENTORY §3b, 28 total)
 
 All 28 appear under `notebooks/` (14 individually renamed by paper
-section, 14 bundled under `notebooks/S_older_evaluations/`) — none are
+section, 14 bundled under `notebooks/supplementary_studies/`) — none are
 missing. See `notebooks/*.ipynb`'s first (header) cell for which claim
 each one backs and whether a maintained script now supersedes it for
 day-to-day reproduction. Outputs and execution metadata were stripped from
@@ -107,13 +105,13 @@ mount paths were replaced with a `DATA_ROOT` environment variable read.
 
 Found during the coverage audit and not addressed:
 
-- **`tab:app-order`, `fig:app-epsilon`, `tab:app-repeat`, `fig:app-rho`**:
+- **Appendix Figure 7, Appendix Table 12, Appendix Figure 15**:
   each has a real cached file in the archive
-  (`compute_cost/order_dependence_n6.csv`, `paper_completion/eps_sweep.json`,
+  (`paper_completion/eps_sweep.json`,
   `degradation_5_9/results/degradation.csv`,
   `paper_completion/rhostar_1000_sharp_exact.csv`) that could become a
-  `score_only.py` Tier-1 check the same way `fig:app-alignshift` and
-  `tab:runtime` are checked -- low effort, no GPU needed. Not done yet.
+  `score_only.py` Tier-1 check the same way Appendix Figure 10 and
+  Appendix Table 13 are checked -- low effort, no GPU needed. Not done yet.
 - **`fig:app-coding`**: permanently not reproducible (paper's own
   admission, no retained outputs); its source notebook is LEGACY-classified
   by the paper's own topic rule and therefore intentionally not shipped in
@@ -130,7 +128,7 @@ Found during the coverage audit and not addressed:
 Every notebook under `notebooks/` had its cell outputs stripped (standard
 hygiene/anonymity practice, and it cut `notebooks/`'s size from 49.7MB to
 1.6MB). For claims that are "printed only" with no backing file
-(`tab:app-representation`, `tab:app-realism`, `tab:app-position`, the
+(Appendix Tables 8 and 9, the
 anchor-mixture prose, the round-trip and
 sparse-coding prose), the ORIGINAL saved printed values are not visible in
 the notebooks as shipped — but they were never lost: `INVENTORY.md`
@@ -142,22 +140,11 @@ part of this package.
 
 ## Summary
 
-- 29 labeled tables/figures total (8 main text, 21 supplement).
-- **12** reproducible + rescorable (script exists, Tier-1 MATCHes archive).
-- **1** reproducible + rescorable except one sub-value (`app:ceiling`'s
-  `CeilRho` — MATCHes the archive's cache but the new script can't
-  re-derive it from scratch).
-- **3** reproducible in principle but unverified (`anchor_mixtures.py`'s
-  three outputs — no cached ground truth exists to check against).
-- **1** reproducible-but-approximate, self-flagged (`tab:app-vacher`'s FID).
-- **8** not reproducible as exact figures/tables (candidates located,
-  final picks or generating code not preserved) — mostly figures.
-- **4** genuinely not reproducible, no file, notebook is the sole record.
-- **4** rescorable in the archive but not wired into `score_only.py` yet
-  (listed above under "Open items").
-- **1** permanently not reproducible by the paper's own admission
-  (`fig:app-coding`).
-- GPT-Image-1.5 rows: rescorable (images released, prompts/ledger shipped),
-  generation itself not reproducible (proprietary, already run).
+- 27 numbered paper items: 13 have a render script, 13 are recorded only by a curated notebook, and 1 (Appendix Figure 14) is not reproducible because the raw outputs were discarded.
+- Script-backed items whose cached inputs `score_only.py` checks: Tables 1 to 3, Appendix Tables 4, 6, 7 and 13, Appendix Figure 10 and Appendix D.6.
+- Script-backed items with no cached value to compare against: Figures 4, Appendix Figures 11 and 12 (`anchor_mixtures.py`); Appendix Table 5 follows the source protocol approximately (`vacher_50.py`).
+- Items recorded only by printed notebook output (no data file): Appendix Tables 8 and 9.
+- Notebooks that back no numbered item: `position_estimator.ipynb` and `order_dependence_and_timing.ipynb` (the tables they produced are not in the paper; the second also holds the 20-pair timing run cited for Vacher). They are kept for provenance.
+- GPT-Image-1.5 rows: scored from the released outputs; generation is not reproducible.
 
 `CHECK.md`: **245 MATCH, 0 MISMATCH, 257 rows checked.**

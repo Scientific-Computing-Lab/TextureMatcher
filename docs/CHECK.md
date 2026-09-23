@@ -321,7 +321,7 @@ they differ from the default.
 | `TMEncSec` | 0.009 | 0.0087944 | -0.000205598 | MATCH | evidence/timing_120_tm.csv (+recompute, median) |
 | `TMInterpSec` | 0.003 | 0.00275007 | -0.00024993 | MATCH | evidence/timing_120_tm.csv (+recompute, median; 'gen' column) |
 
-## Not attempted in this script (see INVENTORY.md §0/§2 for why)
+## Not attempted in this script (see docs/INVENTORY.md §0/§2 for why)
 
 These paper values have no per-pair CSV or raw feature cache in the archive
 (they exist only as notebook-printed output), or require re-deriving the
@@ -336,5 +336,5 @@ per-pair value, which risks a false mismatch from RNG differences:
 - `tab:app-vacher` FID column (printed-only; timing macros ARE checked above)
 - Anchor-mixture prose (`AnchorChangeA/B`), sparse-coding prose, round-trip prose
 - `\GPTsec`, `\GPTcostUSD`, `\GPTOrderRatio*`, `\GPTPathMono`, `\GPTPathRtwo` (from the GPT run report, outside this data root)
-- `\ResampleLPIPS`, `\GEScrambleDReal` (unverified per INVENTORY.md)
+- `\ResampleLPIPS`, `\GEScrambleDReal` (unverified per docs/INVENTORY.md)
 - Old 1,000-pair observer prose and `tab:app-representation`'s CNT rows (printed-only)

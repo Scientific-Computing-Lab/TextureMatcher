@@ -1,6 +1,12 @@
 # Texture Interpolation as Texton Matching
 
-Texture interpolation asks what should lie between two textures. Standard methods typically blend pixels or features at corresponding spatial locations, implicitly assuming that co-located elements should be mixed. For unrelated textures, however, this correspondence is arbitrary: a crack at one location has no particular relationship to a fiber at the same location in another image. We study whether this hidden pairing choice is itself a major determinant of interpolation quality. We represent textures as collections of local appearance vectors, or textons, and replace positional pairing with appearance-aware matching while keeping the encoder, representation, and decoder fixed. This isolates the effect of correspondence from changes in model capacity or training. Across texture pairs, appearance-aware matching consistently improves the distributional quality of interpolated midpoints over positional feature blending. Soft matching produces the strongest midpoint statistics, whereas one-to-one assignments yield more balanced transitions and closer agreement with the target endpoint. The same intervention also improves a second pretrained texture interpolator without retraining. These results identify correspondence as a first-class design choice in texture interpolation: meaningful transitions depend not only on how strongly two textures are mixed, but also on which local appearances are mixed with one another.
+Texture interpolation asks what should lie between two textures. Standard methods typically blend pixels or features at corresponding spatial locations, implicitly assuming that co-located elements should be mixed. For unrelated textures, however, this correspondence is arbitrary: a crack at one location has no particular relationship to a fiber at the same location in another image.
+
+We study whether this hidden pairing choice is itself a major determinant of interpolation quality. We represent textures as collections of local appearance vectors, or textons, and replace positional pairing with appearance-aware matching while keeping the encoder, representation, and decoder fixed. This isolates the effect of correspondence from changes in model capacity or training.
+
+Across texture pairs, appearance-aware matching consistently improves the distributional quality of interpolated midpoints over positional feature blending. Soft matching produces the strongest midpoint statistics, whereas one-to-one assignments yield more balanced transitions and closer agreement with the target endpoint. The same intervention also improves a second pretrained texture interpolator without retraining.
+
+These results identify correspondence as a first-class design choice in texture interpolation: meaningful transitions depend not only on how strongly two textures are mixed, but also on which local appearances are mixed with one another.
 
 ![Cracked earth to lined fur through an RGB cross-fade, positional CNT blending, and soft texton matching](assets/teaser.png)
 
@@ -18,7 +24,7 @@ Texture interpolation asks what should lie between two textures. Standard method
 | Texton matching: Target mean | 0.0090 | 79.6 | 0.970 | 0.077 | 26% |
 | Texton matching: Soft OT | 0.0093 | 79.1 | 0.955 | 0.078 | 23% |
 
-Every number is recomputed by `score_only.py`.
+Every number is recomputed by `score_only.py`. Under identical rendering and sampling (Table 2), soft texton matching lowers KID by 38% relative to positional blending, while exact one-to-one OT does not improve on it.
 
 ## Installation
 
@@ -48,7 +54,7 @@ Three tiers, each with one entry command. Every table and figure below maps to
 a script or a notebook.
 
 **Tier 1, score.** Recomputes every macro traceable to a cached file and compares
-it with the paper. About 2 minutes on a 10-core CPU. Reads the packed inputs in
+it with the paper. About 3 minutes on a 10-core CPU. Reads the packed inputs in
 `evidence/tier1/` and writes `docs/CHECK.md` (245 MATCH, 0 MISMATCH, 257 rows).
 
 ```bash
@@ -71,37 +77,37 @@ under an hour to a few hours on one GPU.
 python experiments/cnt_1000.py --cnt-root CNT_DIR --dtd-root DTD_DIR --out RENDERED_DIR/tm_scale1000 --data-root OUT_DIR --n-pairs 1000
 ```
 
-| Label | Reproduce with | Status |
+| Paper item | Reproduce with | Status |
 |---|---|---|
-| `tab:canonical` (Table 1) | `experiments/cnt_1000.py`, `experiments/tm_1000.py` | script |
-| `fig:qualitative` | `notebooks/4_1_canonical_rescore_128px.ipynb` | notebook |
-| `tab:eqsample` (Table 2) | `experiments/cnt_matched_200.py` | script |
-| `tab:generative` (Table 3) | `experiments/generative_120.py` | script |
-| `fig:gptstrip` | `notebooks/4_3b_generative_gpt_staging.ipynb` | notebook |
-| `fig:app-mixtures`, `fig:app-mixtures2`, `fig:app-palette` | `experiments/anchor_mixtures.py` | script |
-| `fig:transfer` | `notebooks/S_older_evaluations/stability_applications_5_8.ipynb` | notebook |
-| `fig:overview` | `notebooks/S_older_evaluations/paper_figure_candidate_factory.ipynb` | notebook |
-| `tab:app-generative` | `experiments/generative_120.py` | script |
-| `fig:app-gpt` | `notebooks/4_3b_generative_gpt_staging.ipynb` | notebook |
-| `tab:app-vacher` | `experiments/vacher_50.py` | script |
-| `tab:app-primitives` | `experiments/primitives_120.py` | script |
-| `tab:rules` | `experiments/rules_200.py` | script |
-| `tab:app-representation` | `notebooks/S_older_evaluations/cnt_sam_dino_compare.ipynb`, `never_gonna_give_you_up.ipynb` | notebook |
-| `tab:app-realism` | `notebooks/S_older_evaluations/Vortex.ipynb` | notebook |
-| `tab:app-position` | `notebooks/S_older_evaluations/position_estimator_4_9.ipynb` | notebook |
-| `tab:app-order` | `notebooks/S_older_evaluations/compute_cost_5_4.ipynb` | notebook |
-| `fig:app-epsilon` | `notebooks/S_completion_eps_rho_timing20.ipynb` | notebook |
-| `tab:app-repeat` | `notebooks/S_older_evaluations/degradation_ot_vs_tm_5_9.ipynb` | notebook |
-| `tab:runtime` | `experiments/runtime_120.py` | script |
-| `fig:app-qualitative` | `notebooks/4_1_canonical_rescore_128px.ipynb` | notebook |
-| `fig:app-boundary` | `notebooks/4_1_canonical_rescore_128px.ipynb` | notebook |
-| `fig:app-alignshift` | `experiments/alignment.py` | script |
-| `fig:app-semantic` | `notebooks/S_older_evaluations/stability_applications_5_8.ipynb` | notebook |
-| `fig:app-coding` | none | Not reproducible: raw outputs discarded |
-| `fig:app-rho` | `notebooks/S_completion_eps_rho_timing20.ipynb` | notebook |
-| `app:ceiling` | `experiments/ceiling_120.py` | script |
+| Figure 1 | `notebooks/supplementary_studies/figure_candidate_factory.ipynb` | notebook |
+| Table 1 | `experiments/cnt_1000.py`, `experiments/tm_1000.py` | script |
+| Figure 2 | `notebooks/canonical_rescore_128px.ipynb` | notebook |
+| Table 2 | `experiments/cnt_matched_200.py` | script |
+| Table 3 | `experiments/generative_120.py` | script |
+| Figure 3 | `notebooks/generative_comparison_gpt_staging.ipynb` | notebook |
+| Figure 4 | `experiments/anchor_mixtures.py` | script |
+| Figure 5 | `notebooks/supplementary_studies/anchor_mixtures_and_stability.ipynb` | notebook |
+| Appendix Table 4 | `experiments/generative_120.py` | script |
+| Appendix Figure 6 | `notebooks/generative_comparison_gpt_staging.ipynb` | notebook |
+| Appendix Table 5 | `experiments/vacher_50.py` | script |
+| Appendix Table 6 | `experiments/primitives_120.py` | script |
+| Appendix Table 7 | `experiments/rules_200.py` | script |
+| Appendix Table 8 | `notebooks/supplementary_studies/feature_space_spread_dino_sam.ipynb`, `notebooks/supplementary_studies/ot_metric_forensics_cnt.ipynb` | notebook |
+| Appendix Table 9 | `notebooks/supplementary_studies/vortex_observer_realism.ipynb` | notebook |
+| Appendix Figure 7 | `notebooks/entropy_sweep_plan_alignment_timing.ipynb` | notebook |
+| Appendix Table 12 | `notebooks/supplementary_studies/repeated_operations_ot_vs_texture_mixer.ipynb` | notebook |
+| Appendix Table 13 | `experiments/runtime_120.py` | script |
+| Appendix Figure 8 | `notebooks/canonical_rescore_128px.ipynb` | notebook |
+| Appendix Figure 9 | `notebooks/canonical_rescore_128px.ipynb` | notebook |
+| Appendix Figure 10 | `experiments/alignment.py` | script |
+| Appendix Figure 11 | `experiments/anchor_mixtures.py` | script |
+| Appendix Figure 12 | `experiments/anchor_mixtures.py` | script |
+| Appendix Figure 13 | `notebooks/supplementary_studies/anchor_mixtures_and_stability.ipynb` | notebook |
+| Appendix Figure 14 | none | Not reproducible: raw outputs discarded |
+| Appendix Figure 15 | `notebooks/entropy_sweep_plan_alignment_timing.ipynb` | notebook |
+| Appendix D.6 (encoding ceiling) | `experiments/ceiling_120.py` | script |
 
-`docs/COVERAGE.md` lists the data each row needs, and `docs/PROVENANCE.md`
+`docs/COVERAGE.md` lists the data each row needs, with the paper labels, and `docs/PROVENANCE.md`
 records the limits of individual rows.
 
 ## Colab
@@ -138,11 +144,11 @@ are stored at 128×128 and upsampled to 256×256 before CNT encoding.
 2,048-d pool features) for KID, FID and the Inception realism. DINOv2 ViT-S/14
 through timm, `vit_small_patch14_dinov2.lvd142m` (384-d features), for the DINO
 realism and the balance score; this is not the Hugging Face `dinov2-base` model.
-LPIPS (AlexNet) for the ceiling and alignment studies.
+LPIPS (AlexNet) for the ceiling (Appendix D.6) and alignment (Appendix Figure 10) studies.
 
 **Reference pool.** 2,819 DTD images (seed 2819, 60 per category), cached as
 `ref_inc.npy` and `ref_dino.npy` under `evidence/tier1/matching_ablation/`.
-`app:ceiling` uses a 5,640-image reference of native 128-px windows.
+Appendix D.6 uses a 5,640-image reference of native 128-px windows.
 
 **Metrics.**
 - **KID:** unbiased estimator with the cubic polynomial kernel
@@ -165,8 +171,8 @@ LPIPS (AlexNet) for the ceiling and alignment studies.
 
 | Estimator | Tables |
 |---|---|
-| Full reference, trace-corrected | Table 3 and `tab:app-generative`, Table 2, the Texture Mixer block of Table 1, `tab:app-primitives`, `app:ceiling`, every ΔKID |
-| 20 subsamples of size min(1,000, number of images), averaged; trace-corrected | the CNT block of Table 1, `tab:rules` |
+| Full reference, trace-corrected | Table 3 and Appendix Table 4, Table 2, the Texture Mixer block of Table 1, Appendix Table 6, Appendix D.6, every ΔKID |
+| 20 subsamples of size min(1,000, number of images), averaged; trace-corrected | the CNT block of Table 1, Appendix Table 7 |
 
 ## GPT-Image-1.5 comparator
 
@@ -222,8 +228,8 @@ GPT rows from cached features.
 so generation cannot be repeated. The scores are reproducible from the outputs,
 which are released upon publication.
 
-**Figure.** `fig:gptstrip` shows the first three pairs by id, with columns A |
-soft OT | GPT directed | GPT symmetric | Texture Mixer | B; `fig:app-gpt` shows the
+**Figure.** Figure 3 shows the first three pairs by id, with columns A |
+soft OT | GPT directed | GPT symmetric | Texture Mixer | B; Appendix Figure 6 shows the
 first eight.
 
 ## Repository layout

@@ -4,9 +4,9 @@
 # not-yet-scriptable comparison; no experiments/ script renders it (see
 # docs/PROVENANCE.md).
 #
-# Mirrors every notebook that used it (compute_cost_5_4.ipynb,
-# literature_baselines_4_1.ipynb, literature_baselines_corrected.ipynb,
-# dtd/images/stability_applications_5_8.ipynb, paper_completion.ipynb):
+# Mirrors every notebook that used it (order_dependence_and_timing.ipynb,
+# literature_baselines_4_1.ipynb, vacher_comparison_corrected.ipynb,
+# dtd/images/anchor_mixtures_and_stability.ipynb, paper_completion.ipynb):
 #   git clone -q --depth 1 https://github.com/JonathanVacher/texture-interpolation.git
 #
 # No pinned commit: every one of those clones is `--depth 1` (shallow,

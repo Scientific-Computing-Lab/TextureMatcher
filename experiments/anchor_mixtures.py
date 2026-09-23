@@ -4,7 +4,7 @@
 `AnchorChangeB` (38%) / "14%/32% [OT-sym] re-run noise" prose in the
 supplement's anchor-mixtures subsection.
 
-Ported from notebooks_raw/dtd/images/stability_applications_5_8.ipynb:
+Ported from notebooks_raw/dtd/images/anchor_mixtures_and_stability.ipynb:
   - cell 13 ("BARYCENTRE FIGURE") defines the three k-way barycentre
     strategies this script ports verbatim: `bary_anchored` (asymmetric,
     expressed on one source's support), `bary_sym` (average the anchored
@@ -64,7 +64,7 @@ from texton_matching.cnt import CNTModel
 from texton_matching import matching
 
 # The two source quadruples the paper's anchor-mixture study uses, verbatim
-# from stability_applications_5_8.ipynb cell 14. Key "A"/"B" here is our own
+# from anchor_mixtures_and_stability.ipynb cell 14. Key "A"/"B" here is our own
 # naming for AnchorChangeA/AnchorChangeB -- the notebook itself just calls
 # them "quad 0"/"quad 1" (its `QUADS` list, in this order).
 QUADS = {

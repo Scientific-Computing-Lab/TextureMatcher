@@ -53,9 +53,8 @@ NaN. `app:ceiling` and `tab:app-primitives` do not use the generic rescorer;
 
 ## Coverage limits
 
-- `tab:app-order`, `fig:app-epsilon`, `tab:app-repeat` and `fig:app-rho` each
-  have a cached file in the archive (`compute_cost/order_dependence_n6.csv`,
-  `paper_completion/eps_sweep.json`, `degradation_5_9/results/degradation.csv`,
+- Appendix Figure 7, Appendix Table 12 and Appendix Figure 15 each
+  have a cached file in the archive (`paper_completion/eps_sweep.json`, `degradation_5_9/results/degradation.csv`,
   `paper_completion/rhostar_1000_sharp_exact.csv`) that `score_only.py` does not
   read. No script renders these from scratch.
 - `experiments/vacher_50.py` follows the protocol of the source notebook. The
@@ -63,10 +62,8 @@ NaN. `app:ceiling` and `tab:app-primitives` do not use the generic rescorer;
   FID values follow the same protocol without being a byte-exact replay of the
   archived values. The Vacher timing comes from a separate 20-pair run
   (`paper_completion/timing_n20.csv`).
-- `tab:app-representation`, `tab:app-realism` and `tab:app-position` were
-  printed by their notebooks and never saved to a file; `docs/INVENTORY.md`
-  quotes the printed values. `tab:app-position` ran before a fix to CNT's input
-  range.
+- Appendix Tables 8 and 9 were printed by their notebooks and never saved to a
+  file; `docs/INVENTORY.md` quotes the printed values.
 - `experiments/anchor_mixtures.py` renders and measures `AnchorChangeA` and
   `AnchorChangeB`. No cached value exists to compare against.
 - `fig:app-coding`: the raw outputs were not retained.

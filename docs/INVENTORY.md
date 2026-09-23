@@ -446,17 +446,17 @@ texton-matching-code/
 │   ├── f_*.py                   # figure scripts, re-rendering the chosen candidate IDs
 │   └── score_only.py            # reproduces every table from cached PNGs/features, no CNT or TF1 needed
 ├── notebooks/                  # curated KEEP notebooks, renamed by paper section, outputs kept
-│   ├── 4_1_protocol_pairs_and_rendering.ipynb      ← tm_scale1000_headtohead
-│   ├── 4_1_canonical_rescore_128px.ipynb           ← finish_day
-│   ├── 4_2_matching_rules_200.ipynb                ← matching_ablation (+ exact_finish c4 FID)
-│   ├── 4_2_equal_sample_and_tm_coupling.ipynb      ← finishing_experiments
-│   ├── 4_x_jackknife_and_final_tables.ipynb        ← jackknife_dKID
-│   ├── 4_4_texture_mixer_1000.ipynb                ← presubmission_additions
+│   ├── benchmark_pairs_and_rendering.ipynb      ← tm_scale1000_headtohead
+│   ├── canonical_rescore_128px.ipynb           ← finish_day
+│   ├── matching_rules_200_pairs.ipynb                ← matching_ablation (+ exact_finish c4 FID)
+│   ├── equal_sample_and_texture_mixer_coupling.ipynb      ← finishing_experiments
+│   ├── jackknife_delta_kid_and_final_tables.ipynb        ← jackknife_dKID
+│   ├── texture_mixer_1000_pairs.ipynb                ← presubmission_additions
 │   ├── 4_3_generative_gpt_staging.ipynb            ← Untitled6 + subset of dtd
-│   ├── 4_3_runtime_120.ipynb                       ← timing_120_pairs (1)
-│   ├── S_primitives.ipynb ← CNT_correspondence_experiments   S_ceiling.ipynb ← CNT_joint_basis_and_ceiling
-│   ├── S_completion_eps_rho_timing20.ipynb ← paper_completion   S_mechanism.ipynb ← mechanism_study (1)
-│   └── S_older_evaluations/ ← corrected_pipeline_rerun, literature_baselines_corrected, ot_direction_fid_barycenter,
+│   ├── runtime_120_pairs.ipynb                       ← timing_120_pairs (1)
+│   ├── gaussian_primitive_matching.ipynb ← CNT_correspondence_experiments   encoding_ceiling.ipynb ← CNT_joint_basis_and_ceiling
+│   ├── entropy_sweep_plan_alignment_timing.ipynb ← paper_completion   mechanism_study.ipynb ← mechanism_study (1)
+│   └── supplementary_studies/ ← corrected_pipeline_rerun, literature_baselines_corrected, ot_direction_fid_barycenter,
 │                              compute_cost_5_4, position_estimator_4_9, Vortex, cnt sam dino comapre,
 │                              never gonna give you up, stability_applications_5_8, degradation_ot_vs_tm_5_9,
 │                              prop2_midpoint_amplitude_check, lpips expiriment, RAE, paper_figure_candidate_factory

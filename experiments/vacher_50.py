@@ -5,7 +5,7 @@ interpolation baseline, scored at 128px.
 
 Ported from two notebooks (see docs/INVENTORY.md's claims map for `tab:app-vacher`):
 
-  - `literature_baselines_corrected.ipynb` cells 1-2: the "corrected loader"
+  - `vacher_comparison_corrected.ipynb` cells 1-2: the "corrected loader"
     rerun of the 50-pair comparison. Cell 1's `vacher_interp` is the exact
     Vacher invocation, ported verbatim below (`--model` in {tex_wasser,
     tex_gram, tex_gauss}, `--n_iter 30 --bfgs_iter 20 --shape 256,256`, via
@@ -16,7 +16,7 @@ Ported from two notebooks (see docs/INVENTORY.md's claims map for `tab:app-vache
     comment: "THE loader. Always go through load_image, via a temp file if
     needed") means every image -- ours and Vacher's midpoints alike -- is
     always routed through CNT's own `load_image` (proper [-1,1] range),
-    the same class of fix docs/INVENTORY.md flags for `position_estimator_4_9`
+    the same class of fix docs/INVENTORY.md flags for `position_estimator`
     (naive [0,1] loading elsewhere silently lost ~68% of contrast); this
     script inherits that fix for free by using texton_matching.cnt, which
     always calls CNT's `load_image` too.
@@ -42,7 +42,7 @@ Ported from two notebooks (see docs/INVENTORY.md's claims map for `tab:app-vache
     reconstruction, field_linear at eta=0 on a self-pair) is added here to
     match the FID table's "reconstruction floor" row, described next.
 
-  - `ot_direction_fid_barycenter.ipynb` cell 20 ("Cell P30: SOTA FID column
+  - `ot_direction_fid_and_barycenters.ipynb` cell 20 ("Cell P30: SOTA FID column
     -- Texture Mixer + Vacher vs ours, fair protocol") is where the FID
     numbers actually get computed -- cell 2 above only computes realism/
     balance/structure, NOT FID. Cell 20's recipe, ported as faithfully as
@@ -123,21 +123,21 @@ OURS_RULES = {
     "ot": "soft_ot",
 }
 VACHER_MODELS = ["tex_wasser", "tex_gram", "tex_gauss"]
-VACHER_SHAPE = "256,256"     # literature_baselines_corrected.ipynb cell 1, verbatim
+VACHER_SHAPE = "256,256"     # vacher_comparison_corrected.ipynb cell 1, verbatim
 VACHER_N_ITER = 30           # verbatim (matches supplement.tex: "we run them for 30 iterations")
 VACHER_BFGS_ITER = 20        # verbatim (vacher_interp's default, never overridden in cell 2's call)
 FID_RES = 128                # supplement.tex: "scored at 128px"
 
 
 def dtd_path(dtd_root: Path, cat: str, seed: int) -> Path:
-    """Ported verbatim from literature_baselines_corrected.ipynb cell 0's
+    """Ported verbatim from vacher_comparison_corrected.ipynb cell 0's
     `dtd_path`: a deterministic, seeded choice of one file in `cat`."""
     files = sorted(glob.glob(str(dtd_root / cat / "*.jpg")))
     return Path(random.Random(seed).choice(files))
 
 
 def sample_50_pairs(dtd_root: Path, n_pairs: int) -> list[dict]:
-    """Ported verbatim from literature_baselines_corrected.ipynb cell 2:
+    """Ported verbatim from vacher_comparison_corrected.ipynb cell 2:
     `random.Random(4242)` draws unordered category pairs; A's/B's file are
     then independently seeded `20000+i` / `40000+i`. This is NOT the same
     sampler as build_manifest_1000 / pairs_120/pairs.csv -- tab:app-vacher
@@ -156,7 +156,7 @@ def sample_50_pairs(dtd_root: Path, n_pairs: int) -> list[dict]:
 def vacher_interp(vacher_root: Path, path_a: Path, path_b: Path, model_name: str,
                    weight: float = 0.5, n_iter: int = VACHER_N_ITER, bfgs_iter: int = VACHER_BFGS_ITER,
                    shape: str = VACHER_SHAPE, seed: int = 0):
-    """Ported verbatim from literature_baselines_corrected.ipynb cell 1's
+    """Ported verbatim from vacher_comparison_corrected.ipynb cell 1's
     `vacher_interp`: shells into Vacher's own `run_synthesis.py`-style CLI
     entry point (`BaseOptions`/`create_model`) via a temporary `sys.argv`
     swap, from inside `<vacher_root>/texture-synthesis-algorithm` (the
