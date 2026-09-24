@@ -42,8 +42,8 @@ rows in `CHECK.md` MATCH the paper, 0 MISMATCH.**
 | Appendix Table 8 (`tab:app-representation`) | `notebooks/supplementary_studies/feature_space_spread_dino_sam.ipynb` + `ot_metric_forensics_cnt.ipynb` | none (`item2_representation_n40.json` is missing from the archive entirely) | **not reproducible** — printed-only, and the file that would hold it was never in the archive to begin with. The printed values are still preserved in `INVENTORY.md` §2's cross-check column even though the shipped notebooks have their saved outputs stripped (see "A note on stripped outputs" below). |
 | Appendix Table 9 (`tab:app-realism`) | `notebooks/supplementary_studies/vortex_observer_realism.ipynb` | none | **not reproducible** — printed-only, no file; values preserved in `INVENTORY.md` §2. |
 | Appendix Figure 7 (`fig:app-epsilon`) | `notebooks/entropy_sweep_plan_alignment_timing.ipynb` (was `paper_completion`) + candidate factory | `paper_completion/eps_sweep.json` (exists in archive) | **rescorable but not checked by Tier 1** (see "Open items") |
-| Appendix Table 12 (`tab:app-repeat`) | `notebooks/supplementary_studies/repeated_operations_ot_vs_texture_mixer.ipynb` | `degradation_5_9/results/degradation.csv` (exists in archive) | **rescorable but not checked by Tier 1**, except the autoencoder control row, which is printed-only even in the source notebook |
-| Appendix Table 13 (`tab:runtime`) | `experiments/runtime_120.py`; `score_only.py` (Tier1, 6 rows MATCH) | `pairs_120/pairs.csv`; CNT + Texture Mixer; one GPU | **reproducible + rescorable** for the CNT/TM columns (`EncodeSec`,`DecSec`,`OTTransportSec`,`HardAssignSec`,`TMEncSec`,`TMInterpSec`). `VacherWSec`/`GPTsec` in this same table come from other protocols entirely (see `tab:app-vacher` and the GPT section) and were never this table's own timings, even in the source notebook. `DecSecLow` (128px pass): the archive itself never saved `timing_120_ours128.csv` — permanently printed-only, not this package's gap to fill. |
+| Appendix Table 10 (`tab:app-repeat`) | `notebooks/supplementary_studies/repeated_operations_ot_vs_texture_mixer.ipynb` | `degradation_5_9/results/degradation.csv` (exists in archive) | **rescorable but not checked by Tier 1**, except the autoencoder control row, which is printed-only even in the source notebook |
+| Appendix Table 11 (`tab:runtime`) | `experiments/runtime_120.py`; `score_only.py` (Tier1, 6 rows MATCH) | `pairs_120/pairs.csv`; CNT + Texture Mixer; one GPU | **reproducible + rescorable** for the CNT/TM columns (`EncodeSec`,`DecSec`,`OTTransportSec`,`HardAssignSec`,`TMEncSec`,`TMInterpSec`). `VacherWSec`/`GPTsec` in this same table come from other protocols entirely (see `tab:app-vacher` and the GPT section) and were never this table's own timings, even in the source notebook. `DecSecLow` (128px pass): the archive itself never saved `timing_120_ours128.csv` — permanently printed-only, not this package's gap to fill. |
 | Appendix Figure 8 (`fig:app-qualitative`) | Same source as `fig:qualitative` | Same | **not reproducible** as exact figure; candidates reproducible via `cnt_1000.py` |
 | Appendix Figure 9 (`fig:app-boundary`) | `notebooks/canonical_rescore_128px.ipynb` c6/c11/c14 + candidate factory | `paper_figs/boundary` | **not reproducible** as exact figure; the underlying correspondence-progression images are producible by varying `eta` in `texton_matching.matching`'s field-linear rule via `cnt_1000.py`. |
 | Appendix Figure 10 (`fig:app-alignshift`) | `experiments/alignment.py`; `score_only.py` (Tier1, 8 rows MATCH) | `evidence/alignment_scores.csv`; CNT | **reproducible + rescorable** |
@@ -105,13 +105,13 @@ mount paths were replaced with a `DATA_ROOT` environment variable read.
 
 Found during the coverage audit and not addressed:
 
-- **Appendix Figure 7, Appendix Table 12, Appendix Figure 15**:
+- **Appendix Figure 7, Appendix Table 10, Appendix Figure 15**:
   each has a real cached file in the archive
   (`paper_completion/eps_sweep.json`,
   `degradation_5_9/results/degradation.csv`,
   `paper_completion/rhostar_1000_sharp_exact.csv`) that could become a
   `score_only.py` Tier-1 check the same way Appendix Figure 10 and
-  Appendix Table 13 are checked -- low effort, no GPU needed. Not done yet.
+  Appendix Table 11 are checked -- low effort, no GPU needed. Not done yet.
 - **`fig:app-coding`**: permanently not reproducible (paper's own
   admission, no retained outputs); its source notebook is LEGACY-classified
   by the paper's own topic rule and therefore intentionally not shipped in

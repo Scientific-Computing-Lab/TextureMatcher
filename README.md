@@ -95,8 +95,8 @@ python experiments/cnt_1000.py --cnt-root CNT_DIR --dtd-root DTD_DIR --out RENDE
 | Appendix Table 8 | `notebooks/supplementary_studies/feature_space_spread_dino_sam.ipynb`, `notebooks/supplementary_studies/ot_metric_forensics_cnt.ipynb` | notebook |
 | Appendix Table 9 | `notebooks/supplementary_studies/vortex_observer_realism.ipynb` | notebook |
 | Appendix Figure 7 | `notebooks/entropy_sweep_plan_alignment_timing.ipynb` | notebook |
-| Appendix Table 12 | `notebooks/supplementary_studies/repeated_operations_ot_vs_texture_mixer.ipynb` | notebook |
-| Appendix Table 13 | `experiments/runtime_120.py` | script |
+| Appendix Table 10 | `notebooks/supplementary_studies/repeated_operations_ot_vs_texture_mixer.ipynb` | notebook |
+| Appendix Table 11 | `experiments/runtime_120.py` | script |
 | Appendix Figure 8 | `notebooks/canonical_rescore_128px.ipynb` | notebook |
 | Appendix Figure 9 | `notebooks/canonical_rescore_128px.ipynb` | notebook |
 | Appendix Figure 10 | `experiments/alignment.py` | script |
