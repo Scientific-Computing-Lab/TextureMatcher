@@ -10,7 +10,7 @@ from; `docs/CHECK.md` is the generated Tier 1 report.
 `evidence/tier1/` holds the 63 cached files that `score_only.py` reads, in the
 layout of the original results archive. Floating-point arrays are stored as
 float16 (`experiments/pack_tier1.py` rebuilds the folder from the archive) and
-are cast to float64 on load. The packed inputs give the same 245 MATCH and 0
+are cast to float64 on load. The packed inputs give the same 275 MATCH and 0
 MISMATCH as the full-precision archive; recomputed values differ from it by
 about 1e-7 in KID. The folder `pairs_120/` is the 120-pair subset; an older
 archive layout names it `pairs_for_*`, and both are accepted.

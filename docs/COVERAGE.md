@@ -147,4 +147,4 @@ part of this package.
 - Notebooks that back no numbered item: `position_estimator.ipynb` and `order_dependence_and_timing.ipynb` (the tables they produced are not in the paper; the second also holds the 20-pair timing run cited for Vacher). They are kept for provenance.
 - GPT-Image-1.5 rows: scored from the released outputs; generation is not reproducible.
 
-`CHECK.md`: **245 MATCH, 0 MISMATCH, 257 rows checked.**
+`CHECK.md`: **275 MATCH, 0 MISMATCH, 284 rows checked.**

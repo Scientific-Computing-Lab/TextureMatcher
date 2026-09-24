@@ -5,14 +5,16 @@ Data root: `evidence/tier1`
 Paper root: `evidence/paper_numbers`
 
 
-**284 rows checked. 272 MATCH, 0 MISMATCH, 3 have no per-pair file row (see notes per row), 0 have no corresponding paper macro, 9 informational.**
-
-The 27 rows added on 2026-09-24 (the `RuleBal*`, `RuleGap*`, `RuleInc*` macros that now fill every cell of Appendix Table 7, the re-check of its eight pre-existing cells, and `GEKIDmorphPA`) were computed with the same per-pair medians and `kid_full` call as the neighbouring rows; the `GEKIDmorphPA` line is placed in the rules section for brevity.
+**284 rows checked. 275 MATCH, 0 MISMATCH, 3 have no per-pair file row (see notes per row), 0 have no corresponding paper macro, 6 informational.**
 
 Tolerance: |diff| <= max(0.0006, 2% relative) for plain values (0.0006 covers the
 trace-vs-len KID reference-term offset of ~0.000245); wider tolerances are used
 explicitly for bootstrap CIs and derived percentages, and are noted per row where
 they differ from the default.
+
+The `RuleBal*`, `RuleGap*` and `RuleInc*` rows (every cell of the matching-rules
+table) and `GEKIDmorphPA` use the same per-pair medians and `kid_full` call as
+their neighbouring rows.
 
 ## All checks, by table
 
@@ -93,9 +95,9 @@ they differ from the default.
 | `TMkdKIDotVsMeanCI.hi` | 0.0012 | 0.00119343 | -6.57e-06 | MATCH | jackknife/feats_tm1000_*.npy (+recompute) |
 | `TMkKIDgain` | 26 | 25.7215 | -0.278538 | MATCH | derived (mean vs lerp) |
 | `TMkKIDpctOT` | 23 | 23.3681 | +0.368058 | MATCH | derived (ot vs lerp) |
-| `TMkFIDlerp` | nan | 82.4275 | +nan | INFO (new; no paper macro yet) | jackknife/feats_tm1000_*.npy vs matching_ablation/ref_inc.npy (+recompute, fid_score) |
-| `TMkFIDmean` | nan | 79.5511 | +nan | INFO (new; no paper macro yet) | jackknife/feats_tm1000_*.npy vs matching_ablation/ref_inc.npy (+recompute, fid_score) |
-| `TMkFIDot` | nan | 79.0666 | +nan | INFO (new; no paper macro yet) | jackknife/feats_tm1000_*.npy vs matching_ablation/ref_inc.npy (+recompute, fid_score) |
+| `TMkFIDlerp` | 82.4 | 82.4275 | +0.0274629 | MATCH | jackknife/feats_tm1000_*.npy vs matching_ablation/ref_inc.npy (+recompute, fid_score) |
+| `TMkFIDmean` | 79.6 | 79.5511 | -0.0488747 | MATCH | jackknife/feats_tm1000_*.npy vs matching_ablation/ref_inc.npy (+recompute, fid_score) |
+| `TMkFIDot` | 79.1 | 79.0666 | -0.0333556 | MATCH | jackknife/feats_tm1000_*.npy vs matching_ablation/ref_inc.npy (+recompute, fid_score) |
 
 ### tab:eqsample (45 rows)
 
@@ -145,7 +147,7 @@ they differ from the default.
 | `EqKIDgainOT` | 38 | 38.41 | +0.410038 | MATCH | derived (paper vs linear) |
 | `EqFIDgainOT` | 8 | 7.591 | -0.409005 | MATCH | derived (paper vs linear) |
 | `EqKIDgainOTsmall` | 33 | 33.0711 | +0.0710846 | MATCH | derived (4096-sample ot_e0.05 vs linear) |
-| `EqBalP (actual p)` | 10 | 1.7201e-14 | +nan | SEE NOTE: paper says p<value, actual p=1.72e-14 | jackknife/scores_eq_{hard,ot_e0.05}.csv (+recompute, paired Wilcoxon) |
+| `EqBalP (actual p)` | 1.7 | 1.7201e-14 | +nan | SEE NOTE: paper says p<value, actual p=1.72e-14 | jackknife/scores_eq_{hard,ot_e0.05}.csv (+recompute, paired Wilcoxon) |
 
 ### tab:generative-120 (77 rows)
 
@@ -245,7 +247,7 @@ they differ from the default.
 | `RuleFIDGaussian` | 177.6 | 177.608 | +0.00786554 | MATCH | matching_ablation/rules_feats.npz (+recompute) |
 | `RuleKIDNN` | 0.027 | 0.0271122 | +0.000112173 | MATCH | matching_ablation/rules_feats.npz (+recompute, subsampled KID) |
 | `RuleFIDNN` | 182.4 | 182.44 | +0.0402086 | MATCH | matching_ablation/rules_feats.npz (+recompute) |
-| `RuleKIDHard` | 0.031 | 0.0304926 | -0.000507437 | MATCH | matching_ablation/rules_feats.npz (+recompute, subsampled KID) |
+| `RuleKIDHard` | 0.03 | 0.0304926 | +0.000492563 | MATCH | matching_ablation/rules_feats.npz (+recompute, subsampled KID) |
 | `RuleFIDHard` | 184.2 | 184.155 | -0.0454656 | MATCH | matching_ablation/rules_feats.npz (+recompute) |
 | `RuleKIDTransport` | 0.02 | 0.0198274 | -0.000172587 | MATCH | matching_ablation/rules_feats.npz (+recompute, subsampled KID) |
 | `RuleFIDTransport` | 174.9 | 174.85 | -0.0495903 | MATCH | matching_ablation/rules_feats.npz (+recompute) |
@@ -256,33 +258,32 @@ they differ from the default.
 | `(inline) NN balance` | nan | 0.0463199 | +nan | INFO (b=0.046, gap=0.810; see supplement.tex prose) | matching_ablation/rules_n200.csv |
 | `(inline) Hard/Exact balance` | nan | 0.0432797 | +nan | INFO (b=0.043, gap=0.808; see supplement.tex prose) | matching_ablation/rules_n200.csv |
 | `(inline) Soft-OT balance` | nan | 0.081266 | +nan | INFO (b=0.081, gap=0.868; see supplement.tex prose) | matching_ablation/rules_n200.csv |
-| `RuleBalNN` | 0.046 | 0.0463199 | +0.00031988 | MATCH | matching_ablation/rules_n200.csv (median of balance_from_place) |
-| `RuleGapNN` | 0.81 | 0.809843 | -0.000156668 | MATCH | matching_ablation/rules_n200.csv (median endpoint_gap) |
-| `RuleBalHard` | 0.043 | 0.0432797 | +0.00027971 | MATCH | matching_ablation/rules_n200.csv (median of balance_from_place) |
-| `RuleGapHard` | 0.81 | 0.807994 | -0.00200556 | MATCH | matching_ablation/rules_n200.csv (median endpoint_gap) |
-| `RuleBalTransport` | 0.081 | 0.081266 | +0.00026596 | MATCH | matching_ablation/rules_n200.csv (median of balance_from_place) |
-| `RuleGapTransport` | 0.87 | 0.867597 | -0.00240338 | MATCH | matching_ablation/rules_n200.csv (median endpoint_gap) |
-| `RuleIncTransport` | 0.933 | 0.933265 | +0.000265 | MATCH | matching_ablation/rules_n200.csv (median real_inc) |
-| `RuleBalRandom` | 0.035 | 0.0349 | -0.0001 | MATCH | matching_ablation/rules_n200.csv (median of balance_from_place) |
-| `RuleGapRandom` | 1.00 | 1.0043 | +0.0043 | MATCH | matching_ablation/rules_n200.csv (median endpoint_gap) |
-| `RuleBalMean` | 0.082 | 0.0820 | +0.0000 | MATCH | matching_ablation/rules_n200.csv (median of balance_from_place) |
-| `RuleGapMean` | 0.91 | 0.9119 | +0.0019 | MATCH | matching_ablation/rules_n200.csv (median endpoint_gap) |
-| `RuleIncMean` | 0.921 | 0.9212 | +0.0002 | MATCH | matching_ablation/rules_n200.csv (median real_inc) |
-| `RuleBalPixel` | 0.044 | 0.0441 | +0.0001 | MATCH | matching_ablation/rules_n200.csv (median of balance_from_place) |
-| `RuleGapPixel` | 0.29 | 0.2939 | +0.0039 | MATCH | matching_ablation/rules_n200.csv (median endpoint_gap) |
-| `RuleIncPixel` | 0.923 | 0.9229 | -0.0001 | MATCH | matching_ablation/rules_n200.csv (median real_inc) |
-| `RuleBalPosition` | 0.035 | 0.0353 | +0.0003 | MATCH | matching_ablation/rules_n200.csv (median of balance_from_place) |
-| `RuleGapPosition` | 0.00 | 0.0000 | +0.0000 | MATCH | matching_ablation/rules_n200.csv (median endpoint_gap) |
-| `RuleIncPosition` | 0.895 | 0.8946 | -0.0004 | MATCH | matching_ablation/rules_n200.csv (median real_inc) |
-| `RuleBalGaussian` | 0.107 | 0.1068 | -0.0002 | MATCH | matching_ablation/rules_n200.csv (median of balance_from_place) |
-| `RuleGapGaussian` | 0.81 | 0.8094 | -0.0006 | MATCH | matching_ablation/rules_n200.csv (median endpoint_gap) |
-| `RuleIncGaussian` | 0.928 | 0.9281 | +0.0001 | MATCH | matching_ablation/rules_n200.csv (median real_inc) |
-| `RuleIncNN` | 0.951 | 0.9507 | -0.0003 | MATCH | matching_ablation/rules_n200.csv (median real_inc) |
-| `RuleIncHard` | 0.953 | 0.9533 | +0.0003 | MATCH | matching_ablation/rules_n200.csv (median real_inc) |
-| `RuleBalSharp` | 0.083 | 0.0833 | +0.0003 | MATCH | matching_ablation/rules_n200.csv (median of balance_from_place) |
-| `RuleGapSharp` | 0.84 | 0.8357 | -0.0043 | MATCH | matching_ablation/rules_n200.csv (median endpoint_gap) |
-| `RuleIncSharp` | 0.942 | 0.9421 | +0.0001 | MATCH | matching_ablation/rules_n200.csv (median real_inc) |
-| `GEKIDmorphPA` | 0.046 | 0.0459 | -0.0001 | MATCH | correspondence/feats/E1.npz arm PA_morph, kid_full vs matching_ablation/ref_inc.npy |
+| `RuleBalRandom` | 0.035 | 0.0349419 | -5.80883e-05 | MATCH | matching_ablation/rules_n200.csv (median of balance_from_place) |
+| `RuleGapRandom` | 1 | 1.00435 | +0.00434643 | MATCH | matching_ablation/rules_n200.csv (median endpoint_gap) |
+| `RuleBalMean` | 0.082 | 0.0819787 | -2.13362e-05 | MATCH | matching_ablation/rules_n200.csv (median of balance_from_place) |
+| `RuleGapMean` | 0.91 | 0.911919 | +0.00191918 | MATCH | matching_ablation/rules_n200.csv (median endpoint_gap) |
+| `RuleIncMean` | 0.921 | 0.921198 | +0.000198159 | MATCH | matching_ablation/rules_n200.csv (median real_inc) |
+| `RuleBalPixel` | 0.044 | 0.0440962 | +9.61868e-05 | MATCH | matching_ablation/rules_n200.csv (median of balance_from_place) |
+| `RuleGapPixel` | 0.29 | 0.293859 | +0.00385912 | MATCH | matching_ablation/rules_n200.csv (median endpoint_gap) |
+| `RuleIncPixel` | 0.923 | 0.922939 | -6.08485e-05 | MATCH | matching_ablation/rules_n200.csv (median real_inc) |
+| `RuleBalPosition` | 0.035 | 0.0352844 | +0.000284355 | MATCH | matching_ablation/rules_n200.csv (median of balance_from_place) |
+| `RuleGapPosition` | 0 | 0 | +0 | MATCH | matching_ablation/rules_n200.csv (median endpoint_gap) |
+| `RuleIncPosition` | 0.895 | 0.894636 | -0.000363697 | MATCH | matching_ablation/rules_n200.csv (median real_inc) |
+| `RuleBalGaussian` | 0.107 | 0.106809 | -0.000191293 | MATCH | matching_ablation/rules_n200.csv (median of balance_from_place) |
+| `RuleGapGaussian` | 0.81 | 0.809376 | -0.000624297 | MATCH | matching_ablation/rules_n200.csv (median endpoint_gap) |
+| `RuleIncGaussian` | 0.928 | 0.928051 | +5.10843e-05 | MATCH | matching_ablation/rules_n200.csv (median real_inc) |
+| `RuleBalNN` | 0.046 | 0.0463199 | +0.000319947 | MATCH | matching_ablation/rules_n200.csv (median of balance_from_place) |
+| `RuleGapNN` | 0.81 | 0.809783 | -0.000216571 | MATCH | matching_ablation/rules_n200.csv (median endpoint_gap) |
+| `RuleIncNN` | 0.951 | 0.950689 | -0.000310565 | MATCH | matching_ablation/rules_n200.csv (median real_inc) |
+| `RuleBalHard` | 0.043 | 0.0432797 | +0.000279678 | MATCH | matching_ablation/rules_n200.csv (median of balance_from_place) |
+| `RuleGapHard` | 0.81 | 0.808048 | -0.00195196 | MATCH | matching_ablation/rules_n200.csv (median endpoint_gap) |
+| `RuleIncHard` | 0.953 | 0.953317 | +0.000316569 | MATCH | matching_ablation/rules_n200.csv (median real_inc) |
+| `RuleBalTransport` | 0.081 | 0.081266 | +0.000266031 | MATCH | matching_ablation/rules_n200.csv (median of balance_from_place) |
+| `RuleGapTransport` | 0.87 | 0.867603 | -0.0023967 | MATCH | matching_ablation/rules_n200.csv (median endpoint_gap) |
+| `RuleIncTransport` | 0.933 | 0.933293 | +0.000293194 | MATCH | matching_ablation/rules_n200.csv (median real_inc) |
+| `RuleBalSharp` | 0.083 | 0.0833412 | +0.000341211 | MATCH | matching_ablation/rules_n200.csv (median of balance_from_place) |
+| `RuleGapSharp` | 0.84 | 0.835715 | -0.00428527 | MATCH | matching_ablation/rules_n200.csv (median endpoint_gap) |
+| `RuleIncSharp` | 0.942 | 0.942088 | +8.78291e-05 | MATCH | matching_ablation/rules_n200.csv (median real_inc) |
 | `MeanRealismDelta` | -0.016 | -0.015749 | +0.000250993 | MATCH | matching_ablation/rules_n200.csv (+recompute, paired median) |
 | `MeanRealismDeltaCI.lo` | -0.029 | -0.028578 | +0.000422017 | MATCH | matching_ablation/rules_n200.csv (+bootstrap, seed varies) |
 | `MeanRealismDeltaCI.hi` | -0.003 | -0.00315326 | -0.000153265 | MATCH | matching_ablation/rules_n200.csv (+bootstrap, seed varies) |
@@ -293,7 +294,7 @@ they differ from the default.
 | `HardRealismDeltaCI.lo` | -0.007 | -0.00680725 | +0.00019275 | MATCH | matching_ablation/rules_n200.csv (+bootstrap, seed varies) |
 | `HardRealismDeltaCI.hi` | 0.037 | 0.0371695 | +0.000169486 | MATCH | matching_ablation/rules_n200.csv (+bootstrap, seed varies) |
 
-### tab:app-primitives-120 (14 rows)
+### tab:app-primitives-120 (15 rows)
 
 | Macro | Paper | Computed | Diff | Status | Source |
 |---|---|---|---|---|---|
@@ -302,6 +303,7 @@ they differ from the default.
 | `GEKIDfixP` | 0.03 | 0.0299777 | -2.22989e-05 | MATCH | correspondence/feats/E1.npz (+recompute) |
 | `GEKIDfixA` | 0.03 | 0.0300918 | +9.1812e-05 | MATCH | correspondence/feats/E1.npz (+recompute) |
 | `GEKIDfixPA` | 0.027 | 0.0266742 | -0.000325787 | MATCH | correspondence/feats/E1.npz (+recompute) |
+| `GEKIDmorphPA` | 0.046 | 0.0458508 | -0.000149191 | MATCH | correspondence/feats/E1.npz (+recompute) |
 | `GEdKIDmorph` | 0.0433 | 0.043321 | +2.10326e-05 | MATCH | correspondence/feats/E1.npz (+recompute) |
 | `GEdKIDmorphCI.lo` | 0.0333 | 0.0332658 | -3.41914e-05 | MATCH | correspondence/feats/E1.npz (+recompute) |
 | `GEdKIDmorphCI.hi` | 0.0534 | 0.0533763 | -2.37435e-05 | MATCH | correspondence/feats/E1.npz (+recompute) |
@@ -359,8 +361,6 @@ per-pair value, which risks a false mismatch from RNG differences:
 
 - `tab:app-representation` (n=40 DINO/SAM/CNT feature spread)
 - `tab:app-realism` (n=100 LPIPS-control realism)
-- `tab:app-position` (n=120 self-supervised position estimator)
-- `tab:app-order` and the swap/rerun prose (Vacher rows unverified even against the file)
 - `tab:app-repeat` (repeated-operation degradation, autoencoder row is printed-only)
 - `tab:app-vacher` FID column (printed-only; timing macros ARE checked above)
 - Anchor-mixture prose (`AnchorChangeA/B`), sparse-coding prose, round-trip prose

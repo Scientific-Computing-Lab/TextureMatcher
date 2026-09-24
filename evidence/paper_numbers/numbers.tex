@@ -1,4 +1,6 @@
-% Frozen values for the manuscript. Keep manuscript values centralized here.
+% Frozen values transcribed from the supplied project's numbers_new.tex and
+% numbers.tex. The archive does not include the named raw JSON/CSV artifacts;
+% see INTEGRATION_NOTES.md. Keep manuscript values centralized here.
 % Legacy names: Pixel = field-linear; Position = primitive-linear.
 
 % Operator configuration.
@@ -9,7 +11,7 @@
 \newcommand{\SinkhornSteps}{100}
 \newcommand{\NumGaussians}{101}
 
-% Canonical n=1000, 128 px comparison.
+% Canonical n=1000, 128 px comparison (numbers_new.tex).
 \newcommand{\FIDPixel}{108.0}
 \newcommand{\KIDPixel}{0.030}
 \newcommand{\IncPixel}{0.925}
@@ -53,7 +55,7 @@
 \newcommand{\RuleKIDPosition}{0.043}
 \newcommand{\RuleKIDGaussian}{0.022}
 \newcommand{\RuleKIDNN}{0.027}
-\newcommand{\RuleKIDHard}{0.031}
+\newcommand{\RuleKIDHard}{0.030} % recomputed 0.0305 under the seeded estimator (package docs/CHECK.md)
 \newcommand{\RuleKIDTransport}{0.020}
 \newcommand{\RuleKIDSharp}{0.019}
 \newcommand{\RuleFIDRandom}{224.3}
@@ -130,7 +132,7 @@
 \newcommand{\RhoFlaggedN}{71}
 
 % ---------------------------------------------------------------------------
-% Revision values. All new prose numbers below.
+% Revision values (coupling-selection message). All new prose numbers below.
 % timing, 120 pairs, one A100, same protocol for all methods (encode separate; per-t = one renderer pass)
 \newcommand{\EncodeSec}{0.09}\newcommand{\OTTransportSec}{0.03}\newcommand{\HardAssignSec}{0.48}\newcommand{\DecSec}{0.08}\newcommand{\DecSecLow}{0.02}
 \newcommand{\OTsec}{0.21}\newcommand{\OTInterpSec}{0.11}\newcommand{\PathSecOT}{1.02}\newcommand{\OTsecLow}{0.12}\newcommand{\OTInterpSecLow}{0.037}
@@ -142,7 +144,7 @@
 % equal-sample hard vs soft in CNT, 200 ablation pairs, identical 1024 vectors, canonical scoring
 
 \newcommand{\EqGaphard}{0.81}\newcommand{\EqGapotSharp}{0.84}\newcommand{\EqGapot}{0.87}
-\newcommand{\EqVarRetSharp}{0.88}\newcommand{\EqVarRet}{0.38}\newcommand{\EqBalP}{10^{-14}}\newcommand{\EqGapP}{10^{-13}}
+\newcommand{\EqVarRetSharp}{0.88}\newcommand{\EqVarRet}{0.38}\newcommand{\EqBalP}{1.7\times10^{-14}}\newcommand{\EqGapP}{9.5\times10^{-13}}
 % spatial alignment isolated: 40 seamless (mirror-tiled) images, B = cyclic shift of A; DINOv2 deviation from the source reconstruction at t=.5
 \newcommand{\AlignLinZero}{0}\newcommand{\AlignLinFour}{8.2}\newcommand{\AlignLinSixteen}{15.2}\newcommand{\AlignLinMax}{23.9}\newcommand{\AlignGaussDev}{18.2}\newcommand{\AlignOTdev}{22.4}\newcommand{\AlignCrossLo}{16}\newcommand{\AlignCrossHi}{64}\newcommand{\AlignN}{40}
 % coupling on CNT's Gaussian primitives, 120 pairs, canonical scoring
@@ -151,7 +153,7 @@
 \newcommand{\GEScrambleDReal}{0.001}\newcommand{\GEKIDprimHard}{0.030}
 % encoding ceiling, 120 pairs
 \newcommand{\CeilKIDorig}{0.009}\newcommand{\CeilKIDrec}{0.014}\newcommand{\CeilKIDrecTwo}{0.025}\newcommand{\CeilKIDmid}{0.023}\newcommand{\CeilLPIPSrec}{0.21}\newcommand{\CeilRealOrig}{1.00}\newcommand{\CeilRealRec}{0.90}\newcommand{\CeilRealMid}{0.85}\newcommand{\CeilRho}{0.08}
-% names referenced by the revision text; values from the v2 archive
+% names referenced by the revision text but absent from the supplied block; values from the v2 archive
 \newcommand{\CNExact}{1{,}024}\newcommand{\SubsampleM}{4{,}096}\newcommand{\VacherWSec}{52.4}
 % protocol constants for the new supplementary subsections
 \newcommand{\GEPrimN}{30}\newcommand{\SinkhornMargTol}{10^{-3}}
@@ -225,3 +227,21 @@
 % CNT block vs \KIDPixel; Texture Mixer block vs \TMkKIDlerp.
 \newcommand{\CKIDpctGauss}{20\%}\newcommand{\CKIDpctOT}{30\%}\newcommand{\CKIDpctExact}{$-$10\%}
 \newcommand{\TMkKIDpctOT}{23\%}
+
+% GPT-Image-1.5 latency: median over the 240 scored calls (38.4 s); package evidence/gpt_call_summary.csv, experiments/gpt_call_stats.py
+\newcommand{\GPTsec}{38}
+% Table 1, Texture Mixer block, FID (1,000 pairs, canonical Inception reference); package evidence/paper_numbers/numbers_tmfid.tex
+\newcommand{\TMkFIDlerp}{82.4}\newcommand{\TMkFIDmean}{79.6}\newcommand{\TMkFIDot}{79.1}
+% Matching-rules table (200 pairs): median balance, median target gap at t=1, median Inception realism per rule,
+% computed from matching_ablation/rules_n200.csv with texton_matching.scoring.balance_from_place (same estimator as the existing rows).
+\newcommand{\RuleBalRandom}{0.035}\newcommand{\RuleGapRandom}{1.00}
+\newcommand{\RuleBalMean}{0.082}\newcommand{\RuleGapMean}{0.91}\newcommand{\RuleIncMean}{0.921}
+\newcommand{\RuleBalPixel}{0.044}\newcommand{\RuleGapPixel}{0.29}\newcommand{\RuleIncPixel}{0.923}
+\newcommand{\RuleBalPosition}{0.035}\newcommand{\RuleGapPosition}{0.00}\newcommand{\RuleIncPosition}{0.895}
+\newcommand{\RuleBalGaussian}{0.107}\newcommand{\RuleGapGaussian}{0.81}\newcommand{\RuleIncGaussian}{0.928}
+\newcommand{\RuleBalNN}{0.046}\newcommand{\RuleGapNN}{0.81}\newcommand{\RuleIncNN}{0.951}
+\newcommand{\RuleBalHard}{0.043}\newcommand{\RuleGapHard}{0.81}\newcommand{\RuleIncHard}{0.953}
+\newcommand{\RuleBalTransport}{0.081}\newcommand{\RuleGapTransport}{0.87}\newcommand{\RuleIncTransport}{0.933}
+\newcommand{\RuleBalSharp}{0.083}\newcommand{\RuleGapSharp}{0.84}\newcommand{\RuleIncSharp}{0.942}
+% primitives table, moving layout under the mixed cost: kid_full on correspondence/feats/E1.npz arm PA_morph vs matching_ablation/ref_inc.npy (same estimator as the other cells)
+\newcommand{\GEKIDmorphPA}{0.046}

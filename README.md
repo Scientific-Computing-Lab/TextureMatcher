@@ -55,7 +55,7 @@ a script or a notebook.
 
 **Tier 1, score.** Recomputes every macro traceable to a cached file and compares
 it with the paper. About 3 minutes on a 10-core CPU. Reads the packed inputs in
-`evidence/tier1/` and writes `docs/CHECK.md` (245 MATCH, 0 MISMATCH, 257 rows).
+`evidence/tier1/` and writes `docs/CHECK.md` (275 MATCH, 0 MISMATCH, 284 rows).
 
 ```bash
 python score_only.py
