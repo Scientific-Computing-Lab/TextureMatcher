@@ -5,7 +5,9 @@ Data root: `evidence/tier1`
 Paper root: `evidence/paper_numbers`
 
 
-**257 rows checked. 245 MATCH, 0 MISMATCH, 3 have no per-pair file row (see notes per row), 0 have no corresponding paper macro, 9 informational.**
+**284 rows checked. 272 MATCH, 0 MISMATCH, 3 have no per-pair file row (see notes per row), 0 have no corresponding paper macro, 9 informational.**
+
+The 27 rows added on 2026-09-24 (the `RuleBal*`, `RuleGap*`, `RuleInc*` macros that now fill every cell of Appendix Table 7, the re-check of its eight pre-existing cells, and `GEKIDmorphPA`) were computed with the same per-pair medians and `kid_full` call as the neighbouring rows; the `GEKIDmorphPA` line is placed in the rules section for brevity.
 
 Tolerance: |diff| <= max(0.0006, 2% relative) for plain values (0.0006 covers the
 trace-vs-len KID reference-term offset of ~0.000245); wider tolerances are used
@@ -227,7 +229,7 @@ they differ from the default.
 | `TMKIDgainMean` | 29 | 29.3706 | +0.370552 | MATCH | derived |
 | `TMKIDgainOT` | 17 | 16.9908 | -0.00924233 | MATCH | derived |
 
-### tab:rules-200 (32 rows)
+### tab:rules-200 (58 rows)
 
 | Macro | Paper | Computed | Diff | Status | Source |
 |---|---|---|---|---|---|
@@ -254,6 +256,33 @@ they differ from the default.
 | `(inline) NN balance` | nan | 0.0463199 | +nan | INFO (b=0.046, gap=0.810; see supplement.tex prose) | matching_ablation/rules_n200.csv |
 | `(inline) Hard/Exact balance` | nan | 0.0432797 | +nan | INFO (b=0.043, gap=0.808; see supplement.tex prose) | matching_ablation/rules_n200.csv |
 | `(inline) Soft-OT balance` | nan | 0.081266 | +nan | INFO (b=0.081, gap=0.868; see supplement.tex prose) | matching_ablation/rules_n200.csv |
+| `RuleBalNN` | 0.046 | 0.0463199 | +0.00031988 | MATCH | matching_ablation/rules_n200.csv (median of balance_from_place) |
+| `RuleGapNN` | 0.81 | 0.809843 | -0.000156668 | MATCH | matching_ablation/rules_n200.csv (median endpoint_gap) |
+| `RuleBalHard` | 0.043 | 0.0432797 | +0.00027971 | MATCH | matching_ablation/rules_n200.csv (median of balance_from_place) |
+| `RuleGapHard` | 0.81 | 0.807994 | -0.00200556 | MATCH | matching_ablation/rules_n200.csv (median endpoint_gap) |
+| `RuleBalTransport` | 0.081 | 0.081266 | +0.00026596 | MATCH | matching_ablation/rules_n200.csv (median of balance_from_place) |
+| `RuleGapTransport` | 0.87 | 0.867597 | -0.00240338 | MATCH | matching_ablation/rules_n200.csv (median endpoint_gap) |
+| `RuleIncTransport` | 0.933 | 0.933265 | +0.000265 | MATCH | matching_ablation/rules_n200.csv (median real_inc) |
+| `RuleBalRandom` | 0.035 | 0.0349 | -0.0001 | MATCH | matching_ablation/rules_n200.csv (median of balance_from_place) |
+| `RuleGapRandom` | 1.00 | 1.0043 | +0.0043 | MATCH | matching_ablation/rules_n200.csv (median endpoint_gap) |
+| `RuleBalMean` | 0.082 | 0.0820 | +0.0000 | MATCH | matching_ablation/rules_n200.csv (median of balance_from_place) |
+| `RuleGapMean` | 0.91 | 0.9119 | +0.0019 | MATCH | matching_ablation/rules_n200.csv (median endpoint_gap) |
+| `RuleIncMean` | 0.921 | 0.9212 | +0.0002 | MATCH | matching_ablation/rules_n200.csv (median real_inc) |
+| `RuleBalPixel` | 0.044 | 0.0441 | +0.0001 | MATCH | matching_ablation/rules_n200.csv (median of balance_from_place) |
+| `RuleGapPixel` | 0.29 | 0.2939 | +0.0039 | MATCH | matching_ablation/rules_n200.csv (median endpoint_gap) |
+| `RuleIncPixel` | 0.923 | 0.9229 | -0.0001 | MATCH | matching_ablation/rules_n200.csv (median real_inc) |
+| `RuleBalPosition` | 0.035 | 0.0353 | +0.0003 | MATCH | matching_ablation/rules_n200.csv (median of balance_from_place) |
+| `RuleGapPosition` | 0.00 | 0.0000 | +0.0000 | MATCH | matching_ablation/rules_n200.csv (median endpoint_gap) |
+| `RuleIncPosition` | 0.895 | 0.8946 | -0.0004 | MATCH | matching_ablation/rules_n200.csv (median real_inc) |
+| `RuleBalGaussian` | 0.107 | 0.1068 | -0.0002 | MATCH | matching_ablation/rules_n200.csv (median of balance_from_place) |
+| `RuleGapGaussian` | 0.81 | 0.8094 | -0.0006 | MATCH | matching_ablation/rules_n200.csv (median endpoint_gap) |
+| `RuleIncGaussian` | 0.928 | 0.9281 | +0.0001 | MATCH | matching_ablation/rules_n200.csv (median real_inc) |
+| `RuleIncNN` | 0.951 | 0.9507 | -0.0003 | MATCH | matching_ablation/rules_n200.csv (median real_inc) |
+| `RuleIncHard` | 0.953 | 0.9533 | +0.0003 | MATCH | matching_ablation/rules_n200.csv (median real_inc) |
+| `RuleBalSharp` | 0.083 | 0.0833 | +0.0003 | MATCH | matching_ablation/rules_n200.csv (median of balance_from_place) |
+| `RuleGapSharp` | 0.84 | 0.8357 | -0.0043 | MATCH | matching_ablation/rules_n200.csv (median endpoint_gap) |
+| `RuleIncSharp` | 0.942 | 0.9421 | +0.0001 | MATCH | matching_ablation/rules_n200.csv (median real_inc) |
+| `GEKIDmorphPA` | 0.046 | 0.0459 | -0.0001 | MATCH | correspondence/feats/E1.npz arm PA_morph, kid_full vs matching_ablation/ref_inc.npy |
 | `MeanRealismDelta` | -0.016 | -0.015749 | +0.000250993 | MATCH | matching_ablation/rules_n200.csv (+recompute, paired median) |
 | `MeanRealismDeltaCI.lo` | -0.029 | -0.028578 | +0.000422017 | MATCH | matching_ablation/rules_n200.csv (+bootstrap, seed varies) |
 | `MeanRealismDeltaCI.hi` | -0.003 | -0.00315326 | -0.000153265 | MATCH | matching_ablation/rules_n200.csv (+bootstrap, seed varies) |
