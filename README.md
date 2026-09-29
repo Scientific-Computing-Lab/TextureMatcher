@@ -247,17 +247,6 @@ first eight.
 | `docs/` | `CHECK.md`, `COVERAGE.md`, `INVENTORY.md`, `PROVENANCE.md`, `INSTALL_NOTES.md` |
 | `assets/` | README image |
 
-## Citation
-
-Anonymous. Texture Interpolation as Texton Matching. Under review at ICLR 2027.
-
-```bibtex
-@misc{anonymous2027textureinterpolation,
-  title  = {Texture Interpolation as Texton Matching},
-  author = {Anonymous},
-  note   = {Under review at ICLR 2027}
-}
-```
 
 ## License
 
