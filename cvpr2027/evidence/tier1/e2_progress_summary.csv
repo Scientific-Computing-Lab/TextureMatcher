@@ -1,0 +1,9 @@
+method,n,place_t0,place_mid,place_t1,span,balance_mid,monotone,max_jump_share
+sdvae_exact_ot,120,0.187,0.335,0.438,0.251,0.165,0.993,0.228
+sdvae_field_linear,120,0.187,0.499,0.804,0.617,0.041,0.996,0.212
+sdvae_gaussian,120,0.187,0.272,0.352,0.165,0.228,0.992,0.212
+sdvae_soft_ot,120,0.187,0.305,0.418,0.231,0.195,0.994,0.21
+sdvae_soft_ot_sharp,120,0.187,0.322,0.426,0.238,0.178,0.995,0.218
+sdvae_target_mean,120,0.187,0.368,0.499,0.312,0.132,0.976,0.241
+sdvae_twosided_field_linear,120,0.187,0.499,0.804,0.617,0.041,0.996,0.212
+sdvae_twosided_soft_ot_sharp,120,0.187,0.322,0.804,0.617,0.178,0.986,0.653

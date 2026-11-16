@@ -1,0 +1,7 @@
+rule,base,dKIDx1e3,lo,hi,excl0
+mean,lerp,-3.52,-7.44,0.4,False
+gaussian,lerp,-0.82,-4.8,3.17,False
+ot_r0.03,lerp,-2.05,-6.07,1.97,False
+ot_r0.003,lerp,2.09,-1.98,6.15,False
+hard,lerp,9.15,4.54,13.76,True
+ot_r0.03,gaussian,-1.24,-3.8,1.33,False

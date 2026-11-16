@@ -1,0 +1,13 @@
+method,t,n,KIDx1e3
+field_linear,0.25,1000,14.86
+gaussian,0.25,1000,14.23
+soft_ot,0.25,1000,11.55
+field_linear,0.5,1000,30.09
+gaussian,0.5,1000,24.17
+soft_ot,0.5,1000,20.74
+field_linear,0.75,1000,18.01
+field_linear_2s,0.75,1000,15.32
+gaussian,0.75,1000,29.98
+gaussian_2s,0.75,1000,15.22
+soft_ot,0.75,1000,36.81
+soft_ot_2s,0.75,1000,12.07

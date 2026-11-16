@@ -1,0 +1,5 @@
+set,top_minus_bottom,lo,hi,excl0
+report 201-1000,-2.85,-8.73,2.62,False
+all 1000,-1.97,-7.4,2.99,False
+"report, low recon error",-4.51,-11.84,3.51,False
+"report, high recon error",1.63,-5.39,10.89,False

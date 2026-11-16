@@ -1,0 +1,14 @@
+method,base,t,dKIDx1e3,lo,hi,excl0
+gaussian,field_linear,0.25,-0.63,-1.56,0.3,False
+soft_ot,field_linear,0.25,-3.31,-4.1,-2.52,True
+soft_ot,gaussian,0.25,-2.68,-3.41,-1.96,True
+gaussian,field_linear,0.5,-5.92,-8.01,-3.83,True
+soft_ot,field_linear,0.5,-9.35,-11.35,-7.35,True
+soft_ot,gaussian,0.5,-3.43,-4.78,-2.07,True
+gaussian,field_linear,0.75,11.97,9.73,14.2,True
+soft_ot,field_linear,0.75,18.8,16.6,21.0,True
+soft_ot,gaussian,0.75,6.83,4.49,9.17,True
+gaussian_2s,field_linear_2s,0.75,-0.1,-1.05,0.85,False
+gaussian_2s,gaussian,0.75,-14.75,-17.08,-12.42,True
+soft_ot_2s,field_linear_2s,0.75,-3.26,-4.04,-2.47,True
+soft_ot_2s,soft_ot,0.75,-24.74,-26.76,-22.73,True

@@ -1,0 +1,478 @@
+{
+ "classes": [
+  "cobwebbed",
+  "cracked",
+  "gauzy",
+  "lacelike",
+  "perforated",
+  "scaly",
+  "sprinkled",
+  "striped",
+  "veined",
+  "woven"
+ ],
+ "images": [
+  [
+   "cobwebbed",
+   "cobwebbed_0104.jpg"
+  ],
+  [
+   "cobwebbed",
+   "cobwebbed_0112.jpg"
+  ],
+  [
+   "cobwebbed",
+   "cobwebbed_0115.jpg"
+  ],
+  [
+   "cobwebbed",
+   "cobwebbed_0117.jpg"
+  ],
+  [
+   "cobwebbed",
+   "cobwebbed_0135.jpg"
+  ],
+  [
+   "cobwebbed",
+   "cobwebbed_0138.jpg"
+  ],
+  [
+   "cobwebbed",
+   "cobwebbed_0140.jpg"
+  ],
+  [
+   "cobwebbed",
+   "cobwebbed_0141.jpg"
+  ],
+  [
+   "cobwebbed",
+   "cobwebbed_0142.jpg"
+  ],
+  [
+   "cobwebbed",
+   "cobwebbed_0149.jpg"
+  ],
+  [
+   "cracked",
+   "cracked_0004.jpg"
+  ],
+  [
+   "cracked",
+   "cracked_0056.jpg"
+  ],
+  [
+   "cracked",
+   "cracked_0058.jpg"
+  ],
+  [
+   "cracked",
+   "cracked_0060.jpg"
+  ],
+  [
+   "cracked",
+   "cracked_0076.jpg"
+  ],
+  [
+   "cracked",
+   "cracked_0082.jpg"
+  ],
+  [
+   "cracked",
+   "cracked_0104.jpg"
+  ],
+  [
+   "cracked",
+   "cracked_0105.jpg"
+  ],
+  [
+   "cracked",
+   "cracked_0126.jpg"
+  ],
+  [
+   "cracked",
+   "cracked_0152.jpg"
+  ],
+  [
+   "gauzy",
+   "gauzy_0077.jpg"
+  ],
+  [
+   "gauzy",
+   "gauzy_0110.jpg"
+  ],
+  [
+   "gauzy",
+   "gauzy_0116.jpg"
+  ],
+  [
+   "gauzy",
+   "gauzy_0124.jpg"
+  ],
+  [
+   "gauzy",
+   "gauzy_0134.jpg"
+  ],
+  [
+   "gauzy",
+   "gauzy_0146.jpg"
+  ],
+  [
+   "gauzy",
+   "gauzy_0170.jpg"
+  ],
+  [
+   "gauzy",
+   "gauzy_0171.jpg"
+  ],
+  [
+   "gauzy",
+   "gauzy_0188.jpg"
+  ],
+  [
+   "gauzy",
+   "gauzy_0198.jpg"
+  ],
+  [
+   "lacelike",
+   "lacelike_0010.jpg"
+  ],
+  [
+   "lacelike",
+   "lacelike_0045.jpg"
+  ],
+  [
+   "lacelike",
+   "lacelike_0046.jpg"
+  ],
+  [
+   "lacelike",
+   "lacelike_0049.jpg"
+  ],
+  [
+   "lacelike",
+   "lacelike_0066.jpg"
+  ],
+  [
+   "lacelike",
+   "lacelike_0082.jpg"
+  ],
+  [
+   "lacelike",
+   "lacelike_0094.jpg"
+  ],
+  [
+   "lacelike",
+   "lacelike_0097.jpg"
+  ],
+  [
+   "lacelike",
+   "lacelike_0105.jpg"
+  ],
+  [
+   "lacelike",
+   "lacelike_0120.jpg"
+  ],
+  [
+   "perforated",
+   "perforated_0026.jpg"
+  ],
+  [
+   "perforated",
+   "perforated_0039.jpg"
+  ],
+  [
+   "perforated",
+   "perforated_0074.jpg"
+  ],
+  [
+   "perforated",
+   "perforated_0076.jpg"
+  ],
+  [
+   "perforated",
+   "perforated_0087.jpg"
+  ],
+  [
+   "perforated",
+   "perforated_0111.jpg"
+  ],
+  [
+   "perforated",
+   "perforated_0121.jpg"
+  ],
+  [
+   "perforated",
+   "perforated_0124.jpg"
+  ],
+  [
+   "perforated",
+   "perforated_0135.jpg"
+  ],
+  [
+   "perforated",
+   "perforated_0165.jpg"
+  ],
+  [
+   "scaly",
+   "scaly_0107.jpg"
+  ],
+  [
+   "scaly",
+   "scaly_0144.jpg"
+  ],
+  [
+   "scaly",
+   "scaly_0151.jpg"
+  ],
+  [
+   "scaly",
+   "scaly_0152.jpg"
+  ],
+  [
+   "scaly",
+   "scaly_0159.jpg"
+  ],
+  [
+   "scaly",
+   "scaly_0164.jpg"
+  ],
+  [
+   "scaly",
+   "scaly_0178.jpg"
+  ],
+  [
+   "scaly",
+   "scaly_0196.jpg"
+  ],
+  [
+   "scaly",
+   "scaly_0197.jpg"
+  ],
+  [
+   "scaly",
+   "scaly_0214.jpg"
+  ],
+  [
+   "sprinkled",
+   "sprinkled_0021.jpg"
+  ],
+  [
+   "sprinkled",
+   "sprinkled_0033.jpg"
+  ],
+  [
+   "sprinkled",
+   "sprinkled_0071.jpg"
+  ],
+  [
+   "sprinkled",
+   "sprinkled_0074.jpg"
+  ],
+  [
+   "sprinkled",
+   "sprinkled_0086.jpg"
+  ],
+  [
+   "sprinkled",
+   "sprinkled_0088.jpg"
+  ],
+  [
+   "sprinkled",
+   "sprinkled_0095.jpg"
+  ],
+  [
+   "sprinkled",
+   "sprinkled_0099.jpg"
+  ],
+  [
+   "sprinkled",
+   "sprinkled_0136.jpg"
+  ],
+  [
+   "sprinkled",
+   "sprinkled_0139.jpg"
+  ],
+  [
+   "striped",
+   "striped_0037.jpg"
+  ],
+  [
+   "striped",
+   "striped_0055.jpg"
+  ],
+  [
+   "striped",
+   "striped_0068.jpg"
+  ],
+  [
+   "striped",
+   "striped_0073.jpg"
+  ],
+  [
+   "striped",
+   "striped_0082.jpg"
+  ],
+  [
+   "striped",
+   "striped_0102.jpg"
+  ],
+  [
+   "striped",
+   "striped_0108.jpg"
+  ],
+  [
+   "striped",
+   "striped_0116.jpg"
+  ],
+  [
+   "striped",
+   "striped_0118.jpg"
+  ],
+  [
+   "striped",
+   "striped_0123.jpg"
+  ],
+  [
+   "veined",
+   "veined_0067.jpg"
+  ],
+  [
+   "veined",
+   "veined_0123.jpg"
+  ],
+  [
+   "veined",
+   "veined_0131.jpg"
+  ],
+  [
+   "veined",
+   "veined_0135.jpg"
+  ],
+  [
+   "veined",
+   "veined_0136.jpg"
+  ],
+  [
+   "veined",
+   "veined_0142.jpg"
+  ],
+  [
+   "veined",
+   "veined_0143.jpg"
+  ],
+  [
+   "veined",
+   "veined_0173.jpg"
+  ],
+  [
+   "veined",
+   "veined_0178.jpg"
+  ],
+  [
+   "veined",
+   "veined_0188.jpg"
+  ],
+  [
+   "woven",
+   "woven_0008.jpg"
+  ],
+  [
+   "woven",
+   "woven_0015.jpg"
+  ],
+  [
+   "woven",
+   "woven_0018.jpg"
+  ],
+  [
+   "woven",
+   "woven_0031.jpg"
+  ],
+  [
+   "woven",
+   "woven_0073.jpg"
+  ],
+  [
+   "woven",
+   "woven_0097.jpg"
+  ],
+  [
+   "woven",
+   "woven_0102.jpg"
+  ],
+  [
+   "woven",
+   "woven_0110.jpg"
+  ],
+  [
+   "woven",
+   "woven_0116.jpg"
+  ],
+  [
+   "woven",
+   "woven_0125.jpg"
+  ]
+ ],
+ "results": {
+  "CNT": {
+   "positional": {
+    "nn_acc": 0.18,
+    "nn_acc_5pc_mean": 0.18400000000000002,
+    "nn_acc_5pc_sd": 0.05388877434122992,
+    "within_between": 0.8166782998844169
+   },
+   "gaussian": {
+    "nn_acc": 0.27,
+    "nn_acc_5pc_mean": 0.225,
+    "nn_acc_5pc_sd": 0.06192737682156414,
+    "within_between": 0.7450957951789993
+   },
+   "ot": {
+    "nn_acc": 0.19,
+    "nn_acc_5pc_mean": 0.20800000000000002,
+    "nn_acc_5pc_sd": 0.058103356185335804,
+    "within_between": 0.7952283335212398
+   }
+  },
+  "DINO-RAE": {
+   "positional": {
+    "nn_acc": 0.81,
+    "nn_acc_5pc_mean": 0.753,
+    "nn_acc_5pc_sd": 0.055955339334151116,
+    "within_between": 0.8009043029710186
+   },
+   "gaussian": {
+    "nn_acc": 0.87,
+    "nn_acc_5pc_mean": 0.7969999999999999,
+    "nn_acc_5pc_sd": 0.04208325082500162,
+    "within_between": 0.7368466503602195
+   },
+   "ot": {
+    "nn_acc": 0.85,
+    "nn_acc_5pc_mean": 0.782,
+    "nn_acc_5pc_sd": 0.04377213725647857,
+    "within_between": 0.7695062327271985
+   }
+  },
+  "SD-VAE": {
+   "positional": {
+    "nn_acc": 0.15,
+    "nn_acc_5pc_mean": 0.12100000000000002,
+    "nn_acc_5pc_sd": 0.03433656942677879,
+    "within_between": 0.955114752003995
+   },
+   "gaussian": {
+    "nn_acc": 0.25,
+    "nn_acc_5pc_mean": 0.202,
+    "nn_acc_5pc_sd": 0.08364209466530594,
+    "within_between": 0.8691620172447942
+   },
+   "ot": {
+    "nn_acc": 0.29,
+    "nn_acc_5pc_mean": 0.209,
+    "nn_acc_5pc_sd": 0.0788606365685695,
+    "within_between": 0.8863849978731349
+   }
+  }
+ }
+}

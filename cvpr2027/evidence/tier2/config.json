@@ -1,0 +1,18 @@
+{
+ "smoke": false,
+ "m_cells": 1024,
+ "slack_seed": "pair id",
+ "report_set": "manifest pairs 201-1000",
+ "dev_set": "manifest pairs 1-200",
+ "handover_window": [
+  0.5,
+  0.75
+ ],
+ "handover_shape": "smoothstep",
+ "b_canvas": [
+  256,
+  768
+ ],
+ "b_fixed_seed": "tier2-fixed-12",
+ "n_boot": 500
+}

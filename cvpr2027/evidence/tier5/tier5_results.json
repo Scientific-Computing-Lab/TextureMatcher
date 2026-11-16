@@ -1,0 +1,294 @@
+{
+ "sources": [
+  [
+   "banded",
+   "banded_0049.jpg"
+  ],
+  [
+   "blotchy",
+   "blotchy_0054.jpg"
+  ],
+  [
+   "braided",
+   "braided_0190.jpg"
+  ],
+  [
+   "bubbly",
+   "bubbly_0043.jpg"
+  ],
+  [
+   "bumpy",
+   "bumpy_0176.jpg"
+  ],
+  [
+   "chequered",
+   "chequered_0151.jpg"
+  ],
+  [
+   "cobwebbed",
+   "cobwebbed_0129.jpg"
+  ],
+  [
+   "cracked",
+   "cracked_0153.jpg"
+  ],
+  [
+   "crystalline",
+   "crystalline_0168.jpg"
+  ],
+  [
+   "dotted",
+   "dotted_0142.jpg"
+  ],
+  [
+   "fibrous",
+   "fibrous_0134.jpg"
+  ],
+  [
+   "flecked",
+   "flecked_0074.jpg"
+  ],
+  [
+   "frilly",
+   "frilly_0047.jpg"
+  ],
+  [
+   "gauzy",
+   "gauzy_0174.jpg"
+  ],
+  [
+   "grid",
+   "grid_0118.jpg"
+  ],
+  [
+   "grooved",
+   "grooved_0112.jpg"
+  ],
+  [
+   "honeycombed",
+   "honeycombed_0070.jpg"
+  ],
+  [
+   "interlaced",
+   "interlaced_0156.jpg"
+  ],
+  [
+   "knitted",
+   "knitted_0186.jpg"
+  ],
+  [
+   "lacelike",
+   "lacelike_0060.jpg"
+  ],
+  [
+   "lined",
+   "lined_0121.jpg"
+  ],
+  [
+   "marbled",
+   "marbled_0144.jpg"
+  ],
+  [
+   "matted",
+   "matted_0131.jpg"
+  ],
+  [
+   "perforated",
+   "perforated_0051.jpg"
+  ],
+  [
+   "pitted",
+   "pitted_0135.jpg"
+  ],
+  [
+   "pleated",
+   "pleated_0058.jpg"
+  ],
+  [
+   "porous",
+   "porous_0052.jpg"
+  ],
+  [
+   "potholed",
+   "potholed_0145.jpg"
+  ],
+  [
+   "scaly",
+   "scaly_0198.jpg"
+  ],
+  [
+   "smeared",
+   "smeared_0136.jpg"
+  ],
+  [
+   "spiralled",
+   "spiralled_0081.jpg"
+  ],
+  [
+   "sprinkled",
+   "sprinkled_0105.jpg"
+  ],
+  [
+   "stained",
+   "stained_0140.jpg"
+  ],
+  [
+   "stratified",
+   "stratified_0130.jpg"
+  ],
+  [
+   "striped",
+   "striped_0030.jpg"
+  ],
+  [
+   "studded",
+   "studded_0191.jpg"
+  ],
+  [
+   "swirly",
+   "swirly_0177.jpg"
+  ],
+  [
+   "waffled",
+   "waffled_0173.jpg"
+  ],
+  [
+   "wrinkled",
+   "wrinkled_0051.jpg"
+  ],
+  [
+   "zigzagged",
+   "zigzagged_0097.jpg"
+  ]
+ ],
+ "classes20": [
+  "banded",
+  "braided",
+  "bumpy",
+  "chequered",
+  "cobwebbed",
+  "crystalline",
+  "dotted",
+  "fibrous",
+  "honeycombed",
+  "interlaced",
+  "lacelike",
+  "lined",
+  "marbled",
+  "paisley",
+  "polka-dotted",
+  "stained",
+  "striped",
+  "studded",
+  "swirly",
+  "veined"
+ ],
+ "results": {
+  "crops": {
+   "CNT": {
+    "positional": {
+     "nn_acc": 0.3125,
+     "mAP": 0.26273073423878157,
+     "within_between": 0.8370948538156288
+    },
+    "gaussian": {
+     "nn_acc": 0.76875,
+     "mAP": 0.6456497370962652,
+     "within_between": 0.1343912380476273
+    },
+    "ot_div": {
+     "nn_acc": 0.70625,
+     "mAP": 0.5852518720578942,
+     "within_between": 0.15282985067346175
+    }
+   },
+   "DINO-RAE": {
+    "positional": {
+     "nn_acc": 1.0,
+     "mAP": 0.9974553571428573,
+     "within_between": 0.4028888435466374
+    },
+    "gaussian": {
+     "nn_acc": 1.0,
+     "mAP": 0.9988095238095237,
+     "within_between": 0.15663600753305165
+    },
+    "ot_div": {
+     "nn_acc": 1.0,
+     "mAP": 0.9988095238095237,
+     "within_between": 0.22620291316957922
+    }
+   },
+   "SD-VAE": {
+    "positional": {
+     "nn_acc": 0.49375,
+     "mAP": 0.4640277754166927,
+     "within_between": 0.6905448496668956
+    },
+    "gaussian": {
+     "nn_acc": 0.9875,
+     "mAP": 0.9288979708752244,
+     "within_between": 0.040724686163465
+    },
+    "ot_div": {
+     "nn_acc": 0.9875,
+     "mAP": 0.9418608620655547,
+     "within_between": 0.08382626765486716
+    }
+   }
+  },
+  "classes20": {
+   "CNT": {
+    "positional": {
+     "nn_acc": 0.095,
+     "mAP": 0.09146255669378218,
+     "within_between": 0.926726222145669
+    },
+    "gaussian": {
+     "nn_acc": 0.125,
+     "mAP": 0.10054099087591106,
+     "within_between": 0.8912496280649612
+    },
+    "ot_div": {
+     "nn_acc": 0.125,
+     "mAP": 0.09975471411982378,
+     "within_between": 0.891341039007355
+    }
+   },
+   "DINO-RAE": {
+    "positional": {
+     "nn_acc": 0.735,
+     "mAP": 0.5145848867877849,
+     "within_between": 0.7961316988722247
+    },
+    "gaussian": {
+     "nn_acc": 0.74,
+     "mAP": 0.5581448486798257,
+     "within_between": 0.7263223021390544
+    },
+    "ot_div": {
+     "nn_acc": 0.75,
+     "mAP": 0.5505125489464492,
+     "within_between": 0.7590719086005893
+    }
+   },
+   "SD-VAE": {
+    "positional": {
+     "nn_acc": 0.08,
+     "mAP": 0.09543884774547085,
+     "within_between": 0.9664095168234685
+    },
+    "gaussian": {
+     "nn_acc": 0.195,
+     "mAP": 0.13086117861472582,
+     "within_between": 0.8923887608920704
+    },
+    "ot_div": {
+     "nn_acc": 0.24,
+     "mAP": 0.13851420608816017,
+     "within_between": 0.8935580708379401
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,6 @@
+method,KID_tile,KID_band
+rgb_alpha,23.62,18.17
+positional,51.21,45.57
+gaussian,39.57,36.54
+soft_ot,33.82,29.29
+soft_ot_sharprel,44.66,34.49

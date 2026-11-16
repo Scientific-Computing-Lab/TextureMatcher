@@ -1,0 +1,5 @@
+rule,asym_LPIPS_fwd_vs_rev,KID_fwd,KID_rev,dKID_rev_minus_fwd,lo,hi
+field_linear,0.28,29.61,31.4,1.79,-2.83,6.41
+soft_ot,0.5479,19.38,23.78,4.4,-1.7,10.51
+soft_ot_sharprel,0.5458,21.92,26.86,4.95,-1.55,11.45
+gaussian,0.5799,25.01,27.39,2.37,-7.23,11.98

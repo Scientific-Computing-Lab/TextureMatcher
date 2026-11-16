@@ -1,0 +1,11 @@
+rule,base,dKIDx1e3,lo,hi,excl0
+mean,lerp,-3.15,-4.47,-1.82,True
+gaussian,lerp,-1.97,-3.18,-0.76,True
+ot_r0.03,lerp,-2.84,-3.96,-1.72,True
+ot_r0.003,lerp,2.19,0.84,3.55,True
+hard,lerp,9.48,7.84,11.13,True
+ot_r0.03,gaussian,-0.87,-1.59,-0.15,True
+ot_r0.003,gaussian,4.17,3.29,5.04,True
+ot_r0.03,mean,0.3,-0.6,1.21,False
+ot_r0.003,ot_r0.03,5.04,4.3,5.77,True
+hard,ot_r0.03,12.33,11.09,13.56,True

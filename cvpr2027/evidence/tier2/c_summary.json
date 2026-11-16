@@ -1,0 +1,17 @@
+{
+ "jump_share_handover": 0.393,
+ "jump_share_old_twosided": 0.513,
+ "dKID_t0625_vs_old_twosided": {
+  "dKIDx1e3": 8.49,
+  "lo": 3.82,
+  "hi": 13.16,
+  "excl0": true
+ },
+ "dKID_t0625_vs_twosided_positional": {
+  "dKIDx1e3": -1.91,
+  "lo": -7.16,
+  "hi": 3.35,
+  "excl0": false
+ },
+ "share_pairs_window_lpips_above_outside": 1.0
+}

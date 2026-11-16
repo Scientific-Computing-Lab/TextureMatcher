@@ -1,12 +1,14 @@
-# Texture Interpolation as Texton Matching
+# Interpolate Distributions, Not Positions: Texture Interpolation as a Coupling Problem
 
-Texture interpolation asks what should lie between two textures. Standard methods typically blend pixels or features at corresponding spatial locations, implicitly assuming that co-located elements should be mixed. For unrelated textures, however, this correspondence is arbitrary: a crack at one location has no particular relationship to a fiber at the same location in another image.
+Texture interpolation asks what should lie between two textures. Most methods blend pixels or features at the same spatial location, assuming that co-located elements belong together. For unrelated textures they do not: a crack in one image has nothing to do with the fiber at the same spot in the other.
 
-We study whether this hidden pairing choice is itself a major determinant of interpolation quality. We represent textures as collections of local appearance vectors, or textons, and replace positional pairing with appearance-aware matching while keeping the encoder, representation, and decoder fixed. This isolates the effect of correspondence from changes in model capacity or training.
+We argue that interpolation should mix distributions, not positions. A texture is defined by what its local elements look like, not where they happen to sit, so the in-between should pair elements by appearance. We make this change inside existing models, keeping each model frozen and replacing only the pairing.
 
-Across texture pairs, appearance-aware matching consistently improves the distributional quality of interpolated midpoints over positional feature blending. Soft matching produces the strongest midpoint statistics, whereas one-to-one assignments yield more balanced transitions and closer agreement with the target endpoint. The same intervention also improves a second pretrained texture interpolator without retraining.
+This simple change improves interpolation in a texture decoder, a trained interpolator, and the latent spaces of modern generative models. The in-between textures it produces look like a single coherent texture rather than an overlay of two. In a blind user study, every participant judged the matched results as more coherent than positional blending on most of their trials.
 
-These results identify correspondence as a first-class design choice in texture interpolation: meaningful transitions depend not only on how strongly two textures are mixed, but also on which local appearances are mixed with one another.
+Our results make correspondence a design choice in its own right. A good transition depends not only on how much of each texture is mixed, but on which parts are mixed together.
+
+**What is where.** This repository has two parts. The CNT benchmark, the Texture Mixer 1,000-pair comparison, the matching-rule and primitive studies, the GPT-Image-1.5 comparison and the runtime table are reproduced by the package described below (`score_only.py`, `experiments/`, `texton_matching/`). Everything added for the current version (DINO-RAE, SD-VAE, DiffMorpher, Texture Mixer with every rule, two-sided paths, the distance experiment, the human study and the new supplement controls) is in [`cvpr2027/`](cvpr2027/README.md), with its own checker: `python cvpr2027/check_cvpr_numbers.py`.
 
 ![Cracked earth to lined fur through an RGB cross-fade, positional CNT blending, and soft texton matching](assets/teaser.png)
 
@@ -52,6 +54,9 @@ bash install/texture_mixer.sh
 
 Three tiers, each with one entry command. Every table and figure below maps to
 a script or a notebook.
+
+Table and figure numbers in this section follow the package's original release, before the paper was
+reorganized; the numbering of the current paper and supplement is in [`cvpr2027/README.md`](cvpr2027/README.md).
 
 **Tier 1, score.** Recomputes every macro traceable to a cached file and compares
 it with the paper. About 3 minutes on a 10-core CPU. Reads the packed inputs in
@@ -246,6 +251,7 @@ first eight.
 | `evidence/` | `tier1/` (packed Tier 1 inputs), `paper_numbers/` (the paper's macros), demo pairs, per-pair GPT scores, the GPT harness |
 | `docs/` | `CHECK.md`, `COVERAGE.md`, `INVENTORY.md`, `PROVENANCE.md`, `INSTALL_NOTES.md` |
 | `assets/` | README image |
+| `cvpr2027/` | Everything new in the current version: scripts, notebook, per-pair scores, human study, `check_cvpr_numbers.py` |
 
 
 ## License
